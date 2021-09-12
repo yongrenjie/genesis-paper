@@ -11,7 +11,7 @@ expnos = [4001, 3001]
 dss = [pg.read(path, expno) for expno in expnos]
 labels = ['without $^{13}$C 90°', 'with $^{13}$C 90°']
 
-fig = plt.figure(figsize=(6, 4.8), constrained_layout=True)
+fig = plt.figure(figsize=(7, 5.5), constrained_layout=True)
 gs = fig.add_gridspec(2, 2, height_ratios=[0.9, 1])
 axs = [fig.add_subplot(gs[0, :]),
        fig.add_subplot(gs[1, 0]),

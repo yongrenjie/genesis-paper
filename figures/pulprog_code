@@ -1,0 +1,43 @@
+    ; noah2-SpCc   
+    ; 13C sensitivity-enhanced HSQC
+    ;     [use -DEDIT for multiplicity editing]
+    ; 1H CLIP-COSY (States)
+    
+①   define delay DC_SEHSQCa
+②   "d4         = 0.25s/cnst2"  ; 13C INEPT
+    "DC_SEHSQCa = d4-p14/2"     ; zz-filter
+    "l0         = td1/2"        ; TD1/NBL
+    
+③   1 ze
+    4 50u UNBLKGRAD
+      ; Module 1 - 13C seHSQC
+      (p1 ph0):f1
+      DC_SEHSQCa
+      goscnp ph30 cpd2:f2
+      50u do:f2
+      2m st
+      ; Module 2 - CLIP-COSY
+      (p1 ph6):f1
+      go=2 ph26
+④     1m igrad EA
+    if "l1 % 2 == 0" {
+      1m id0
+      1m id10
+    }
+      lo to 4 times l0
+    exit
+    
+⑤   ph0=0
+    ph1=1
+    
+⑥   ;gpnam0: SMSQ10.100
+    ;gpz0: 29% (for purging)
+⑦   ;sp3:wvm:wu180C13: cawurst-20(60 kHz, 0.5 ms; L2H)
+⑧   ;d0: 13C t1
+    ;d4: 1/4J(CH)
+⑨   ;auprog: noah_hsqc:noah_clipcosy States
+    ;module identifiers: C_SEHSQC H_CLIP_COSY
+    ;pulse programme created by genesis-v2.0.12, https://nmr-genesis.co.uk
+    ;Sun Sep 12 2021 21:03:34 GMT+0100 (British Summer Time)
+
+

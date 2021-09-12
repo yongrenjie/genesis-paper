@@ -2,7 +2,7 @@
 <svg
    inkscape:export-ydpi="500"
    inkscape:export-xdpi="500"
-   inkscape:export-filename="/Users/yongrenjie/Desktop/noah_sehsqc_v1.png"
+   inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
    sodipodi:docname="hmbc_pulprog.svg"
    inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    id="svg8"
@@ -377,9 +377,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.0657536"
-     inkscape:cx="258.50131"
-     inkscape:cy="126.34614"
+     inkscape:zoom="1.8208377"
+     inkscape:cx="261.96733"
+     inkscape:cy="82.928863"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -421,15 +421,15 @@
        title="cos(x)*exp(-x/15)"
        d="m 150.90275,47.62497 c 0.0857,0.0705 0.17123,0.54038 0.25677,1.26223 0.0856,0.72168 0.17123,1.68758 0.25691,2.64362 0.0855,0.95605 0.17122,1.89335 0.25676,2.58929 0.0855,0.69595 0.17122,1.14418 0.25676,1.26017 0.0857,0.11599 0.17122,-0.10074 0.25692,-0.56772 0.0855,-0.46698 0.17109,-1.17961 0.25675,-1.94435 0.0855,-0.76474 0.17122,-1.57461 0.25677,-2.23131 0.0855,-0.65669 0.17121,-1.15434 0.25677,-1.38839 0.0856,-0.2342 0.17122,-0.2029 0.25689,0.0618 0.0855,0.26472 0.17108,0.76014 0.25676,1.34629 0.0855,0.58615 0.17123,1.25746 0.25678,1.8452 0.0856,0.5879 0.17121,1.08681 0.25674,1.38553 0.0857,0.29871 0.17124,0.39484 0.25691,0.28378 0.0855,-0.11091 0.17123,-0.42758 0.25678,-0.85515 0.0855,-0.42758 0.17122,-0.96193 0.25675,-1.4653 0.0857,-0.5032 0.17122,-0.97082 0.25677,-1.29385 0.0856,-0.32318 0.17122,-0.49907 0.2569,-0.49907 0.0855,-1.6e-4 0.17121,0.17541 0.25676,0.46825 0.0855,0.29284 0.17125,0.70007 0.25676,1.11382 0.0856,0.4136 0.17122,0.82973 0.25691,1.14847 0.0855,0.31858 0.17109,0.53705 0.25675,0.61221 0.0855,0.075 0.17124,0.006 0.25677,-0.17653 0.0856,-0.18289 0.17122,-0.4781 0.25678,-0.80447 0.0856,-0.32636 0.17122,-0.68084 0.25691,-0.97606 0.0855,-0.29507 0.17106,-0.52816 0.25674,-0.64907 0.0855,-0.12092 0.17123,-0.12871 0.25678,-0.0319 0.0856,0.0968 0.17122,0.29712 0.25676,0.5434 0.0856,0.24628 0.17123,0.53626 0.25691,0.79652 0.0855,0.26011 0.17123,0.48796 0.25676,0.63207 0.0855,0.14412 0.17123,0.20307 0.25678,0.17065 0.0856,-0.0322 0.17122,-0.15555 0.2569,-0.33192 0.0855,-0.17637 0.17107,-0.4039 0.25675,-0.62365 0.0855,-0.21975 0.17123,-0.42948 0.25678,-0.57979 0.0855,-0.15047 0.17122,-0.24025 0.25675,-0.25343"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <path
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        style="fill:none;stroke:#000000;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 59.531244,51.593754 H 162.71875"
        id="path10-22-2"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <text
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        xml:space="preserve"
@@ -437,8 +437,8 @@
        x="55.440712"
        y="52.916664"
        id="text14-2-7"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan12-5-03"
          x="55.440712"
@@ -453,8 +453,8 @@
        x="55.276443"
        y="70.005417"
        id="text24-6-9"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan22-4-9"
          x="55.276443"
@@ -469,8 +469,8 @@
        x="54.439777"
        style="font-style:normal;font-weight:normal;font-size:3.52777px;line-height:1.25;font-family:'Fira Sans';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
          y="62.106327"
          x="54.439777"
@@ -486,8 +486,8 @@
        height="5.2916665"
        x="62.177086"
        y="46.302086"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
@@ -496,15 +496,15 @@
        height="5.2916665"
        x="68.791664"
        y="46.302086"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <path
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        id="path10-2-0-1"
        d="M 59.531249,60.854164 H 162.71875"
        style="fill:none;stroke:#000000;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        y="55.562523"
@@ -513,8 +513,8 @@
        width="1.3229166"
        id="rect1350-7-4-4"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
@@ -523,8 +523,8 @@
        height="5.2916665"
        x="75.40625"
        y="46.302082"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
@@ -533,8 +533,8 @@
        height="5.2916665"
        x="88.635422"
        y="46.302082"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
@@ -543,8 +543,8 @@
        height="5.2916665"
        x="92.604164"
        y="55.5625"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
@@ -553,8 +553,8 @@
        height="5.2916665"
        x="88.635414"
        y="55.5625"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
@@ -563,8 +563,8 @@
        height="5.2916665"
        x="96.572922"
        y="55.5625"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
@@ -573,8 +573,8 @@
        height="5.2916665"
        x="82.020836"
        y="46.302082"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        y="55.562519"
@@ -583,8 +583,8 @@
        width="1.3229166"
        id="rect1350-7-4-4-7"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <text
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        id="text2182-0-3-6"
@@ -592,8 +592,8 @@
        x="78.552322"
        style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
          y="49.5499"
          x="78.552322"
@@ -611,8 +611,8 @@
        x="85.166908"
        y="49.5499"
        id="text2188-2-6-6"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan2184-8-6-6"
          x="85.166908"
@@ -630,8 +630,8 @@
        x="103.91875"
        y="49.5499"
        id="text2188-2-6-6-6"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          x="103.91875"
          y="49.5499"
@@ -647,8 +647,8 @@
        height="5.2916665"
        x="113.77084"
        y="55.5625"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        y="46.302067"
@@ -657,8 +657,8 @@
        width="1.3229166"
        id="rect1350-7-1-6-1-3"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        y="55.5625"
@@ -667,8 +667,8 @@
        width="1.3229166"
        id="rect1348-7-2-5-5-8-7-2"
        style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
@@ -677,15 +677,15 @@
        height="5.2916665"
        x="146.8438"
        y="46.302063"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <path
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        style="fill:none;stroke:#000000;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 59.531244,68.791664 H 162.71874"
        id="path10-2-8-0-41"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <ellipse
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        sodipodi:arc-type="slice"
@@ -698,24 +698,24 @@
        sodipodi:type="arc"
        id="path1583-6-8-78"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"
        d="m 119.26791,68.791664 a 1.1175005,5.2916665 0 0 1 1.1175,-5.291666 1.1175005,5.2916665 0 0 1 1.1175,5.291666 h -1.1175 z" />
     <ellipse
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        sodipodi:arc-type="slice"
        sodipodi:end="0"
        sodipodi:start="3.1415927"
-       sodipodi:ry="5.2916665"
-       sodipodi:rx="1.1175005"
+       sodipodi:ry="2.874655"
+       sodipodi:rx="0.85292125"
        sodipodi:cy="-68.791664"
        sodipodi:cx="91.28125"
        sodipodi:type="arc"
        id="path1583-6-8-78-7"
-       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"
-       d="m 90.163749,-68.791664 a 1.1175005,5.2916665 0 0 1 1.117501,-5.291667 1.1175005,5.2916665 0 0 1 1.117501,5.291667 H 91.28125 Z"
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"
+       d="m 90.428329,-68.791664 a 0.85292125,2.874655 0 0 1 0.852921,-2.874655 0.85292125,2.874655 0 0 1 0.852921,2.874655 H 91.28125 Z"
        transform="scale(1,-1)" />
     <ellipse
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
@@ -729,39 +729,39 @@
        sodipodi:type="arc"
        id="path1583-6-8-78-5"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"
        d="m 139.11167,68.791664 a 1.1175005,5.2916665 0 0 1 1.1175,-5.291666 1.1175005,5.2916665 0 0 1 1.1175,5.291666 h -1.1175 z" />
     <path
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        id="path1632-7-8"
        sodipodi:type="arc"
        sodipodi:cx="99.21875"
        sodipodi:cy="68.791664"
-       sodipodi:rx="0.7730006"
-       sodipodi:ry="1.3229166"
+       sodipodi:rx="0.50841528"
+       sodipodi:ry="0.88653362"
        sodipodi:start="3.1415927"
        sodipodi:end="0"
        sodipodi:arc-type="slice"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"
-       d="m 98.445749,68.791664 a 0.7730006,1.3229166 0 0 1 0.773001,-1.322917 0.7730006,1.3229166 0 0 1 0.773001,1.322917 H 99.21875 Z" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"
+       d="m 98.710335,68.791664 a 0.50841528,0.88653362 0 0 1 0.508415,-0.886533 0.50841528,0.88653362 0 0 1 0.508415,0.886533 H 99.21875 Z" />
     <ellipse
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        sodipodi:arc-type="slice"
        sodipodi:end="0"
        sodipodi:start="3.1415927"
-       sodipodi:ry="3.3830252"
-       sodipodi:rx="0.82300049"
+       sodipodi:ry="1.7310039"
+       sodipodi:rx="0.55841917"
        sodipodi:cy="68.791664"
        sodipodi:cx="95.25"
        sodipodi:type="arc"
        id="path1583-3-4-8"
-       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"
-       d="m 94.427,68.791664 a 0.82300049,3.3830252 0 0 1 0.823,-3.383025 0.82300049,3.3830252 0 0 1 0.823,3.383025 H 95.25 Z" />
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"
+       d="M 94.691581,68.791664 A 0.55841917,1.7310039 0 0 1 95.25,67.06066 0.55841917,1.7310039 0 0 1 95.808419,68.791664 H 95.25 Z" />
     <ellipse
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -774,8 +774,8 @@
        sodipodi:start="3.1415927"
        sodipodi:end="0"
        sodipodi:arc-type="slice"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"
        d="m 148.74061,68.791649 a 0.74900049,2.5273936 0 0 1 0.749,-2.527394 0.74900049,2.5273936 0 0 1 0.749,2.527394 h -0.749 z" />
     <rect
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
@@ -785,8 +785,8 @@
        width="1.3229166"
        id="rect1350-7-1-0-2-8-3"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <text
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        xml:space="preserve"
@@ -794,8 +794,8 @@
        x="143.54311"
        y="58.604042"
        id="text2052-45-0-2-9-3"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan2050-8-4-1-54-5"
          x="143.54311"
@@ -813,8 +813,8 @@
        x="139.52095"
        style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#023eff;fill-opacity:1;stroke-width:0.264583"
          y="58.604042"
          x="139.52095"
@@ -833,8 +833,8 @@
        width="1.3229166"
        id="rect1350-7-1-0-2-8-3-1"
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <text
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        xml:space="preserve"
@@ -842,8 +842,8 @@
        x="119.73061"
        y="58.604046"
        id="text2052-45-0-2-9-3-7"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan2050-8-4-1-54-5-6"
          x="119.73061"
@@ -861,8 +861,8 @@
        x="115.70846"
        style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#023eff;fill-opacity:1;stroke-width:0.264583"
          y="58.604046"
          x="115.70846"
@@ -880,8 +880,8 @@
        x="129.45473"
        y="58.604046"
        id="text2142-5-4"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan2140-0-1"
          x="129.45473"
@@ -898,8 +898,8 @@
        x="65.323151"
        style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
          y="49.549904"
          x="65.323151"
@@ -917,8 +917,8 @@
        x="71.937737"
        y="49.549904"
        id="text2188-2-6"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan2184-8-6"
          x="71.937737"
@@ -936,8 +936,8 @@
        x="144.95435"
        style="font-size:2.46944px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
        xml:space="preserve"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
          y="54.239582"
          x="144.95435"
@@ -956,8 +956,8 @@
        x="153.17883"
        style="font-size:2.46944px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
        xml:space="preserve"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
          y="44.979168"
          x="153.17883"
@@ -971,8 +971,8 @@
            id="tspan13574-2" /></tspan></text>
     <text
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-ydpi="500"
-       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="1000"
+       inkscape:export-xdpi="1000"
        id="text2052-45-0-2-6-6"
        y="49.516022"
        x="149.06656"
@@ -990,29 +990,29 @@
          sodipodi:role="line" /></text>
     <path
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-ydpi="500"
-       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="1000"
+       inkscape:export-xdpi="1000"
        style="fill:none;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.3, 0.3;stroke-dashoffset:0;stroke-opacity:1"
        d="m 138.90625,44.979167 v 26.458333 0"
        id="path1421-2-7" />
     <path
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-ydpi="500"
-       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="1000"
+       inkscape:export-xdpi="1000"
        style="fill:none;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.3, 0.3;stroke-dashoffset:0;stroke-opacity:1"
        d="m 121.70833,44.979167 v 26.458333 0"
        id="path1421-2-7-4" />
     <path
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-ydpi="500"
-       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="1000"
+       inkscape:export-xdpi="1000"
        style="fill:none;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.3, 0.3;stroke-dashoffset:0;stroke-opacity:1"
        d="m 113.77082,44.979167 v 6.614583 0"
        id="path1421-2-7-4-9" />
     <ellipse
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-ydpi="500"
-       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="1000"
+       inkscape:export-xdpi="1000"
        transform="scale(-1)"
        style="fill:#b4b4b4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        id="path1583-6-5-6-2"
@@ -1030,15 +1030,15 @@
        d="m 113.20547,48.577642 h -4.72631"
        id="path7736-5-6"
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <path
        style="fill:#023eff;fill-opacity:1;stroke:#023eff;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart-6-5)"
        d="m 98.274683,48.577642 h 4.726337"
        id="path7736-5-6-3"
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
     <text
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
        id="text2294-2-9-3-3-5-5-0-7"
@@ -1046,8 +1046,8 @@
        x="91.939766"
        style="font-size:2.46944px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
        xml:space="preserve"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
          y="54.239582"
          x="91.939766"
@@ -1066,8 +1066,8 @@
        x="95.908524"
        style="font-size:2.46944px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
        xml:space="preserve"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
          y="54.239582"
          x="95.908524"
@@ -1086,8 +1086,8 @@
        x="113.10645"
        style="font-size:2.46944px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
        xml:space="preserve"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
          y="54.239582"
          x="113.10645"
@@ -1106,8 +1106,8 @@
        y="71.4375"
        id="text7173"
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan7171"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
@@ -1122,8 +1122,8 @@
        y="71.4375"
        id="text7173-3"
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan7171-8"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
@@ -1138,8 +1138,8 @@
        y="71.4375"
        id="text7173-3-7"
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan7171-8-4"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
@@ -1154,8 +1154,8 @@
        y="71.4375"
        id="text7173-3-7-5"
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan7171-8-4-1"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
@@ -1170,8 +1170,8 @@
        y="71.4375"
        id="text7173-3-7-5-4"
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan7171-8-4-1-3"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
@@ -1186,8 +1186,8 @@
        y="71.4375"
        id="text7173-3-7-5-4-3"
        inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000"><tspan
          sodipodi:role="line"
          id="tspan7171-8-4-1-3-8"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
@@ -1202,6 +1202,9 @@
        height="7.9375"
        x="87.3125"
        y="54.239582"
-       ry="0.7937513" />
+       ry="0.7937513"
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000" />
   </g>
 </svg>

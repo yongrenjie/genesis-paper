@@ -158,16 +158,40 @@ For more advanced usage, enabling ``developer mode'' will remove these limitatio
 
 We begin with a brief discussion of how the GENESIS approach works.
 The pulse programme generation code itself is written in TypeScript (version 4.2.3, Microsoft), which is compiled to JavaScript (formally ECMAScript 2015, or ``ES6'') and then executed directly in a client's browser; there is no server-side code.
-The web browser shows a list of modules for users to choose from, using accessible and familiar names such as HMBC, HSQC, and so on.
+The web browser shows a list of modules for users to choose from, using accessible and familiar names such as HMBC, HSQC, and so on (\cref{fig:screenshot}).
 Internally, these are mapped to a series of \texttt{NOAHModule} objects, each of which contain module-specific information, such as its abbreviation (usually one letter, but some are longer e.g. $\mathrm{S^T}$/\texttt{St} for HSQC-TOCSY), parameter definitions, the pulse programme for the module itself, and the appropriate AU programme to be used for processing. 
 
-Using this information, GENESIS then constructs the pulse programme in three steps:
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{pulprog_code.png}
+    \caption{
+        Abridged pulse programme for a NOAH-2 $\mathrm{S^+C^c}$ supersequence (\carbon{} seHSQC + CLIP-COSY).
+        Specific sections of interest are numbered on the left.
+        \textbf{(1)} Module-specific delays are given unique identifiers to prevent clashes and to improve readability.
+        \textbf{(2)} TopSpin parameters (delays such as \texttt{d4}) are standardised between modules.
+        \textbf{(3)} The pulse programme instructions themselves begin here.
+        \textbf{(4)} $t_1$ incrementation and echo--antiecho gradient inversion is carried out with the appropriate frequency (once per loop or once per two loops).
+        \textbf{(5)} Pulse and receiver phase cycles are standardised between modules.
+        \textbf{(6)} Comments for gradient pulses are compatible with the TopSpin \texttt{gppp} script.
+        \textbf{(7)} Instructions for generating shaped pulses using TopSpin's WaveMaker software.
+        \textbf{(8)} Comments describing each parameter appear in the parameter setup screen.
+        \textbf{(9)} Instructions for processing AU programmes (\cref{subsec:splitx_au}) are encoded here, along with information about the specific modules used and a timestamp which ensures reproducibility.
+    }
+    \label{fig:pulprog_code}
+\end{figure}
+
+Using this information, GENESIS then constructs the pulse programme in several steps (\cref{fig:pulprog_code}):
 
 \begin{itemize}
-    \item the \textit{preamble}, which contains header comments including information about the pulse programme and constituent modules, as well as parameter definitions. 
+    \item Header comments including information about the pulse programme and constituent modules;
+    \item The preambles, which contains header comments including information about the pulse programme and constituent modules, as well as parameter definitions, are first collated.
         Particular care is taken to avoid duplicating parameter definitions which are used in multiple modules.
-    \item the \textit{main section}, which contains the actual instructions corresponding to the pulse sequence. Appropriate looping and incrementation of parameters such as phase cycles, $t_1$ delays, and gradient pulses for echo--antiecho selection is introduced at this stage.
-    \item the \textit{epilogue}, which contains the phase cycles themselves, as well as other metadata such as descriptive text for parameters (displayed in TopSpin's \texttt{ased} parameter setup screen), gradient and shaped pulse information (which allow direct setup using the \texttt{gppp} and \texttt{wvm} commands), and other details such as which modules were used in the pulse programme and the GENESIS version number (which enables full reproducibility in the pulse programme generation).
+    \item The main section, which contains the actual instructions corresponding to the pulse sequence, is then put together.
+        This is done mostly by simply concatenating individual modules together, although there are also context-sensitive blocks placed \textit{between} modules such as ASAP mixing\autocite{Claridge2019MRC} in BSX-type supersequences, or purge pulses and gradients.
+    \item Appropriate looping and incrementation of parameters such as phase cycles, $t_1$ delays, and gradient pulses for echo--antiecho selection is added at the end of the main section.
+    \item Additional comments containing descriptive text for parameters (displayed in TopSpin's \texttt{ased} parameter setup screen), as well as gradient and shaped pulse information (which allow direct setup using the \texttt{gppp} and \texttt{wvm} commands), are added at this stage.
+        These are collated by scanning the main section for TopSpin parameters (e.g.\ delays, pulses, gradients) and obtaining their descriptions from a lookup table.
+    \item Finally, to ensure full reproducibility in the pulse programme generation, we also specify the exact modules used in the pulse programme, the GENESIS version number, and a timestamp.
 \end{itemize}
 
 The website further contains a series of frequently asked questions and instructions on how to set NOAH experiments up.
@@ -206,20 +230,6 @@ A substantial benefit of the GENESIS approach is that it provides a single sourc
 This allows us to rapidly disseminate new NOAH developments to users, independently from TopSpin's own release cycle, and without needing to write an entire paper about them.
 The initial GENESIS release already contains a number of such improvements, some of which we detail below.
 
-\subsection{\texorpdfstring{\nitrogen{}}{15N} HMQC gradient scheme}
-
-\todo{(Need a figure here showing pulse sequence and before/after spectra)}
-
-We have recently described the occurrence of ``wing artefacts'' in homonuclear modules, which arise from bulk magnetisation which evolves during either half of $t_1$ in a preceding heteronuclear module.\autocite{Yong2021JMR}
-These artefacts can be removed in an elegant manner by ensuring that each half of $t_1$ in a HMQC/HSQC/seHSQC module contains coherence transfer pathway (CTP) gradients of equal sign and magnitude, which makes sure that any bulk magnetisation undergoing net evolution during $t_1$ is dephased.
-
-At the same time, it is also important that the final gradient in the heteronuclear module have as large an amplitude as possible, since this gradient is responsible for dephasing bulk magnetisation that is not returned to $+z$ just prior to the detection period.
-In order to accomplish this, the previous \nitrogen{} HMQC module used bipolar opposing gradients in either half of $t_1$, a scheme which allows the final refocusing CTP gradient $g_2$ to have an amplitude of $4\gamma_{\ce{N}} / \gamma_{\ce{H}}$ (\todo{Fig XX}).
-Although this leads to excellent artefact suppresion in the \nitrogen{} HMQC itself, wing artefacts are apparent in downstream modules, because the opposing gradients cancel each other out and do not enforce any CTP selection on the bulk magnetisation.
-
-The solution to this is to only use two gradients during $t_1$ (one in either half), but to \textit{lengthen} their duration such that the final gradient $g_2$ provides sufficient dephasing in the HMQC itself (\todo{Fig XX}).
-This strategy was previously described for the \nitrogen{} seHSQC;\autocite{Yong2021JMR} we have also applied it to the HMQC with success.
-
 \subsection{Suppression of one-bond artefacts in HMBC}
 
 \begin{figure}[ht]
@@ -252,6 +262,40 @@ This idea has previously been used by Luy and coworkers in CLIP-HSQC experiments
 In the event, this small modification proved to have a large impact, almost completely suppressing the $\onejch$ artefacts (\cref{fig:hmbc_comp_after}).
 \todo{Further comparisons of artefact intensity are provided in the SI.}
 
+\subsection{\texorpdfstring{\nitrogen{}}{15N} HMQC gradient scheme}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{hmqc_comp.png}
+    {\phantomsubcaption\label{fig:hmqc_comp_pulprog}}
+    {\phantomsubcaption\label{fig:hmqc_comp_pulprog_before}}
+    {\phantomsubcaption\label{fig:hmqc_comp_pulprog_after}}
+    {\phantomsubcaption\label{fig:hmqc_comp_spec_before}}
+    {\phantomsubcaption\label{fig:hmqc_comp_spec_after}}
+    \caption{
+        \textbf{(\subref{fig:hmqc_comp_pulprog})} A general outline of the NOAH \nitrogen{} HMQC module.
+        $g_2$ has a duration which matches that of $g_1$ (explained below), and an amplitude of $\pm n \cdot 8.1\%$, where $n$ is the number of CTP gradients bracketing the $t_1$ period.
+        $g_1$ has an amplitude of $80\%$ in all cases.
+        All other symbols have the same meaning as in \cref{fig:hmbc_comp}.
+        \textbf{(\subref{fig:hmqc_comp_pulprog_before})} The previously published coherence selection scheme for the HMQC module, with four gradients each of duration \SI{1}{ms}.
+        \textbf{(\subref{fig:hmqc_comp_pulprog_after})} The new coherence selection scheme for the HMQC module, with two gradients each of duration \SI{2.5}{ms}.
+        \textbf{(\subref{fig:hmqc_comp_spec_before})--(\subref{fig:hmqc_comp_spec_after})} CLIP-COSY spectra obtained from a NOAH-3 $\mathrm{MS^+C^c}$ supersequence (\nitrogen{} HMQC + \carbon{} seHSQC + CLIP-COSY), acquired with the gradient schemes shown in (\subref{fig:hmqc_comp_pulprog_before}) and (\subref{fig:hmqc_comp_pulprog_after}) respectively.
+        The wing artefacts in the former spectrum are highlighted in red boxes.
+        \zolmi{}
+    }
+    \label{fig:hmqc_comp}
+\end{figure}
+
+We have recently described the occurrence of ``wing artefacts'' in homonuclear modules, which arise from bulk magnetisation which evolves during either half of $t_1$ in a preceding heteronuclear module.\autocite{Yong2021JMR}
+These artefacts can be removed in an elegant manner by ensuring that each half of $t_1$ in a HMQC/HSQC/seHSQC module contains coherence transfer pathway (CTP) gradients of equal sign and magnitude, which makes sure that any bulk magnetisation undergoing net evolution during $t_1$ is dephased.
+
+At the same time, it is also important that the final gradient in the heteronuclear module have as large an amplitude as possible, since this gradient is responsible for dephasing bulk magnetisation that is not returned to $+z$ just prior to the detection period.
+In order to accomplish this, the previous \nitrogen{} HMQC module used bipolar opposing gradients in either half of $t_1$, a scheme which allows the final refocusing CTP gradient $g_2$ to have an amplitude of $4\gamma_{\ce{N}} / \gamma_{\ce{H}}$ (\cref{fig:hmqc_comp_pulprog,fig:hmqc_comp_pulprog_before}).
+Although this leads to excellent artefact suppresion in the \nitrogen{} HMQC itself, wing artefacts are apparent in downstream modules (\cref{fig:hmqc_comp_spec_before}), because the opposing gradients cancel each other out and do not enforce any CTP selection on the bulk magnetisation.
+
+The solution to this is to only use two gradients during $t_1$ (one in either half), but to \textit{lengthen} their duration such that the final gradient $g_2$ provides sufficient dephasing in the HMQC itself (\cref{fig:hmqc_comp_pulprog_after}).
+This strategy was previously described for the \nitrogen{} seHSQC;\autocite{Yong2021JMR} here we have also applied it to the HMQC with success (\cref{fig:hmqc_comp_spec_after}).
+
 \subsection{PSYCHE and 2DJ modules}
 
 In previous work,\autocite{Yong2021JMR} we described how the sensitivity of some \nitrogen{} modules, particularly the HMQC, could be improved through the use of $k$-scaling.\autocite{PerezTrujillo2007MRC}
@@ -275,7 +319,7 @@ This entails a reduction in the number of $t_1$ increments (by a factor of $k$),
 
 A simple extension of this protocol to \textit{homonuclear} \proton{}--\proton{} modules enables experiments such as 2D J-resolved spectroscopy or pseudo-2D pure shift techniques to be incorporated into NOAH supersequences.
 In both cases, the number of $t_1$ increments needed (16--32) is far smaller than the typical number required for a 2D experiment (128--256).
-In particular, at present, we have implemented a family of PSYCHE experiments: namely the original pseudo-2D PSYCHE, the triple spin echo (TSE)-PSYCHE experiment which provides improved robustness towards strong coupling, and the PSYCHE 2DJ experiment.\autociteset{psyche}
+In particular, at present, we have implemented a family of PSYCHE experiments, namely the original pseudo-2D PSYCHE, the triple spin echo (TSE)-PSYCHE experiment which provides improved robustness towards strong coupling, and the PSYCHE 2DJ experiment which yields pure absorption-mode lineshapes.\autociteset{psyche}
 
 In PSYCHE spectra, the flip angle of the chirp or saltire pulses used in the J-refocusing element provides the experimentalist with a choice: a larger flip angle provides greater sensitivity, but at the cost of increased artefacts.\autocite{Foroozandeh2018CEJ}
 One advantage of acquiring PSYCHE spectra in NOAH-type supersequences is that, due to the increased number of transients, sensitivity is often not at a premium.
@@ -283,6 +327,7 @@ Thus, the user can choose a smaller flip angle (ca.\ \ang{10}) in order to maxim
 An example of a NOAH-3 supersequence with the TSE-PSYCHE module is shown in \cref{fig:psyche}.
 
 \subsection{splitx\_au processing}
+\label{subsec:splitx_au}
 
 NOAH data processing is done using the \texttt{splitx\_au} AU programme; this is responsible for creating \texttt{NBL} separate datasets containing the data for each module, and processing each dataset using module-specific AU programmes (e.g.\ \texttt{noah\_hsqc} for \carbon{} HSQC data).
 Previously, the module-specific AU programmes had to be specified as the \texttt{USERP1}, \texttt{USERP2}, \ldots{} series of processing parameters.
