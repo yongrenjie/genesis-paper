@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   inkscape:export-ydpi="500"
+   inkscape:export-xdpi="500"
+   inkscape:export-filename="/Users/yongrenjie/Desktop/noah_sehsqc_v1.png"
+   sodipodi:docname="hmbc_pulprog.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 153.65833 58.408333"
+   height="58.408333mm"
+   width="153.65833mm"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path12914" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Sstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Sstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path12920" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Send"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path4199" />
+    </marker>
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417" />
+    <rect
+       x="66.145836"
+       y="30.427082"
+       width="11.90625"
+       height="7.9375"
+       id="rect2405" />
+    <rect
+       id="rect2417-5"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       id="rect3112"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-5-4" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect1299" />
+    <rect
+       id="rect2417-2"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       id="rect1704"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-2-5" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect1911" />
+    <rect
+       id="rect2417-7"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       id="rect628"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-7-0" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect1265" />
+    <rect
+       id="rect2417-7-0-8"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       id="rect1352"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-7-2" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect1645" />
+    <rect
+       id="rect2417-7-0-3"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       id="rect1648"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-7-4" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect1937" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-7-6" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2315" />
+    <rect
+       id="rect2417-7-0-0"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       id="rect2318"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       id="rect2417-7-4-4"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       id="rect2321"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-5-7" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect1918" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-5-7-9" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect1827" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-5-7-9-5" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2715" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-5-7-9-5-0" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect3097" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-5-7-8" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2046" />
+    <rect
+       id="rect2417-5-0"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       id="rect2691"
+       height="2.6458333"
+       width="7.9375"
+       y="59.53125"
+       x="125.67708" />
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-5-7-9-7" />
+    <marker
+       style="overflow:visible"
+       id="Arrow1Send-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path4199-7" />
+    </marker>
+    <rect
+       x="125.67708"
+       y="59.53125"
+       width="7.9375"
+       height="2.6458333"
+       id="rect2417-5-7-2" />
+    <marker
+       style="overflow:visible"
+       id="Arrow1Sstart-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Sstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path12920-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path12914-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart-6-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path12914-4-8" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.0657536"
+     inkscape:cx="258.50131"
+     inkscape:cy="126.34614"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     inkscape:window-width="1393"
+     inkscape:window-height="726"
+     inkscape:window-x="11"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-text-baseline="true"
+     inkscape:pagecheckerboard="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1346"
+       originx="-31.650002"
+       originy="-31.65" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-31.65,-31.65)">
+    <path
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="path3919-7-8-6"
+       title="cos(x)*exp(-x/15)"
+       d="m 150.90275,47.62497 c 0.0857,0.0705 0.17123,0.54038 0.25677,1.26223 0.0856,0.72168 0.17123,1.68758 0.25691,2.64362 0.0855,0.95605 0.17122,1.89335 0.25676,2.58929 0.0855,0.69595 0.17122,1.14418 0.25676,1.26017 0.0857,0.11599 0.17122,-0.10074 0.25692,-0.56772 0.0855,-0.46698 0.17109,-1.17961 0.25675,-1.94435 0.0855,-0.76474 0.17122,-1.57461 0.25677,-2.23131 0.0855,-0.65669 0.17121,-1.15434 0.25677,-1.38839 0.0856,-0.2342 0.17122,-0.2029 0.25689,0.0618 0.0855,0.26472 0.17108,0.76014 0.25676,1.34629 0.0855,0.58615 0.17123,1.25746 0.25678,1.8452 0.0856,0.5879 0.17121,1.08681 0.25674,1.38553 0.0857,0.29871 0.17124,0.39484 0.25691,0.28378 0.0855,-0.11091 0.17123,-0.42758 0.25678,-0.85515 0.0855,-0.42758 0.17122,-0.96193 0.25675,-1.4653 0.0857,-0.5032 0.17122,-0.97082 0.25677,-1.29385 0.0856,-0.32318 0.17122,-0.49907 0.2569,-0.49907 0.0855,-1.6e-4 0.17121,0.17541 0.25676,0.46825 0.0855,0.29284 0.17125,0.70007 0.25676,1.11382 0.0856,0.4136 0.17122,0.82973 0.25691,1.14847 0.0855,0.31858 0.17109,0.53705 0.25675,0.61221 0.0855,0.075 0.17124,0.006 0.25677,-0.17653 0.0856,-0.18289 0.17122,-0.4781 0.25678,-0.80447 0.0856,-0.32636 0.17122,-0.68084 0.25691,-0.97606 0.0855,-0.29507 0.17106,-0.52816 0.25674,-0.64907 0.0855,-0.12092 0.17123,-0.12871 0.25678,-0.0319 0.0856,0.0968 0.17122,0.29712 0.25676,0.5434 0.0856,0.24628 0.17123,0.53626 0.25691,0.79652 0.0855,0.26011 0.17123,0.48796 0.25676,0.63207 0.0855,0.14412 0.17123,0.20307 0.25678,0.17065 0.0856,-0.0322 0.17122,-0.15555 0.2569,-0.33192 0.0855,-0.17637 0.17107,-0.4039 0.25675,-0.62365 0.0855,-0.21975 0.17123,-0.42948 0.25678,-0.57979 0.0855,-0.15047 0.17122,-0.24025 0.25675,-0.25343"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:none;stroke:#000000;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 59.531244,51.593754 H 162.71875"
+       id="path10-22-2"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.52777px;line-height:1.25;font-family:'Fira Sans';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="55.440712"
+       y="52.916664"
+       id="text14-2-7"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan12-5-03"
+         x="55.440712"
+         y="52.916664"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.29306px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';baseline-shift:super;stroke-width:0.264583"
+   id="tspan16-1-9">1</tspan>H</tspan></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.52777px;line-height:1.25;font-family:'Fira Sans';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="55.276443"
+       y="70.005417"
+       id="text24-6-9"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan22-4-9"
+         x="55.276443"
+         y="70.005417"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583">G<tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.29306px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';baseline-shift:sub;stroke-width:0.264583"
+   id="tspan28-4-1">z</tspan></tspan></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="text20-1-3-7"
+       y="62.106327"
+       x="54.439777"
+       style="font-style:normal;font-weight:normal;font-size:3.52777px;line-height:1.25;font-family:'Fira Sans';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+         y="62.106327"
+         x="54.439777"
+         id="tspan18-9-4-2"
+         sodipodi:role="line"><tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan4939">13</tspan>C</tspan></text>
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1348-2-65"
+       width="1.3229166"
+       height="5.2916665"
+       x="62.177086"
+       y="46.302086"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1350-6-5"
+       width="1.3229166"
+       height="5.2916665"
+       x="68.791664"
+       y="46.302086"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="path10-2-0-1"
+       d="M 59.531249,60.854164 H 162.71875"
+       style="fill:none;stroke:#000000;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       y="55.562523"
+       x="68.791672"
+       height="5.2916665"
+       width="1.3229166"
+       id="rect1350-7-4-4"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1348-2-65-6"
+       width="1.3229166"
+       height="5.2916665"
+       x="75.40625"
+       y="46.302082"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1348-2-65-6-8"
+       width="1.3229166"
+       height="5.2916665"
+       x="88.635422"
+       y="46.302082"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1348-2-65-6-8-8"
+       width="1.3229166"
+       height="5.2916665"
+       x="92.604164"
+       y="55.5625"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1348-2-65-6-8-8-0"
+       width="1.3229166"
+       height="5.2916665"
+       x="88.635414"
+       y="55.5625"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1348-2-65-6-8-8-9"
+       width="1.3229166"
+       height="5.2916665"
+       x="96.572922"
+       y="55.5625"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1350-6-5-9"
+       width="1.3229166"
+       height="5.2916665"
+       x="82.020836"
+       y="46.302082"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       y="55.562519"
+       x="82.020844"
+       height="5.2916665"
+       width="1.3229166"
+       id="rect1350-7-4-4-7"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="text2182-0-3-6"
+       y="49.5499"
+       x="78.552322"
+       style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         y="49.5499"
+         x="78.552322"
+         id="tspan2178-4-5-7"
+         sodipodi:role="line">Δ</tspan><tspan
+         id="tspan2180-5-22-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         y="53.077686"
+         x="78.552322"
+         sodipodi:role="line" /></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="85.166908"
+       y="49.5499"
+       id="text2188-2-6-6"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan2184-8-6-6"
+         x="85.166908"
+         y="49.5499"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583">Δ</tspan><tspan
+         sodipodi:role="line"
+         x="85.166908"
+         y="53.077686"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         id="tspan2186-0-78-6" /></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="103.91875"
+       y="49.5499"
+       id="text2188-2-6-6-6"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         x="103.91875"
+         y="49.5499"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         id="tspan2186-0-78-6-5">Δ<tspan
+   style="font-size:65%;baseline-shift:sub;fill:#023eff;fill-opacity:1"
+   id="tspan6568">LR</tspan></tspan></text>
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1348-7-2-6-7"
+       width="1.3229166"
+       height="5.2916665"
+       x="113.77084"
+       y="55.5625"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       y="46.302067"
+       x="129.64583"
+       height="5.2916665"
+       width="1.3229166"
+       id="rect1350-7-1-6-1-3"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       y="55.5625"
+       x="145.52083"
+       height="5.2916665"
+       width="1.3229166"
+       id="rect1348-7-2-5-5-8-7-2"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1350-7-2-8-9-1-6"
+       width="1.3229166"
+       height="5.2916665"
+       x="146.8438"
+       y="46.302063"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:none;stroke:#000000;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 59.531244,68.791664 H 162.71874"
+       id="path10-2-8-0-41"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <ellipse
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       sodipodi:arc-type="slice"
+       sodipodi:end="0"
+       sodipodi:start="3.1415927"
+       sodipodi:ry="5.2916665"
+       sodipodi:rx="1.1175005"
+       sodipodi:cy="68.791664"
+       sodipodi:cx="120.38541"
+       sodipodi:type="arc"
+       id="path1583-6-8-78"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"
+       d="m 119.26791,68.791664 a 1.1175005,5.2916665 0 0 1 1.1175,-5.291666 1.1175005,5.2916665 0 0 1 1.1175,5.291666 h -1.1175 z" />
+    <ellipse
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       sodipodi:arc-type="slice"
+       sodipodi:end="0"
+       sodipodi:start="3.1415927"
+       sodipodi:ry="5.2916665"
+       sodipodi:rx="1.1175005"
+       sodipodi:cy="-68.791664"
+       sodipodi:cx="91.28125"
+       sodipodi:type="arc"
+       id="path1583-6-8-78-7"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"
+       d="m 90.163749,-68.791664 a 1.1175005,5.2916665 0 0 1 1.117501,-5.291667 1.1175005,5.2916665 0 0 1 1.117501,5.291667 H 91.28125 Z"
+       transform="scale(1,-1)" />
+    <ellipse
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       sodipodi:arc-type="slice"
+       sodipodi:end="0"
+       sodipodi:start="3.1415927"
+       sodipodi:ry="5.2916665"
+       sodipodi:rx="1.1175005"
+       sodipodi:cy="68.791664"
+       sodipodi:cx="140.22917"
+       sodipodi:type="arc"
+       id="path1583-6-8-78-5"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"
+       d="m 139.11167,68.791664 a 1.1175005,5.2916665 0 0 1 1.1175,-5.291666 1.1175005,5.2916665 0 0 1 1.1175,5.291666 h -1.1175 z" />
+    <path
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path1632-7-8"
+       sodipodi:type="arc"
+       sodipodi:cx="99.21875"
+       sodipodi:cy="68.791664"
+       sodipodi:rx="0.7730006"
+       sodipodi:ry="1.3229166"
+       sodipodi:start="3.1415927"
+       sodipodi:end="0"
+       sodipodi:arc-type="slice"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"
+       d="m 98.445749,68.791664 a 0.7730006,1.3229166 0 0 1 0.773001,-1.322917 0.7730006,1.3229166 0 0 1 0.773001,1.322917 H 99.21875 Z" />
+    <ellipse
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       sodipodi:arc-type="slice"
+       sodipodi:end="0"
+       sodipodi:start="3.1415927"
+       sodipodi:ry="3.3830252"
+       sodipodi:rx="0.82300049"
+       sodipodi:cy="68.791664"
+       sodipodi:cx="95.25"
+       sodipodi:type="arc"
+       id="path1583-3-4-8"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"
+       d="m 94.427,68.791664 a 0.82300049,3.3830252 0 0 1 0.823,-3.383025 0.82300049,3.3830252 0 0 1 0.823,3.383025 H 95.25 Z" />
+    <ellipse
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path1583-6-5-2-5"
+       sodipodi:type="arc"
+       sodipodi:cx="149.48961"
+       sodipodi:cy="68.791649"
+       sodipodi:rx="0.74900049"
+       sodipodi:ry="2.5273936"
+       sodipodi:start="3.1415927"
+       sodipodi:end="0"
+       sodipodi:arc-type="slice"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"
+       d="m 148.74061,68.791649 a 0.74900049,2.5273936 0 0 1 0.749,-2.527394 0.74900049,2.5273936 0 0 1 0.749,2.527394 h -0.749 z" />
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       y="55.5625"
+       x="141.55208"
+       height="5.2916665"
+       width="1.3229166"
+       id="rect1350-7-1-0-2-8-3"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="143.54311"
+       y="58.604042"
+       id="text2052-45-0-2-9-3"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan2050-8-4-1-54-5"
+         x="143.54311"
+         y="58.604042"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#023eff;fill-opacity:1;stroke-width:0.264583">ε</tspan><tspan
+         sodipodi:role="line"
+         x="143.54311"
+         y="62.131828"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         id="tspan2054-9-3-0-9-2" /></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="text2052-45-2-2-3-17-8"
+       y="58.604042"
+       x="139.52095"
+       style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         y="58.604042"
+         x="139.52095"
+         id="tspan2050-8-8-6-6-5-6"
+         sodipodi:role="line">ε</tspan><tspan
+         id="tspan2054-9-6-8-6-5-5"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         y="62.131828"
+         x="139.52095"
+         sodipodi:role="line" /></text>
+    <rect
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       y="55.562504"
+       x="117.73959"
+       height="5.2916665"
+       width="1.3229166"
+       id="rect1350-7-1-0-2-8-3-1"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="119.73061"
+       y="58.604046"
+       id="text2052-45-0-2-9-3-7"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan2050-8-4-1-54-5-6"
+         x="119.73061"
+         y="58.604046"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#023eff;fill-opacity:1;stroke-width:0.264583">ε</tspan><tspan
+         sodipodi:role="line"
+         x="119.73061"
+         y="62.131832"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         id="tspan2054-9-3-0-9-2-3" /></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="text2052-45-2-2-3-17-8-3"
+       y="58.604046"
+       x="115.70846"
+       style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         y="58.604046"
+         x="115.70846"
+         id="tspan2050-8-8-6-6-5-6-4"
+         sodipodi:role="line">ε</tspan><tspan
+         id="tspan2054-9-6-8-6-5-5-9"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         y="62.131832"
+         x="115.70846"
+         sodipodi:role="line" /></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+       x="129.45473"
+       y="58.604046"
+       id="text2142-5-4"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan2140-0-1"
+         x="129.45473"
+         y="58.604046"
+         style="fill:#023eff;fill-opacity:1;stroke-width:0.264583"><tspan
+           style="font-style:italic;fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+           id="tspan2144-2-8">t</tspan><tspan
+           style="font-size:1.83445px;baseline-shift:sub;fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+           id="tspan2146-3-8">1</tspan></tspan></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="text2182-0-3"
+       y="49.549904"
+       x="65.323151"
+       style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         y="49.549904"
+         x="65.323151"
+         id="tspan2178-4-5"
+         sodipodi:role="line">Δ</tspan><tspan
+         id="tspan2180-5-22"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         y="53.07769"
+         x="65.323151"
+         sodipodi:role="line" /></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="71.937737"
+       y="49.549904"
+       id="text2188-2-6"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan2184-8-6"
+         x="71.937737"
+         y="49.549904"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583">Δ</tspan><tspan
+         sodipodi:role="line"
+         x="71.937737"
+         y="53.07769"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         id="tspan2186-0-78" /></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="text2294-2-9-3-3-5-5"
+       y="54.239582"
+       x="144.95435"
+       style="font-size:2.46944px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+         y="54.239582"
+         x="144.95435"
+         id="tspan2292-1-1-7-9-5-5"
+         sodipodi:role="line"><tspan
+           style="font-style:italic"
+           id="tspan25903">φ</tspan><tspan
+           style="font-size:65%;baseline-shift:sub"
+           id="tspan4501">1</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';baseline-shift:sub"
+           id="tspan13574" /></tspan></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="text2294-2-9-3-3-5-5-3"
+       y="44.979168"
+       x="153.17883"
+       style="font-size:2.46944px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+         y="44.979168"
+         x="153.17883"
+         id="tspan2292-1-1-7-9-5-5-2"
+         sodipodi:role="line"><tspan
+           style="font-style:italic"
+           id="tspan25903-0">φ</tspan><tspan
+           style="font-size:65%;baseline-shift:sub"
+           id="tspan4501-8">rec</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';baseline-shift:sub"
+           id="tspan13574-2" /></tspan></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-ydpi="500"
+       inkscape:export-xdpi="500"
+       id="text2052-45-0-2-6-6"
+       y="49.516022"
+       x="149.06656"
+       style="font-style:normal;font-weight:normal;font-size:2.82223px;line-height:1.25;font-family:'Fira Sans';fill:#023eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         y="49.516022"
+         x="149.06656"
+         id="tspan2050-8-4-1-5-1"
+         sodipodi:role="line">ε</tspan><tspan
+         id="tspan2054-9-3-0-7-2"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
+         y="53.043808"
+         x="149.06656"
+         sodipodi:role="line" /></text>
+    <path
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-ydpi="500"
+       inkscape:export-xdpi="500"
+       style="fill:none;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.3, 0.3;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 138.90625,44.979167 v 26.458333 0"
+       id="path1421-2-7" />
+    <path
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-ydpi="500"
+       inkscape:export-xdpi="500"
+       style="fill:none;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.3, 0.3;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 121.70833,44.979167 v 26.458333 0"
+       id="path1421-2-7-4" />
+    <path
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-ydpi="500"
+       inkscape:export-xdpi="500"
+       style="fill:none;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.3, 0.3;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 113.77082,44.979167 v 6.614583 0"
+       id="path1421-2-7-4-9" />
+    <ellipse
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-ydpi="500"
+       inkscape:export-xdpi="500"
+       transform="scale(-1)"
+       style="fill:#b4b4b4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path1583-6-5-6-2"
+       sodipodi:type="arc"
+       sodipodi:cx="-149.48961"
+       sodipodi:cy="-68.791641"
+       sodipodi:rx="0.74900049"
+       sodipodi:ry="2.5273936"
+       sodipodi:start="3.1415927"
+       sodipodi:end="0"
+       sodipodi:arc-type="slice"
+       d="m -150.23861,-68.791641 a 0.74900049,2.5273936 0 0 1 0.749,-2.527394 0.74900049,2.5273936 0 0 1 0.749,2.527394 h -0.749 z" />
+    <path
+       style="fill:#023eff;fill-opacity:1;stroke:#023eff;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart-6)"
+       d="m 113.20547,48.577642 h -4.72631"
+       id="path7736-5-6"
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="fill:#023eff;fill-opacity:1;stroke:#023eff;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart-6-5)"
+       d="m 98.274683,48.577642 h 4.726337"
+       id="path7736-5-6-3"
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="text2294-2-9-3-3-5-5-0-7"
+       y="54.239582"
+       x="91.939766"
+       style="font-size:2.46944px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+         y="54.239582"
+         x="91.939766"
+         id="tspan2292-1-1-7-9-5-5-0-8"
+         sodipodi:role="line"><tspan
+           style="font-style:italic"
+           id="tspan25903-0-9">φ</tspan><tspan
+           style="font-size:65%;baseline-shift:sub"
+           id="tspan4501-9-8">2</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';baseline-shift:sub"
+           id="tspan13574-2-0" /></tspan></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="text2294-2-9-3-3-5-5-0-7-3"
+       y="54.239582"
+       x="95.908524"
+       style="font-size:2.46944px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+         y="54.239582"
+         x="95.908524"
+         id="tspan2292-1-1-7-9-5-5-0-8-5"
+         sodipodi:role="line"><tspan
+           style="font-style:italic"
+           id="tspan25903-0-9-1">φ</tspan><tspan
+           style="font-size:65%;baseline-shift:sub"
+           id="tspan4501-9-8-3">2</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';baseline-shift:sub"
+           id="tspan13574-2-0-8" /></tspan></text>
+    <text
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       id="text2294-2-9-3-3-5-5-0-7-3-8"
+       y="54.239582"
+       x="113.10645"
+       style="font-size:2.46944px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+         y="54.239582"
+         x="113.10645"
+         id="tspan2292-1-1-7-9-5-5-0-8-5-9"
+         sodipodi:role="line"><tspan
+           style="font-style:italic"
+           id="tspan25903-0-9-1-0">φ</tspan><tspan
+           style="font-size:65%;baseline-shift:sub"
+           id="tspan4501-9-8-3-1">2</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';baseline-shift:sub"
+           id="tspan13574-2-0-8-5" /></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Normal';stroke-width:0.264583"
+       x="87.3125"
+       y="71.4375"
+       id="text7173"
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan7171"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
+         x="87.3125"
+         y="71.4375">g<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';baseline-shift:sub"
+   id="tspan8629">1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Normal';stroke-width:0.264583"
+       x="93.985176"
+       y="71.4375"
+       id="text7173-3"
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan7171-8"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
+         x="93.985176"
+         y="71.4375">g<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';baseline-shift:sub"
+   id="tspan8629-2">2</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Normal';stroke-width:0.264583"
+       x="97.954842"
+       y="71.4375"
+       id="text7173-3-7"
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan7171-8-4"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
+         x="97.954842"
+         y="71.4375">g<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';baseline-shift:sub"
+   id="tspan8629-2-0">3</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Normal';stroke-width:0.264583"
+       x="119.06831"
+       y="71.4375"
+       id="text7173-3-7-5"
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan7171-8-4-1"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
+         x="119.06831"
+         y="71.4375">g<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';baseline-shift:sub"
+   id="tspan8629-2-0-5">4</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Normal';stroke-width:0.264583"
+       x="138.91206"
+       y="71.4375"
+       id="text7173-3-7-5-4"
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan7171-8-4-1-3"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
+         x="138.91206"
+         y="71.4375">g<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';baseline-shift:sub"
+   id="tspan8629-2-0-5-4">4</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Normal';stroke-width:0.264583"
+       x="150.8125"
+       y="71.4375"
+       id="text7173-3-7-5-4-3"
+       inkscape:export-filename="/Users/yongrenjie/dphil/paper/genesis/figures/hmbc_pulprog.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan7171-8-4-1-3-8"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';stroke-width:0.264583"
+         x="150.8125"
+         y="71.4375">g<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';baseline-shift:sub"
+   id="tspan8629-2-0-5-4-5">5</tspan></tspan></text>
+    <rect
+       style="fill:none;stroke:#e8000b;stroke-width:0.25;stop-color:#000000"
+       id="rect14894"
+       width="3.96875"
+       height="7.9375"
+       x="87.3125"
+       y="54.239582"
+       ry="0.7937513" />
+  </g>
+</svg>
