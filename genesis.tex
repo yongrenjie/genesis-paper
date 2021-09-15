@@ -19,10 +19,11 @@
 \usepackage[final]{microtype}
 % }}}1
 % Packages and settings {{{1
-\usepackage[version=4]{mhchem}
 \usepackage[font=small,labelfont=it,margin=15pt]{caption}
 \usepackage{fullpage,parskip,graphicx,float,braket,setspace,subcaption}
 \usepackage[dvipsnames]{xcolor}
+\usepackage{chemformula}
+\setchemformula{math-scripts=true}
 \usepackage[style=chem-acs,subentry,doi]{biblatex}
 \addbibresource{genesis.bib}
 \graphicspath{{./figures/}}
@@ -61,9 +62,9 @@
 \newcommand{\genesistitle}{Modular pulse programme generation for NOAH supersequences}
 \newcommand{\crl}{Chemistry Research Laboratory, Department of Chemistry, University of Oxford, Mansfield Road, Oxford, OX1 3TA, U.K.}
 \newcommand{\brukeruk}{Bruker UK Ltd., Banner Lane, Coventry, CV4 9GH, U.K.}
-\newcommand{\proton}{\ce{^{1}H}}
-\newcommand{\carbon}{\ce{^{13}C}}
-\newcommand{\nitrogen}{\ce{^{15}N}}
+\newcommand{\proton}{\ch{^{1}H}}
+\newcommand{\carbon}{\ch{^{13}C}}
+\newcommand{\nitrogen}{\ch{^{15}N}}
 \newcommand{\CH}{\carbon{}--\proton{}}
 \newcommand{\HC}{\proton{}--\carbon{}}
 \newcommand{\NH}{\nitrogen{}--\proton{}}
@@ -71,13 +72,13 @@
 \newcommand{\HH}{\proton{}--\proton{}}
 \newcommand{\todo}[1]{\textcolor{WildStrawberry}{#1}}
 \newcommand{\autociteset}[1]{\autocite{\usebibentry{#1}{entryset}}}
-\newcommand{\onejch}{{}^1\!J_{\ce{CH}}}
-\newcommand{\njch}{{}^n\!J_{\ce{CH}}}
-\newcommand{\onejnh}{{}^1\!J_{\ce{NH}}}
+\newcommand{\onejch}{{}^1\!J_{\ch{CH}}}
+\newcommand{\njch}{{}^n\!J_{\ch{CH}}}
+\newcommand{\onejnh}{{}^1\!J_{\ch{NH}}}
 \newcommand{\theurl}{\url{https://nmr-genesis.co.uk}}
-\newcommand*{\andro}{Spectra were obtained on a \SI{700}{\MHz} Bruker AV III equipped with a TCI H/C/N cryoprobe; the sample used was \SI{40}{\milli\molar} andrographolide in DMSO-$d_6$.}
-\newcommand*{\grami}{Spectra were obtained on a \SI{700}{\MHz} Bruker AV III equipped with a TCI H/C/N cryoprobe; the sample used was \SI{40}{\milli\molar} gramicidin in DMSO-$d_6$.}
-\newcommand*{\zolmi}{Spectra were obtained on a \SI{700}{\MHz} Bruker AV III equipped with a TCI H/C/N cryoprobe; the sample used was \SI{50}{\milli\molar} zolmitriptan in DMSO-$d_6$.}
+\newcommand*{\andro}{Spectra were obtained on a \SI{700}{\MHz} Bruker AV III equipped with a TCI H/C/N cryoprobe; the sample used was \SI{40}{\milli\molar} andrographolide in DMSO-\(d_6\).}
+\newcommand*{\grami}{Spectra were obtained on a \SI{700}{\MHz} Bruker AV III equipped with a TCI H/C/N cryoprobe; the sample used was \SI{40}{\milli\molar} gramicidin in DMSO-\(d_6\).}
+\newcommand*{\zolmi}{Spectra were obtained on a \SI{700}{\MHz} Bruker AV III equipped with a TCI H/C/N cryoprobe; the sample used was \SI{50}{\milli\molar} zolmitriptan in DMSO-\(d_6\).}
 % }}}1
 % Counters for the combinatorics {{{1
 \newcount\nmoda
@@ -130,11 +131,11 @@ This not only allows users to obtain customised supersequences for specific appl
 
 \section{Introduction}
 
-The acceleration of NMR data acquisition has in recent years proven a fruitful area for NMR pulse sequence and method development, particularly for $n$-dimensional ($n$D) NMR where raw data is acquired as a series of increments.
+The acceleration of NMR data acquisition has in recent years proven a fruitful area for NMR pulse sequence and method development, particularly for \(n\)-dimensional (\(n\)D) NMR where raw data is acquired as a series of increments.
 Developments in this area include (but are not limited to) ultrafast NMR\autociteset{ultrafast}, non-uniform sampling (NUS)\autociteset{nus}, multiple-FID experiments\autociteset{multifid}, and the shortening or elision of recovery delays\autociteset{reducedd1}.
 In this paper, we focus on NOAH (NMR by Ordered Acquisition using \proton{}-detection) experiments,\autociteset{noah} which fall under the last two categories.
 NOAH experiments consist of a series of up to five 2D experiments (``modules''), combined into one single ``supersequence'' which uses only one recovery delay for all modules.
-This provides substantial (up to $4\times$) time savings compared to conventional acquisition, in which one recovery delay is used for each module (\cref{fig:noah_diagram}).
+This provides substantial (up to \(4\times\)) time savings compared to conventional acquisition, in which one recovery delay is used for each module (\cref{fig:noah_diagram}).
 
 \begin{figure}
     \centering
@@ -142,7 +143,7 @@ This provides substantial (up to $4\times$) time savings compared to conventiona
     {\phantomsubcaption\label{fig:noah_diagram_noah}}
     {\phantomsubcaption\label{fig:noah_diagram_conventional}}
     \caption{
-        \textbf{(\subref{fig:noah_diagram_noah})} Diagrammatic representation of a NOAH supersequence, where only one recovery delay ($d_1$) is used for the entire experiment.
+        \textbf{(\subref{fig:noah_diagram_noah})} Diagrammatic representation of a NOAH supersequence, where only one recovery delay (\(d_1\)) is used for the entire experiment.
         \textbf{(\subref{fig:noah_diagram_conventional})} Conventional 2D NMR data acquisition, where one recovery delay is used per dataset.
     }
     \label{fig:noah_diagram}
@@ -151,14 +152,14 @@ This provides substantial (up to $4\times$) time savings compared to conventiona
 Virtually all common 2D experiments have been implemented in NOAH supersequences to date, including HMBC, HSQC, HSQC-TOCSY, HMQC, COSY, TOCSY, NOESY, and ROESY.
 Each module is given a unique abbreviation, usually one letter long (e.g.\ `B' for HMBC, `S' for HSQC, `M' for HMQC, `C' for COSY) and occasionally sub/superscripted (e.g.\ `S\textsuperscript{T}' for HSQC-TOCSY or `S\textsuperscript{+}' for seHSQC).
 The combinatorial nature of NOAH experiments means that there are a very large number of conceivable supersequences ranging from NOAH-2 to NOAH-5 (where the suffix indicates the number of modules).
-In principle, this figure is on the order of $N^5$, where $N$ is the number of available modules: as of the time of writing, $N$ is 27, which in total yields more than 10 million NOAH supersequences.
+In principle, this figure is on the order of \(N^5\), where \(N\) is the number of available modules: as of the time of writing, \(N\) is 27, which in total yields more than 10 million NOAH supersequences.
 
 For optimal data quality in terms of both sensitivity and artefact minimisation, there are certain conditions on NOAH supersequences.
 Specifically, NOAH modules placed earlier in a supersequence should ideally utilise only the specific magnetisation they require.
-As a concrete example, in the NOAH-2 SC supersequence (HSQC and COSY), the \HC{} HSQC module is designed to excite only the \proton{} nuclei directly attached to the 1.1\%-natural abundance \carbon{} and leave all other proton magnetisation (the ``bulk magnetisation'') along the equilibrium $+z$ axis.\autocite{SchulzeSunninghausen2014JACS}
+As a concrete example, in the NOAH-2 SC supersequence (HSQC and COSY), the \HC{} HSQC module is designed to excite only the \proton{} nuclei directly attached to the 1.1\%-natural abundance \carbon{} and leave all other proton magnetisation (the ``bulk magnetisation'') along the equilibrium \(+z\) axis.\autocite{SchulzeSunninghausen2014JACS}
 A \HH{} COSY module (or TOCSY, or NOESY, etc.) can then draw on this bulk magnetisation, with almost no loss in sensitivity and without having to wait for the \carbon{}-bound protons to relax.
 Conversely, if the COSY module were placed first, the \carbon{}-bound proton magnetisation would not survive for use in the HSQC: thus, the HSQC module in a NOAH-2 CS would display severe sensitivity losses, as compared to in a NOAH-2 SC.
-More subtle factors are also abound, such as in the SBC sequence\autocite{Kupce2017ACIE}, where COSY intensities are modulated by $T_2$ relaxation and $J_{\ce{HH}}$ evolution.
+More subtle factors are also abound, such as in the SBC sequence\autocite{Kupce2017ACIE}, where COSY intensities are modulated by \(T_2\) relaxation and \(J_{\ch{HH}}\) evolution.
 The alternative BSC arrangement\autocite{Kupce2018CC}, especially with isotropic ``ASAP'' mixing applied before the COSY, circumvents this issue and has become the preferred implementation for HMBC/HSQC combinations\autocite{Claridge2019MRC}.
 
 Considerations such as these restrict the set of ``effective'' NOAH supersequences.
@@ -196,12 +197,12 @@ Internally, these are mapped to a series of \texttt{NOAHModule} objects, each of
     \centering
     \includegraphics[width=0.8\textwidth]{pulprog_code.png}
     \caption{
-        Abridged pulse programme for a NOAH-2 $\mathrm{S^+C^c}$ supersequence (\carbon{} seHSQC + CLIP-COSY).
+        Abridged pulse programme for a NOAH-2 \(\mathrm{S^+C^c}\) supersequence (\carbon{} seHSQC + CLIP-COSY).
         Specific sections of interest are numbered on the left.
         \textbf{(1)} Module-specific delays are given unique identifiers to prevent clashes and to improve readability.
         \textbf{(2)} TopSpin parameters (delays such as \texttt{d4}) are standardised between modules.
         \textbf{(3)} The pulse programme instructions themselves begin here.
-        \textbf{(4)} $t_1$ incrementation and echo--antiecho gradient inversion is carried out with the appropriate frequency (once per loop or once per two loops).
+        \textbf{(4)} \(t_1\) incrementation and echo--antiecho gradient inversion is carried out with the appropriate frequency (once per loop or once per two loops).
         \textbf{(5)} Pulse and receiver phase cycles are standardised between modules.
         \textbf{(6)} Comments for gradient pulses are compatible with the TopSpin \texttt{gppp} script.
         \textbf{(7)} Instructions for generating shaped pulses using TopSpin's WaveMaker software.
@@ -218,7 +219,7 @@ Using this information, GENESIS then constructs the pulse programme in several s
     \item Parameter definitions from each module are then collated, taking particular care to avoid duplicate definitions for parameters used in multiple modules;
     \item The main section, which contains the actual instructions for the pulse sequence, is then put together.
         This is done mostly by concatenating individual modules together, although there are also context-sensitive blocks placed \textit{between} modules such as purge pulses, gradients, or ASAP mixing\autocite{Claridge2019MRC} in BSX-type supersequences (X being any homonuclear module);
-    \item Appropriate looping and incrementation of parameters such as phase cycles, $t_1$ delays, and gradient amplitudes for echo--antiecho selection is added at the end of the main section;
+    \item Appropriate looping and incrementation of parameters such as phase cycles, \(t_1\) delays, and gradient amplitudes for echo--antiecho selection is added at the end of the main section;
     \item Additional comments containing descriptive text for parameters (displayed in TopSpin's \texttt{ased} parameter setup screen), as well as gradient and shaped pulse information (which allow direct setup using the \texttt{gppp} and \texttt{wvm} commands), are added at this stage.
         These are collated by scanning the main section for TopSpin parameters (e.g.\ delays, pulses, gradients) and obtaining their descriptions from a lookup table;
     \item Finally, to ensure full reproducibility in the pulse programme generation, we also specify the exact modules used in the pulse programme, the GENESIS version number, and a timestamp.
@@ -231,10 +232,10 @@ It also offers download links for the AU scripts used for processing, as well as
 
 An immediate problem of directly concatenating pulse programme texts from different modules is that a given parameter in one module may take on a different value in another module.
 As a necessary step to prevent such clashes, we have fully standardised all parameters used in the GENESIS pulse programmes.
-These include pulse widths (\texttt{p}), delays (\texttt{d}), constants (\texttt{cnst}), $z$-gradient amplitudes (\texttt{gpz}), and phase cycles (\texttt{ph}).
-Thus, \texttt{d2} is always $1 / (2 \cdot \onejch)$, and \texttt{d4} is always $1 / (4 \cdot \onejch)$.
+These include pulse widths (\texttt{p}), delays (\texttt{d}), constants (\texttt{cnst}), \(z\)-gradient amplitudes (\texttt{gpz}), and phase cycles (\texttt{ph}).
+Thus, \texttt{d2} is always \(1 / (2 \cdot \onejch)\), and \texttt{d4} is always \(1 / (4 \cdot \onejch)\).
 Where possible, we have chosen meanings that are similar to those in the standard library of Bruker pulse programmes.
-However, there are invariably some small deviations: for example, the $\Delta'$ delay in the \carbon{} sensitivity-enhanced HSQC (which can range from $1/(8 \cdot\onejch)$ to $1/(4 \cdot\onejch)$)\autocite{Schleucher1994JBNMR} is \texttt{d24} in the standard library, but we have chosen \texttt{d6} because \texttt{d24} is reserved for $1 / (4 \cdot \onejnh)$.
+However, there are invariably some small deviations: for example, the \(\Delta'\) delay in the \carbon{} sensitivity-enhanced HSQC (which can range from \(1/(8 \cdot\onejch)\) to \(1/(4 \cdot\onejch)\))\autocite{Schleucher1994JBNMR} is \texttt{d24} in the standard library, but we have chosen \texttt{d6} because \texttt{d24} is reserved for \(1 / (4 \cdot \onejnh)\).
 
 In place of module-specific delays which are often called \texttt{DELTA1}, \ldots{} in standard library sequences, we have chosen to define new identifiers with more human-readable names inside the pulse programme itself.
 Thus, the delays in a HSQC sequence might be called \texttt{DC\_HSQC1}, \ldots{}, where the first \texttt{C} indicates the indirect-dimension nucleus (\carbon{}).
@@ -248,7 +249,7 @@ In principle, it is possible to set up a single ``prototype'' parameter set whic
     \centering
     \includegraphics[width=0.85\textwidth]{flowchart.png}
     \caption{
-        Flowchart illustrating how GENESIS decides the form of the $zz$-filter to be used in a HMBC module.
+        Flowchart illustrating how GENESIS decides the form of the \(zz\)-filter to be used in a HMBC module.
         Dotted lines represent the branch where developer mode is enabled, i.e.\ the user has full control over which form is used: these are labelled by alphabetical codes starting with \texttt{C\_HMBC} (the website contains a full description of these codes).
         Solid lines represent the branch where developer mode is not enabled: in this case, GENESIS chooses the appropriate module based on what other modules are present in the supersequence.
     }
@@ -256,9 +257,9 @@ In principle, it is possible to set up a single ``prototype'' parameter set whic
 \end{figure}
 
 Another potential issue is that different versions of a pulse sequence often exist.
-A simple example is the $zz$-HMBC\autocite{Kupce2018CC,Kupce2019JMR}, where the $zz$-filter element is used to retain \carbon{}-bound and optionally \nitrogen{}-bound \proton{} magnetisation, depending on what modules follow.
-Since the user only specifies that they want a HMBC module and not the exact details of the $zz$-filter, the GENESIS code must in effect make this choice for the user (\cref{fig:flowchart}).
-The sensitivity-enhanced HSQC (seHSQC, abbreviated `$\mathrm{S^+}$'/\texttt{Sp}) presents a similar case.
+A simple example is the \(zz\)-HMBC\autocite{Kupce2018CC,Kupce2019JMR}, where the \(zz\)-filter element is used to retain \carbon{}-bound and optionally \nitrogen{}-bound \proton{} magnetisation, depending on what modules follow.
+Since the user only specifies that they want a HMBC module and not the exact details of the \(zz\)-filter, the GENESIS code must in effect make this choice for the user (\cref{fig:flowchart}).
+The sensitivity-enhanced HSQC (seHSQC, abbreviated `\(\mathrm{S^+}\)'/\texttt{Sp}) presents a similar case.
 If the seHSQC module is followed by one or more homonuclear modules such as a COSY or NOESY, then the ZIP-seHSQC\autocite{Hansen2021AC,Yong2021JMR} should be used, as this preserves the requisite magnetisation for the later modules.
 However, if the seHSQC module is used last in the sequence, then the original Cavanagh--Rance--Kay seHSQC\autociteset{sehsqc} should be used in order to maximise sensitivity.
 
@@ -278,27 +279,27 @@ The initial GENESIS release already contains a number of such improvements, some
     {\phantomsubcaption\label{fig:hmbc_comp_before}}
     {\phantomsubcaption\label{fig:hmbc_comp_after}}
     \caption{
-        \textbf{(\subref{fig:hmbc_comp_pulprog})} The NOAH $zz$-HMBC pulse sequence, with the newly added \carbon{} \ang{90} pulse highlighted in red.
-        The delays are $\Delta = 1/(4 \cdot \onejch)$ and $\Delta_{\text{LR}} = 1/(2 \cdot \njch)$; $\varepsilon$ is the minimum time required for a gradient plus the subsequent recovery delay.
-        Phase cycling is performed as follows: $\phi_1 = x, -x$; $\phi_2 = x, x, -x, -x$; $\phi_{\text{rec}} = x, -x, -x, x$.
-        All gradients have duration \SI{1}{ms}; amplitudes as a fraction of the maximum gradient strength (\SI{55.7}{G\per\cm}) are as follows: $g_1 = -15\%$; $g_2 = 10\%$; $g_3 = 5\%$; $g_4 = 80\%$; $g_5 = \pm 40.2\%$.
-        \textbf{(\subref{fig:hmbc_comp_before})} HMBC spectrum obtained using the original $zz$-HMBC module, i.e.\ without the added \ang{90} pulse.
-        $\onejch{}$ artefacts are highlighted in red boxes.
+        \textbf{(\subref{fig:hmbc_comp_pulprog})} The NOAH \(zz\)-HMBC pulse sequence, with the newly added \carbon{} \ang{90} pulse highlighted in red.
+        The delays are \(\Delta = 1/(4 \cdot \onejch)\) and \(\Delta_{\text{LR}} = 1/(2 \cdot \njch)\); \(\varepsilon\) is the minimum time required for a gradient plus the subsequent recovery delay.
+        Phase cycling is performed as follows: \(\phi_1 = x, -x\); \(\phi_2 = x, x, -x, -x\); \(\phi_{\text{rec}} = x, -x, -x, x\).
+        All gradients have duration \SI{1}{ms}; amplitudes as a fraction of the maximum gradient strength (\SI{55.7}{G\per\cm}) are as follows: \(g_1 = -15\%\); \(g_2 = 10\%\); \(g_3 = 5\%\); \(g_4 = 80\%\); \(g_5 = \pm 40.2\%\).
+        \textbf{(\subref{fig:hmbc_comp_before})} HMBC spectrum obtained using the original \(zz\)-HMBC module, i.e.\ without the added \ang{90} pulse.
+        \(\onejch{}\) artefacts are highlighted in red boxes.
         \textbf{(\subref{fig:hmbc_comp_after})} HMBC spectrum obtained with the added \ang{90} pulse.
         \andro{}
     }
     \label{fig:hmbc_comp}
 \end{figure}
 
-The $zz$-HMBC module is ordinarily placed first in a supersequence, where the $zz$-filter element serves to preserve magnetisation of protons directly coupled to \carbon{} and/or \nitrogen{}.\autocite{Kupce2018CC,Kupce2019JMR}
-Specifically, the $zz$-filter acts as a \ang{90} excitation pulse on uncoupled protons, while leaving coupled protons along $+z$.
+The \(zz\)-HMBC module is ordinarily placed first in a supersequence, where the \(zz\)-filter element serves to preserve magnetisation of protons directly coupled to \carbon{} and/or \nitrogen{}.\autocite{Kupce2018CC,Kupce2019JMR}
+Specifically, the \(zz\)-filter acts as a \ang{90} excitation pulse on uncoupled protons, while leaving coupled protons along \(+z\).
 This is largely accomplished in practice, as evidenced by the fact that the intensities in subsequent HSQC-type modules are barely perturbed.
-However, not all of the coupled magnetisation is perfectly retained: in particular, the $zz$-filter also generates a degree of \textit{antiphase} magnetisation of the form $2\mathrm{H}_x\mathrm{C}_z$.
+However, not all of the coupled magnetisation is perfectly retained: in particular, the \(zz\)-filter also generates a degree of \textit{antiphase} magnetisation of the form \(2\mathrm{H}_x\mathrm{C}_z\).
 This antiphase magnetisation is later refocused during the low-pass J-filter (LPJF) to give in-phase magnetisation, eventually ending up as one-bond correlation artefacts in the HMBC spectrum (\cref{fig:hmbc_comp_before}).
 
-A simple solution to this is to add a \carbon{} \ang{90} pulse at the end of the $zz$-filter (\cref{fig:hmbc_comp_pulprog}): this converts any antiphase magnetisation to double- or zero-quantum magnetisation, which is later destroyed by the LPJF.
+A simple solution to this is to add a \carbon{} \ang{90} pulse at the end of the \(zz\)-filter (\cref{fig:hmbc_comp_pulprog}): this converts any antiphase magnetisation to double- or zero-quantum magnetisation, which is later destroyed by the LPJF.
 This idea has previously been used by Luy and coworkers in CLIP-HSQC experiments to remove antiphase contributions prior to FID detection.\autocite{Enthart2008JMR}
-In the event, this small modification proved to have a large impact, almost completely suppressing the $\onejch$ artefacts (\cref{fig:hmbc_comp_after}).
+In the event, this small modification proved to have a large impact, almost completely suppressing the \(\onejch\) artefacts (\cref{fig:hmbc_comp_after}).
 Further comparisons of artefact intensity are provided in \cref{sec:si_hmbc}.
 
 \subsection{\texorpdfstring{\nitrogen{}}{15N} HMQC gradient scheme}
@@ -313,33 +314,34 @@ Further comparisons of artefact intensity are provided in \cref{sec:si_hmbc}.
     {\phantomsubcaption\label{fig:hmqc_comp_spec_after}}
     \caption{
         \textbf{(\subref{fig:hmqc_comp_pulprog})} A general outline of the NOAH \nitrogen{} HMQC module.
-        $g_2$ has a duration which matches that of $g_1$ (explained below), and an amplitude of $\pm n \cdot 8.1\%$, where $n$ is the number of CTP gradients bracketing the $t_1$ period.
-        $g_1$ has an amplitude of $80\%$ in all cases.
+        \(g_2\) has a duration which matches that of \(g_1\) (explained below), and an amplitude of \(\pm n \cdot 8.1\%\), where \(n\) is the number of CTP gradients bracketing the \(t_1\) period.
+        \(g_1\) has an amplitude of \(80\%\) in all cases.
         All other symbols have the same meaning as in \cref{fig:hmbc_comp}.
         \textbf{(\subref{fig:hmqc_comp_pulprog_before})} The previously published coherence selection scheme for the HMQC module, with four gradients each of duration \SI{1}{ms}.
         \textbf{(\subref{fig:hmqc_comp_pulprog_after})} The new coherence selection scheme for the HMQC module, with two gradients each of duration \SI{2.5}{ms}.
-        \textbf{(\subref{fig:hmqc_comp_spec_before})--(\subref{fig:hmqc_comp_spec_after})} CLIP-COSY spectra obtained from a NOAH-3 $\mathrm{MS^+C^c}$ supersequence (\nitrogen{} HMQC + \carbon{} seHSQC + CLIP-COSY), acquired with the gradient schemes shown in (\subref{fig:hmqc_comp_pulprog_before}) and (\subref{fig:hmqc_comp_pulprog_after}) respectively.
+        \textbf{(\subref{fig:hmqc_comp_spec_before})--(\subref{fig:hmqc_comp_spec_after})} CLIP-COSY spectra obtained from a NOAH-3 \(\mathrm{MS^+C^c}\) supersequence (\nitrogen{} HMQC + \carbon{} seHSQC + CLIP-COSY), acquired with the gradient schemes shown in (\subref{fig:hmqc_comp_pulprog_before}) and (\subref{fig:hmqc_comp_pulprog_after}) respectively.
         The wing artefacts in the former spectrum are highlighted in red boxes.
         \zolmi{}
     }
     \label{fig:hmqc_comp}
 \end{figure}
 
-We have recently described the occurrence of ``wing artefacts'' in homonuclear modules, which arise from bulk magnetisation which evolves during either half of $t_1$ in a preceding heteronuclear module.\autocite{Yong2021JMR}
-These artefacts can be removed in an elegant manner by ensuring that each half of $t_1$ in a HMQC/HSQC/seHSQC module contains coherence transfer pathway (CTP) gradients of equal sign and magnitude, which makes sure that any bulk magnetisation undergoing net evolution during $t_1$ is dephased.
+We have recently described the occurrence of ``wing artefacts'' in homonuclear modules, which arise from bulk magnetisation which evolves during either half of \(t_1\) in a preceding heteronuclear module.\autocite{Yong2021JMR}
+These artefacts can be removed in an elegant manner by ensuring that each half of \(t_1\) in a HMQC/HSQC/seHSQC module contains coherence transfer pathway (CTP) gradients of equal sign and magnitude, which makes sure that any bulk magnetisation undergoing net evolution during \(t_1\) is dephased.
 
-At the same time, it is also important that the final gradient in the heteronuclear module have as large an amplitude as possible, since this gradient is responsible for dephasing bulk magnetisation that is not returned to $+z$ just prior to the detection period.
-In order to accomplish this, the previous \nitrogen{} HMQC module used bipolar opposing gradients in either half of $t_1$, a scheme which allows the final refocusing CTP gradient $g_2$ to have an amplitude of $4g_1(\gamma_{\ce{N}} / \gamma_{\ce{H}})$ (\cref{fig:hmqc_comp_pulprog_before}).
+At the same time, it is also important that the final gradient in the heteronuclear module have as large an amplitude as possible, since this gradient is responsible for dephasing bulk magnetisation that is not returned to \(+z\) just prior to the detection period.
+In order to accomplish this, the previous \nitrogen{} HMQC module used bipolar opposing gradients in either half of \(t_1\), a scheme which allows the final refocusing CTP gradient \(g_2\) to have an amplitude of \(4g_1(\gamma_{\ch{N}} / \gamma_{\ch{H}})\) (\cref{fig:hmqc_comp_pulprog_before}).
 Although this leads to excellent artefact suppresion in the \nitrogen{} HMQC itself, wing artefacts are apparent in downstream modules (\cref{fig:hmqc_comp_spec_before}), because the opposing gradients cancel each other out and do not enforce any CTP selection on the bulk magnetisation.
 
-The solution to this is to only use two gradients during $t_1$ (one in either half), and to \textit{lengthen} their duration such that the final gradient $g_2$ provides sufficient dephasing in the HMQC itself (\cref{fig:hmqc_comp_pulprog_after}).
+The solution to this is to only use two gradients during \(t_1\) (one in either half), and to \textit{lengthen} their duration such that the final gradient \(g_2\) provides sufficient dephasing in the HMQC itself (\cref{fig:hmqc_comp_pulprog_after}).
 This strategy was previously described for the \nitrogen{} seHSQC;\autocite{Yong2021JMR} here we have also applied it to the HMQC with success (\cref{fig:hmqc_comp_spec_after}).
+This change causes no significant difference in the sensitivity of the HMQC module itself (\cref{fig:hmqc_comp_snr}).
 
 \subsection{PSYCHE and 2DJ modules}
 
-In previous work,\autocite{Yong2021JMR} we described how \HN{} modules could be implemented with optional ``$k$-scaling''.\autocite{PerezTrujillo2007MRC}
-This entails a reduction in the number of $t_1$ increments (by a factor of $k$), in return for a corresponding increase in the number of transients per increment, with no overall change in the experimental time.
-Particularly for the HMQC experiment, this allowed modest gains in sensitivity as $J_{\ce{HH}}$ splittings were no longer resolved in the indirect dimension.
+In previous work,\autocite{Yong2021JMR} we described how \HN{} modules could be implemented with optional ``\(k\)-scaling''.\autocite{PerezTrujillo2007MRC}
+This entails a reduction in the number of \(t_1\) increments (by a factor of \(k\)), in return for a corresponding increase in the number of transients per increment, with no overall change in the experimental time.
+Particularly for the HMQC experiment, this allowed modest gains in sensitivity as \(J_{\ch{HH}}\) splittings were no longer resolved in the indirect dimension.
 
 \begin{figure}[ht]
     \centering
@@ -348,9 +350,9 @@ Particularly for the HMQC experiment, this allowed modest gains in sensitivity a
     {\phantomsubcaption\label{fig:psyche_c13_sehsqc}}
     {\phantomsubcaption\label{fig:psyche_psyche}}
     \caption{
-        Spectra obtained from a NOAH-3 $\mathrm{S^{+}_{N}S^{+}P^T}$ supersequence.
-        \textbf{(\subref{fig:psyche_n15_sehsqc})} \nitrogen{} sensitivity-enhanced HSQC\autocite{Yong2021JMR} (256 $t_1$ increments, 2 scans per increment).
-        \textbf{(\subref{fig:psyche_c13_sehsqc})} \carbon{} sensitivity-enhanced HSQC\autocite{Hansen2021AC,Yong2021JMR} (256 $t_1$ increments, 2 scans per increment).
+        Spectra obtained from a NOAH-3 \(\mathrm{S^{+}_{N}S^{+}P^T}\) supersequence.
+        \textbf{(\subref{fig:psyche_n15_sehsqc})} \nitrogen{} sensitivity-enhanced HSQC\autocite{Yong2021JMR} (256 \(t_1\) increments, 2 scans per increment).
+        \textbf{(\subref{fig:psyche_c13_sehsqc})} \carbon{} sensitivity-enhanced HSQC\autocite{Hansen2021AC,Yong2021JMR} (256 \(t_1\) increments, 2 scans per increment).
         \textbf{(\subref{fig:psyche_c13_sehsqc})} 1D TSE-PSYCHE pure shift spectrum\autocite{Foroozandeh2015CC} (saltire flip angle of \ang{10}, 32 chunks, 16 scans per chunk).
         \grami{}
     }
@@ -358,7 +360,7 @@ Particularly for the HMQC experiment, this allowed modest gains in sensitivity a
 \end{figure}
 
 A simple extension of this protocol to \textit{homonuclear} \proton{}--\proton{} modules enables experiments such as 2D J-resolved or pseudo-2D pure shift spectroscopy to be incorporated into NOAH supersequences.
-In both cases, the number of $t_1$ increments needed (16--32) is far smaller than the typical number required for a 2D experiment (128--256).
+In both cases, the number of \(t_1\) increments needed (16--32) is far smaller than the typical number required for a 2D experiment (128--256).
 In particular, at present, we have implemented a family of PSYCHE experiments, namely the original pseudo-2D PSYCHE, the triple spin echo (TSE)-PSYCHE experiment which provides improved robustness towards strong coupling, and the PSYCHE 2DJ experiment which yields pure absorption-mode lineshapes.\autociteset{psyche}
 
 In PSYCHE spectra, the flip angle of the chirp or saltire pulses used in the J-refocusing element provides the experimentalist with a choice: a larger flip angle provides greater sensitivity, but at the cost of increased artefacts.\autocite{Foroozandeh2018CEJ}
@@ -379,7 +381,7 @@ It is still possible to specify the \texttt{USERPx} parameters, and these will o
 \label{subsec:nus}
 
 With the GENESIS pulse programmes we also introduce a new and more user-friendly implementation of non-uniform sampling (NUS).
-NOAH experiments do not work ``out of the box'' with TopSpin's conventional NUS setup routine: some special adjustments have to be made by manually generating the list of increments to be sampled and adjusting the $t_1$ delays accordingly.
+NOAH experiments do not work ``out of the box'' with TopSpin's conventional NUS setup routine: some special adjustments have to be made by manually generating the list of increments to be sampled and adjusting the \(t_1\) delays accordingly.
 Previously, this was accomplished using a Python script which created a new pulse programme for each supersequence, e.g.\ \texttt{noah3\_BSC.nus}.\autocite{Claridge2019MRC}
 We have modified this approach such that the \textit{same} pulse programme can be used for both uniform and non-uniform sampling, where NUS is controlled by an acquisition flag \texttt{-DNUS}.
 Although a (different) Python script is still required for initialisation, this means that it is no longer necessary to keep two separate instances of the same pulse sequence in TopSpin, and reduces the difficulty of turning NUS on and off.
@@ -508,10 +510,10 @@ This also does not include modules that are only available via the ``developer m
     {\phantomsubcaption\label{fig:hmbc_si_andro_trace4}}
     {\phantomsubcaption\label{fig:hmbc_si_andro_trace5}}
     \caption{
-        Comparisons of HMBC spectra obtained using the Bruker standard library sequences\autocite{Cicero2001JMR} \texttt{hmbcetgpl2nd} (with a third-order LPJF, first column); \texttt{hmbcetgpl2nd} (with a second-order LPJF, second column); and the NOAH $zz$-HMBC module (\cref{fig:hmbc_comp_pulprog}), before and after the added \carbon{} \ang{90} pulse (third and fourth columns respectively).
+        Comparisons of HMBC spectra obtained using the Bruker standard library sequences\autocite{Cicero2001JMR} \texttt{hmbcetgpl2nd} (with a third-order LPJF, first column); \texttt{hmbcetgpl2nd} (with a second-order LPJF, second column); and the NOAH \(zz\)-HMBC module (\cref{fig:hmbc_comp_pulprog}), before and after the added \carbon{} \ang{90} pulse (third and fourth columns respectively).
         \textbf{(\subref{fig:hmbc_si_andro_overall})} The full 2D spectra, plotted with the same contour levels.
-        \textbf{(\subref{fig:hmbc_si_andro_trace1})--(\subref{fig:hmbc_si_andro_trace5})} Multiple $f_1$ traces through the 2D spectra showing the $\onejch{}$ artefacts.
-        Each row is plotted with the same $y$-axis range.
+        \textbf{(\subref{fig:hmbc_si_andro_trace1})--(\subref{fig:hmbc_si_andro_trace5})} Multiple \(f_1\) traces through the 2D spectra showing the \(\onejch{}\) artefacts.
+        Each row is plotted with the same \(y\)-axis range.
         In all cases except (\subref{fig:hmbc_si_andro_trace5}), the addition of the \ang{90} pulse leads to far better artefact suppression; in many cases, its performance is comparable to the standard library third-order LPJF.
         \andro{}
     }
@@ -528,11 +530,35 @@ This also does not include modules that are only available via the ``developer m
     {\phantomsubcaption\label{fig:hmbc_si_zolmi_trace4}}
     {\phantomsubcaption\label{fig:hmbc_si_zolmi_trace5}}
     \caption{
-        The same as in \cref{fig:hmbc_si_andro}, but instead acquired with a sample of \SI{50}{\milli\molar} zolmitriptan in DMSO-$d_6$.
+        The same as in \cref{fig:hmbc_si_andro}, but instead acquired with a sample of \SI{50}{\milli\molar} zolmitriptan in DMSO-\(d_6\).
         Note that the peak labelled with an asterisk in (\subref{fig:hmbc_si_zolmi_trace1}) is a genuine correlation.
-        It is, however, flanked by a pair of $\onejch{}$ artefacts (most visible in the third column, i.e.\ NOAH $zz$-HMBC without added \ang{90} pulse).
+        It is, however, flanked by a pair of \(\onejch{}\) artefacts (most visible in the third column, i.e.\ NOAH \(zz\)-HMBC without added \ang{90} pulse).
     }
     \label{fig:hmbc_si_zolmi}
+\end{figure}
+
+\section{HMQC sensitivity comparison}
+\label{sec:si_hmqc_comp_snr}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{hmqc_comp_snr.png}
+    {\phantomsubcaption\label{fig:hmqc_comp_snr_bad2d}}
+    {\phantomsubcaption\label{fig:hmqc_comp_snr_good2d}}
+    {\phantomsubcaption\label{fig:hmqc_comp_snr_bad1d}}
+    {\phantomsubcaption\label{fig:hmqc_comp_snr_good1d}}
+    \caption{
+        Comparisons of \HN{} HMQC spectra obtained using the two gradient schemes shown in \cref{fig:hmqc_comp}.
+        \textbf{(\subref{fig:hmqc_comp_snr_bad2d})--(\subref{fig:hmqc_comp_snr_good2d})} Full 2D spectra.
+        The two desired signals are boxed.
+        Note the artefacts at \(f_2 = \SI{2.2}{\ppm}\); these arise from bulk magnetisation that is not fully dephased by the gradients in the HMQC module.
+        \textbf{(\subref{fig:hmqc_comp_snr_bad1d})--(\subref{fig:hmqc_comp_snr_good1d})} Positive projections of the spectra onto the \(f_2\) axis.
+        The relative intensities of the peaks and artefacts are shown in (\subref{fig:hmqc_comp_snr_good1d}).
+        Switching to the improved gradient scheme leads to no significant change in the intensity of the desired peaks (\(\geq 95\%\)), and halves the artefact intensity.
+        We previously reported similar results with the \HN{} seHSQC module.\autocite{Yong2021JMR}
+        \zolmi{}
+    }
+    \label{fig:hmqc_comp_snr}
 \end{figure}
 
 % Fakesection SI bibliography
