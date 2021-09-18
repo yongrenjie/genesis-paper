@@ -3,10 +3,10 @@ from aptenodytes import nmrd, enzip
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-path = nmrd() / '210909-7a-hmbc'
+path = nmrd() / '210916-7a-hmbc-morescans'
 plt.style.use(Path(__file__).parent / 'fira.mplstyle')
 
-expnos = [7, 6, 4001, 3001]
+expnos = [8, 7, 4001, 3001]
 dss = [pg.read(path, expno) for expno in expnos]
 labels = ['standard LP3',
           'standard LP2',
