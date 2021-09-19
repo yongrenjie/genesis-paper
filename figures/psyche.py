@@ -25,6 +25,8 @@ pg.ymove(axn, tight_layout=False)
 pg.ymove(axc, tight_layout=False)
 pg.cleanup_axes()
 
+pg.label_axes([axn, axc, axh], fstr="({})", fontweight="semibold")
+
 # pg.show()
 for filetype in [".png", ".svg"]:
     pg.savefig(str(Path(__file__)).replace(".py", filetype))

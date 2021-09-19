@@ -139,7 +139,7 @@ This provides substantial (up to \(4\times\)) time savings compared to conventio
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{noah_diagram.png}
+    \includegraphics[width=0.8\textwidth]{noah_diagram.pdf}
     {\phantomsubcaption\label{fig:noah_diagram_noah}}
     {\phantomsubcaption\label{fig:noah_diagram_conventional}}
     \caption{
@@ -247,7 +247,7 @@ In principle, it is possible to set up a single ``prototype'' parameter set whic
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.85\textwidth]{flowchart.png}
+    \includegraphics[width=0.85\textwidth]{flowchart.pdf}
     \caption{
         Flowchart illustrating how GENESIS decides the form of the \(zz\)-filter to be used in a HMBC module.
         Dotted lines represent the branch where developer mode is enabled, i.e.\ the user has full control over which form is used: these are labelled by alphabetical codes starting with \texttt{C\_HMBC} (the website contains a full description of these codes).
@@ -353,7 +353,7 @@ Particularly for the HMQC experiment, this allowed modest gains in sensitivity a
         Spectra obtained from a NOAH-3 \(\mathrm{S^{+}_{N}S^{+}P^T}\) supersequence.
         \textbf{(\subref{fig:psyche_n15_sehsqc})} \nitrogen{} sensitivity-enhanced HSQC\autocite{Yong2021JMR} (256 \(t_1\) increments, 2 scans per increment).
         \textbf{(\subref{fig:psyche_c13_sehsqc})} \carbon{} sensitivity-enhanced HSQC\autocite{Hansen2021AC,Yong2021JMR} (256 \(t_1\) increments, 2 scans per increment).
-        \textbf{(\subref{fig:psyche_c13_sehsqc})} 1D TSE-PSYCHE pure shift spectrum\autocite{Foroozandeh2015CC} (saltire flip angle of \ang{10}, 32 chunks, 16 scans per chunk).
+        \textbf{(\subref{fig:psyche_psyche})} 1D TSE-PSYCHE pure shift spectrum\autocite{Foroozandeh2015CC} (saltire flip angle of \ang{10}, 32 chunks, 16 scans per chunk).
         \grami{}
     }
     \label{fig:psyche}
@@ -375,7 +375,7 @@ NOAH data processing is done using the \texttt{splitx\_au} AU programme; this is
 Previously, the module-specific AU programmes had to be specified as the \texttt{USERP1}, \texttt{USERP2}, \ldots{} series of processing parameters.
 Since the GENESIS approach allows module-specific information such as these to be embedded within the pulse programme itself, this means that (with a small modification to the \texttt{splitx\_au} AU programme) we can parse the pulse programme to obtain the requisite list of AU programmes.
 The user therefore does not have to specify it explicitly, which makes setting up multiple different supersequences a much smoother process.
-It is still possible to specify the \texttt{USERPx} parameters, and these will override the AU programmes parsed from the pulse programme, but in practice there is no real reason to do so.
+If necessary, it is still possible to specify the \texttt{USERPx} parameters; these will override the AU programmes parsed from the pulse programme, allowing for customised processing.
 
 \subsection{Non-uniform sampling implementation}
 \label{subsec:nus}

@@ -326,8 +326,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.5133631"
-     inkscape:cx="322.27735"
-     inkscape:cy="102.25343"
+     inkscape:cx="276.72086"
+     inkscape:cy="101.45768"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -725,9 +725,9 @@
        inkscape:export-ydpi="500"><tspan
          x="127.66624"
          y="61.445072"
-         id="tspan1977"><tspan
+         id="tspan1594"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan1975">dec.</tspan></tspan></text>
+           id="tspan1592">dec.</tspan></tspan></text>
     <ellipse
        inkscape:export-filename="/Users/yongrenjie/dphil/nbsphinx/sehsqc/spor.png"
        inkscape:export-ydpi="500"
@@ -1267,7 +1267,7 @@
          x="60.854176"
          y="44.979168" /></text>
     <rect
-       style="fill:#ffffff;stroke:#4c72b0;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.795, 0.265;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       style="fill:#ffffff;stroke:#023eff;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.795, 0.265;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        id="rect3922"
        width="10.583339"
        height="26.458332"
@@ -1275,7 +1275,7 @@
        y="29.104183"
        ry="0.66145825" />
     <rect
-       style="fill:none;stroke:#4c72b0;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.795, 0.265;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       style="fill:none;stroke:#023eff;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.795, 0.265;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        id="rect3922-8"
        width="25.135422"
        height="34.395832"
@@ -1283,7 +1283,7 @@
        y="27.78125"
        ry="0.85989565" />
     <rect
-       style="fill:none;stroke:#4c72b0;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.795, 0.265;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       style="fill:none;stroke:#023eff;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.795, 0.265;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        id="rect3922-8-2"
        width="22.489586"
        height="29.104166"
@@ -1292,26 +1292,26 @@
        ry="0.72760403" />
     <text
        xml:space="preserve"
-       style="font-size:2.11667px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Normal';fill:#4c72b0;fill-opacity:1;stroke-width:0.264583"
+       style="font-size:2.11667px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Normal';fill:#023eff;fill-opacity:1;stroke-width:0.264583"
        x="68.860397"
        y="40.40683"
        id="text5608"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#4c72b0;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#023eff;fill-opacity:1;stroke-width:0.264583"
          x="68.860397"
          y="40.40683"
          id="tspan5610"><tspan
-   style="font-style:italic;font-size:2.11667px;text-align:center;text-anchor:middle;fill:#4c72b0;fill-opacity:1"
+   style="font-style:italic;font-size:2.11667px;text-align:center;text-anchor:middle;fill:#023eff;fill-opacity:1"
    id="tspan8506">t</tspan><tspan
-   style="font-size:2.11667px;text-align:center;baseline-shift:sub;text-anchor:middle;fill:#4c72b0;fill-opacity:1"
+   style="font-size:2.11667px;text-align:center;baseline-shift:sub;text-anchor:middle;fill:#023eff;fill-opacity:1"
    id="tspan9322">1</tspan> and</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#4c72b0;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#023eff;fill-opacity:1;stroke-width:0.264583"
          x="68.860397"
          y="43.114403"
          id="tspan5614">CTP</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#4c72b0;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#023eff;fill-opacity:1;stroke-width:0.264583"
          x="68.860397"
          y="45.821976"
          id="tspan5616">selection</tspan></text>

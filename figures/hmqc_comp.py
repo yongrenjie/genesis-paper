@@ -14,7 +14,7 @@ dss = [bad, good]
 labels = ['4 × 1 ms HMQC gradients', '2 × 2.5 ms HMQC gradients']
 
 fig = plt.figure(figsize=(7, 5.5), constrained_layout=True)
-gs = fig.add_gridspec(2, 2, height_ratios=[0.9, 1])
+gs = fig.add_gridspec(2, 2, height_ratios=[0.85, 1], hspace=0.2)
 axs = [fig.add_subplot(gs[0, :]),
        fig.add_subplot(gs[1, 0]),
        fig.add_subplot(gs[1, 1])]
@@ -40,7 +40,7 @@ axs[1].add_patch(Rectangle((7.14, 6.55), width=0.75, height=0.33, fill=False, co
 pg.label_axes(axs[1:], start=4, fstr="({})", fontweight="semibold")
 
 bbox = axs[0].get_position()
-axs[0].set_position([0.03, bbox.y0+0.1, 0.95, bbox.height*0.95])
+axs[0].set_position([0.03, bbox.y0, 0.95, bbox.height*0.95])
 pg.label_axes(axs[0], fstr='({})', fontweight='semibold', offset=(-0.02, 0.02))
 pg.label_axes(axs[0], start=2, fstr='({})', fontweight='semibold',
               offset=(0.46, 0.02))
