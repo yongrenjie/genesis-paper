@@ -11,5 +11,7 @@
 *.toc
 *.swp
 *.synctex.gz
+*.synctex(busy)
+*.xdv
 *.xml
 refs/**/*.pdf
