@@ -3,12 +3,12 @@
   _work:
     contents:
       _articleDoi: 10.1002/anie.201705506
-      _articleVolume: '56'
       _articlePages:
         contents: 11779-11783
         tag: PageRange
-      _articleJournalLong: Angewandte Chemie International Edition
+      _articleVolume: '56'
       _articleJournalShort: Angew. Chem. Int. Ed.
+      _articleJournalLong: Angewandte Chemie International Edition
       _articleAuthors:
       - _suffix: null
         _given: Ēriks
@@ -27,12 +27,12 @@
   _work:
     contents:
       _articleDoi: 10.1039/c8cc03296c
-      _articleVolume: '54'
       _articlePages:
         contents: 7139-7142
         tag: PageRange
-      _articleJournalLong: Chemical Communications
+      _articleVolume: '54'
       _articleJournalShort: Chem. Commun.
+      _articleJournalLong: Chemical Communications
       _articleAuthors:
       - _suffix: null
         _given: Ēriks
@@ -50,12 +50,12 @@
   _work:
     contents:
       _articleDoi: 10.1002/mrc.4887
-      _articleVolume: '57'
       _articlePages:
         contents: 946-952
         tag: PageRange
-      _articleJournalLong: Magnetic Resonance in Chemistry
+      _articleVolume: '57'
       _articleJournalShort: Magn. Reson. Chem.
+      _articleJournalLong: Magnetic Resonance in Chemistry
       _articleAuthors:
       - _suffix: null
         _given: Tim D. W.
@@ -77,12 +77,12 @@
   _work:
     contents:
       _articleDoi: 10.1016/j.jmr.2019.106568
-      _articleVolume: '307'
       _articlePages:
         contents: '106568'
         tag: PageRange
-      _articleJournalLong: Journal of Magnetic Resonance
+      _articleVolume: '307'
       _articleJournalShort: J. Magn. Reson.
+      _articleJournalLong: Journal of Magnetic Resonance
       _articleAuthors:
       - _suffix: null
         _given: Ēriks
@@ -101,12 +101,12 @@
   _work:
     contents:
       _articleDoi: 10.1016/j.pnmrs.2021.03.001
-      _articleVolume: 124-125
       _articlePages:
         contents: 1-56
         tag: PageRange
-      _articleJournalLong: Progress in Nuclear Magnetic Resonance Spectroscopy
+      _articleVolume: 124-125
       _articleJournalShort: Prog. Nucl. Magn. Reson. Spectrosc.
+      _articleJournalLong: Progress in Nuclear Magnetic Resonance Spectroscopy
       _articleAuthors:
       - _suffix: null
         _given: Ēriks
@@ -133,12 +133,12 @@
   _work:
     contents:
       _articleDoi: 10.1038/s43586-021-00024-3
-      _articleVolume: '1'
       _articlePages:
         contents: '27'
         tag: ArticleNumber
-      _articleJournalLong: Nature Reviews Methods Primers
+      _articleVolume: '1'
       _articleJournalShort: Nat. Rev. Methods Primers
+      _articleJournalLong: Nature Reviews Methods Primers
       _articleAuthors:
       - _suffix: null
         _given: Ēriks
@@ -165,12 +165,12 @@
   _work:
     contents:
       _articleDoi: 10.1021/acs.analchem.0c05205
-      _articleVolume: '93'
       _articlePages:
         contents: 6112-6119
         tag: PageRange
-      _articleJournalLong: Analytical Chemistry
+      _articleVolume: '93'
       _articleJournalShort: Anal. Chem.
+      _articleJournalLong: Analytical Chemistry
       _articleAuthors:
       - _suffix: null
         _given: Alexandar L.
@@ -200,12 +200,12 @@
   _work:
     contents:
       _articleDoi: 10.1073/pnas.252644399
-      _articleVolume: '99'
       _articlePages:
         contents: 15858-15862
         tag: PageRange
-      _articleJournalLong: Proceedings of the National Academy of Sciences
+      _articleVolume: '99'
       _articleJournalShort: Proc. Natl. Acad. Sci. U. S. A.
+      _articleJournalLong: Proceedings of the National Academy of Sciences
       _articleAuthors:
       - _suffix: null
         _given: L.
@@ -227,12 +227,12 @@
   _work:
     contents:
       _articleDoi: 10.1021/ja030055b
-      _articleVolume: '125'
       _articlePages:
         contents: 9204-9217
         tag: PageRange
-      _articleJournalLong: Journal of the American Chemical Society
+      _articleVolume: '125'
       _articleJournalShort: J. Am. Chem. Soc.
+      _articleJournalLong: Journal of the American Chemical Society
       _articleAuthors:
       - _suffix: null
         _given: Lucio
@@ -253,12 +253,12 @@
   _work:
     contents:
       _articleDoi: 10.1016/j.pnmrs.2010.04.001
-      _articleVolume: '57'
       _articlePages:
         contents: 241-292
         tag: PageRange
-      _articleJournalLong: Progress in Nuclear Magnetic Resonance Spectroscopy
+      _articleVolume: '57'
       _articleJournalShort: Prog. Nucl. Magn. Reson. Spectrosc.
+      _articleJournalLong: Progress in Nuclear Magnetic Resonance Spectroscopy
       _articleAuthors:
       - _suffix: null
         _given: Assaf
@@ -276,12 +276,12 @@
   _work:
     contents:
       _articleDoi: 10.1016/j.pnmrs.2014.09.002
-      _articleVolume: '83'
       _articlePages:
         contents: 21-41
         tag: PageRange
-      _articleJournalLong: Progress in Nuclear Magnetic Resonance Spectroscopy
+      _articleVolume: '83'
       _articleJournalShort: Prog. Nucl. Magn. Reson. Spectrosc.
+      _articleJournalLong: Progress in Nuclear Magnetic Resonance Spectroscopy
       _articleAuthors:
       - _suffix: null
         _given: Mehdi
@@ -300,12 +300,12 @@
   _work:
     contents:
       _articleDoi: 10.1002/mrc.4284
-      _articleVolume: '53'
       _articlePages:
         contents: 921-926
         tag: PageRange
-      _articleJournalLong: Magnetic Resonance in Chemistry
+      _articleVolume: '53'
       _articleJournalShort: Magn. Reson. Chem.
+      _articleJournalLong: Magnetic Resonance in Chemistry
       _articleAuthors:
       - _suffix: null
         _given: Krzysztof
@@ -324,12 +324,12 @@
   _work:
     contents:
       _articleDoi: 10.1016/j.pnmrs.2019.09.003
-      _articleVolume: '116'
       _articlePages:
         contents: 40-55
         tag: PageRange
-      _articleJournalLong: Progress in Nuclear Magnetic Resonance Spectroscopy
+      _articleVolume: '116'
       _articleJournalShort: Prog. Nucl. Magn. Reson. Spectrosc.
+      _articleJournalLong: Progress in Nuclear Magnetic Resonance Spectroscopy
       _articleAuthors:
       - _suffix: null
         _given: Dariusz
@@ -353,12 +353,12 @@
   _work:
     contents:
       _articleDoi: 10.1002/anie.200702258
-      _articleVolume: '46'
       _articlePages:
         contents: 7495-7497
         tag: PageRange
-      _articleJournalLong: Angewandte Chemie International Edition
+      _articleVolume: '46'
       _articleJournalShort: Angew. Chem. Int. Ed.
+      _articleJournalLong: Angewandte Chemie International Edition
       _articleAuthors:
       - _suffix: null
         _given: Pau
@@ -379,12 +379,12 @@
   _work:
     contents:
       _articleDoi: 10.1021/ja8036492
-      _articleVolume: '130'
       _articlePages:
         contents: 10788-10792
         tag: PageRange
-      _articleJournalLong: Journal of the American Chemical Society
+      _articleVolume: '130'
       _articleJournalShort: J. Am. Chem. Soc.
+      _articleJournalLong: Journal of the American Chemical Society
       _articleAuthors:
       - _suffix: null
         _given: E̅riks
@@ -402,12 +402,12 @@
   _work:
     contents:
       _articleDoi: 10.1039/c9cc06253j
-      _articleVolume: '55'
       _articlePages:
         contents: 12208-12211
         tag: PageRange
-      _articleJournalLong: Chemical Communications
+      _articleVolume: '55'
       _articleJournalShort: Chem. Commun.
+      _articleJournalLong: Chemical Communications
       _articleAuthors:
       - _suffix: null
         _given: Tamás Milán
@@ -432,12 +432,12 @@
   _work:
     contents:
       _articleDoi: 10.1016/j.jmr.2020.106767
-      _articleVolume: '316'
       _articlePages:
         contents: '106767'
         tag: PageRange
-      _articleJournalLong: Journal of Magnetic Resonance
+      _articleVolume: '316'
       _articleJournalShort: J. Magn. Reson.
+      _articleJournalLong: Journal of Magnetic Resonance
       _articleAuthors:
       - _suffix: null
         _given: Tamás Milán
@@ -459,12 +459,12 @@
   _work:
     contents:
       _articleDoi: 10.1021/ja062025p
-      _articleVolume: '128'
       _articlePages:
         contents: 9042-9043
         tag: PageRange
-      _articleJournalLong: Journal of the American Chemical Society
+      _articleVolume: '128'
       _articleJournalShort: J. Am. Chem. Soc.
+      _articleJournalLong: Journal of the American Chemical Society
       _articleAuthors:
       - _suffix: null
         _given: Paul
@@ -486,12 +486,12 @@
   _work:
     contents:
       _articleDoi: 10.1002/mrc.1931
-      _articleVolume: '45'
       _articlePages:
         contents: 2-4
         tag: PageRange
-      _articleJournalLong: Magnetic Resonance in Chemistry
+      _articleVolume: '45'
       _articleJournalShort: Magn. Reson. Chem.
+      _articleJournalLong: Magnetic Resonance in Chemistry
       _articleAuthors:
       - _suffix: null
         _given: Eriks
@@ -509,12 +509,12 @@
   _work:
     contents:
       _articleDoi: 10.1021/ja411588d
-      _articleVolume: '136'
       _articlePages:
         contents: 1242-1245
         tag: PageRange
-      _articleJournalLong: Journal of the American Chemical Society
+      _articleVolume: '136'
       _articleJournalShort: J. Am. Chem. Soc.
+      _articleJournalLong: Journal of the American Chemical Society
       _articleAuthors:
       - _suffix: null
         _given: David
@@ -536,12 +536,12 @@
   _work:
     contents:
       _articleDoi: 10.1002/anie.202102487
-      _articleVolume: '60'
       _articlePages:
         contents: 13587-13590
         tag: PageRange
-      _articleJournalLong: Angewandte Chemie International Edition
+      _articleVolume: '60'
       _articleJournalShort: Angew. Chem. Int. Ed.
+      _articleJournalLong: Angewandte Chemie International Edition
       _articleAuthors:
       - _suffix: null
         _given: Tamás Milán
@@ -562,12 +562,12 @@
   _work:
     contents:
       _articleDoi: 10.1016/j.jmr.2021.107027
-      _articleVolume: '329'
       _articlePages:
         contents: '107027'
         tag: PageRange
-      _articleJournalLong: Journal of Magnetic Resonance
+      _articleVolume: '329'
       _articleJournalShort: J. Magn. Reson.
+      _articleJournalLong: Journal of Magnetic Resonance
       _articleAuthors:
       - _suffix: null
         _given: Jonathan R. J.
@@ -592,12 +592,12 @@
   _work:
     contents:
       _articleDoi: 10.1016/0022-2364(91)90036-s
-      _articleVolume: '93'
       _articlePages:
         contents: 151-170
         tag: PageRange
-      _articleJournalLong: Journal of Magnetic Resonance (1969)
+      _articleVolume: '93'
       _articleJournalShort: J. Magn. Reson.
+      _articleJournalLong: Journal of Magnetic Resonance (1969)
       _articleAuthors:
       - _suffix: III
         _given: Arthur G.
@@ -622,12 +622,12 @@
   _work:
     contents:
       _articleDoi: 10.1021/ja00052a088
-      _articleVolume: '114'
       _articlePages:
         contents: 10663-10665
         tag: PageRange
-      _articleJournalLong: Journal of the American Chemical Society
+      _articleVolume: '114'
       _articleJournalShort: J. Am. Chem. Soc.
+      _articleJournalLong: Journal of the American Chemical Society
       _articleAuthors:
       - _suffix: E.
         _given: Lewis
@@ -649,12 +649,12 @@
   _work:
     contents:
       _articleDoi: 10.1016/j.jmr.2008.03.009
-      _articleVolume: '192'
       _articlePages:
         contents: 314-322
         tag: PageRange
-      _articleJournalLong: Journal of Magnetic Resonance
+      _articleVolume: '192'
       _articleJournalShort: J. Magn. Reson.
+      _articleJournalLong: Journal of Magnetic Resonance
       _articleAuthors:
       - _suffix: null
         _given: Andreas
@@ -682,12 +682,12 @@
   _work:
     contents:
       _articleDoi: 10.1002/mrc.1973
-      _articleVolume: '45'
       _articlePages:
         contents: 325-329
         tag: PageRange
-      _articleJournalLong: Magnetic Resonance in Chemistry
+      _articleVolume: '45'
       _articleJournalShort: Magn. Reson. Chem.
+      _articleJournalLong: Magnetic Resonance in Chemistry
       _articleAuthors:
       - _suffix: null
         _given: Miriam
@@ -711,12 +711,12 @@
   _work:
     contents:
       _articleDoi: 10.1002/anie.201404111
-      _articleVolume: '53'
       _articlePages:
         contents: 6990-6992
         tag: PageRange
-      _articleJournalLong: Angewandte Chemie International Edition
+      _articleVolume: '53'
       _articleJournalShort: Angew. Chem. Int. Ed.
+      _articleJournalLong: Angewandte Chemie International Edition
       _articleAuthors:
       - _suffix: null
         _given: Mohammadali
@@ -746,12 +746,12 @@
   _work:
     contents:
       _articleDoi: 10.1039/c5cc06293d
-      _articleVolume: '51'
       _articlePages:
         contents: 15410-15413
         tag: PageRange
-      _articleJournalLong: Chemical Communications
+      _articleVolume: '51'
       _articleJournalShort: Chem. Commun.
+      _articleJournalLong: Chemical Communications
       _articleAuthors:
       - _suffix: null
         _given: M.
@@ -779,12 +779,12 @@
   _work:
     contents:
       _articleDoi: 10.1002/chem.201800524
-      _articleVolume: '24'
       _articlePages:
         contents: 13988-14000
         tag: PageRange
-      _articleJournalLong: Chemistry – A European Journal
+      _articleVolume: '24'
       _articleJournalShort: Chem. Eur. J.
+      _articleJournalLong: Chemistry – A European Journal
       _articleAuthors:
       - _suffix: null
         _given: Mohammadali
@@ -798,5 +798,49 @@
       _articleYear: 2018
       _articleTitle: PSYCHE Pure Shift NMR Spectroscopy
       _articleIssue: '53'
+    tag: ArticleWork
+  _tags: []
+- _timeOpened: 2021-10-02T13:38:28.949014Z
+  _timeAdded: 2021-10-02T13:38:28.949014Z
+  _work:
+    contents:
+      _articleDoi: 10.1038/d41586-020-02462-7
+      _articlePages:
+        contents: 656-658
+        tag: PageRange
+      _articleVolume: '584'
+      _articleJournalShort: Nature
+      _articleJournalLong: Nature
+      _articleAuthors:
+      - _suffix: null
+        _given: Jeffrey M.
+        _family: Perkel
+      _articleYear: 2020
+      _articleTitle: 'Challenge to scientists: does your ten-year-old code still run?'
+      _articleIssue: '7822'
+    tag: ArticleWork
+  _tags: []
+- _timeOpened: 2021-10-02T23:02:05.83635Z
+  _timeAdded: 2021-10-02T23:02:05.83635Z
+  _work:
+    contents:
+      _articleDoi: 10.1002/anie.200351947
+      _articlePages:
+        contents: 3938-3941
+        tag: PageRange
+      _articleVolume: '42'
+      _articleJournalShort: Angew. Chem. Int. Ed.
+      _articleJournalLong: Angewandte Chemie International Edition
+      _articleAuthors:
+      - _suffix: null
+        _given: Michael J.
+        _family: Thrippleton
+      - _suffix: null
+        _given: James
+        _family: Keeler
+      _articleYear: 2003
+      _articleTitle: Elimination of Zero-Quantum Interference in Two-Dimensional NMR
+        Spectra
+      _articleIssue: '33'
     tag: ArticleWork
   _tags: []
