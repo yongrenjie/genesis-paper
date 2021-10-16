@@ -23,10 +23,19 @@ fig, axs = pg.subplots2d(npeaks+1, nexpts, sharey='row', figsize=(12, 10),
                          height_ratios=([1.9]+[1.0]*npeaks),
                          constrained_layout=True)
 for j, ax, label, ds in enzip(axs[0], labels, dss):
-    ds.stage(ax, f1_bounds="11..174", f2_bounds="0.4..6.9", levels=3.3e3)
+    ds.stage(ax, f1_bounds="5..174", f2_bounds="0.4..6.9", levels=3.3e3)
     pg.mkplot(ax, title=label)
     ax.yaxis.set_tick_params(labelright=True)
     pg.ymove(ax)
+for char, f1 in zip("bcdefghijk", f1s):   # only uses as many chars as needed
+    axs[0][0].annotate(text=f"({char})", fontsize=10,
+                       horizontalalignment="right",
+                       verticalalignment="center",
+                       xy=(-0.02, f1), xytext=(-0.15, f1),
+                       xycoords=axs[0][0].get_yaxis_transform(),
+                       textcoords=axs[0][0].get_yaxis_transform(),
+                       arrowprops={"arrowstyle": "->"},
+                       )
 for i, ax_row, f1, f2b in enzip(axs[1:], f1s, f2bs):
     for j, ax, ds in enzip(ax_row, dss):
         ds.f2projp(bounds=(f1 - 0.6, f1 + 0.6)).stage(ax, bounds=f2b)

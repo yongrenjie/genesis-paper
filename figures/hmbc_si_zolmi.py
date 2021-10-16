@@ -27,6 +27,20 @@ for j, ax, label, ds in enzip(axs[0], labels, dss):
     pg.mkplot(ax, title=label)
     ax.yaxis.set_tick_params(labelright=True)
     pg.ymove(ax)
+for char, f1 in zip("bcdefghijk", f1s):   # only uses as many chars as needed
+    dy = 0 if char in "bc" else 4 if char in "df" else -4
+    axs[0][0].annotate(
+        text=f"({char})", fontsize=10,
+        horizontalalignment="right",
+        verticalalignment="center",
+        xy=(-0.02, f1), xytext=(-0.15, f1 + dy),
+        xycoords=axs[0][0].get_yaxis_transform(),
+        textcoords=axs[0][0].get_yaxis_transform(),
+        arrowprops={
+            "arrowstyle": "->",
+            "connectionstyle": "arc,angleA=0,angleB=180,armA=110,armB=80,rad=0"
+        },
+    )
 for i, ax_row, f1, f2b in enzip(axs[1:], f1s, f2bs):
     for j, ax, ds in enzip(ax_row, dss):
         proj = ds.f2projp(bounds=(f1 - 0.6, f1 + 0.6))
