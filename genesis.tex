@@ -153,7 +153,7 @@ This provides substantial (up to \(4\times\)) time savings compared to conventio
 
 Virtually all common 2D experiments employed for small molecule characterisation have been implemented in NOAH supersequences to date, including HMBC, HSQC, HSQC-TOCSY, HMQC, COSY, TOCSY, NOESY, and ROESY.
 Each module is given a unique abbreviation, usually one letter long (e.g.\ `B' for HMBC, `S' for HSQC, `M' for HMQC, `C' for COSY) and occasionally sub/superscripted (e.g.\ `S\textsuperscript{T}' for HSQC-TOCSY or `S\textsuperscript{+}' for sensitivity-enhanced HSQC).
-The combinatorial nature of NOAH experiments means that there are a very large number of conceivable supersequences ranging from NOAH-2 to NOAH-5 (where the suffix indicates the number of modules); the use of parallel supersequences\autocite{Kupce2021pNOAH} extends this maximum number even further.
+The combinatorial nature of NOAH experiments means that there are a very large number of conceivable supersequences ranging from NOAH-2 to NOAH-5 (where the suffix indicates the number of modules); the use of parallel supersequences\autocite{Kupce2021JACSA} extends this maximum number even further.
 
 For optimal data quality in terms of both sensitivity and artefact minimisation, there are certain conditions on NOAH supersequences.
 Specifically, NOAH modules placed earlier in a supersequence should ideally only excite the magnetisation it needs, leaving all other magnetisation sources untouched.
@@ -269,6 +269,15 @@ The sensitivity-enhanced HSQC (seHSQC, abbreviated `\(\mathrm{S^+}\)'/\texttt{Sp
 If the seHSQC module is followed by one or more homonuclear modules such as a COSY or NOESY, then the ZIP-seHSQC\autocite{Hansen2021AC,Yong2021JMR} is automatically chosen, as this preserves the requisite magnetisation for the later modules.
 However, if the seHSQC module is used last in the sequence, then the original Cavanagh--Rance--Kay seHSQC\autociteset{sehsqc} is chosen in order to maximise sensitivity.
 
+
+\subsection{Acquisition flags}
+\label{subsec:zgoptns}
+
+\changed{
+The GENESIS pulse programmes make substantial use of acquisition flags, a feature within TopSpin which allows for conditional compilation of pulse programme segments.
+By defining one or more ``symbols'' inside the \texttt{zgoptns} TopSpin parameter, users may choose whether to include additional features in the pulse programme, such as multiplicity editing in HSQC sequences, zero-quantum suppression\autocite{Thrippleton2003ACIE}, and solvent suppression (\cref{subsec:solvsupp}).
+The benefit of this is that there is no need for users to store multiple different pulse sequences which only differ in isolated sections.
+}
 
 \subsection{Reproducibility}
 \label{subsec:repro}
@@ -396,6 +405,25 @@ One advantage of acquiring PSYCHE spectra in NOAH-type supersequences is that th
 Thus, the user can choose a smaller flip angle (ca.\ \ang{10}) in order to maximise spectral purity instead, without losing any actual spectrometer time.
 An example of a NOAH-3 supersequence with the TSE-PSYCHE module is shown in \cref{fig:psyche}.
 
+\subsection{Solvent suppression}
+\label{subsec:solvsupp}
+
+\changed{
+The addition of solvent suppression to NOAH supersequences is more involved than for a typical NMR experiment, because the water signal must be adequately suppressed in all modules, ideally without affecting any other magnetisation components.
+The HMQC- and HSQC-type NOAH modules in fact provide good intrinsic solvent suppression, because the magnetisation of all \proton{} spins not coupled to heteronuclei---including that of water---are returned to $+z$ at the end of the sequence.
+However, other modules require the addition of specific solvent suppression techniques.
+}
+
+\changed{
+Two options are currently available, namely presaturation (during the recovery delay $d_1$, as well as the mixing time in NOESY modules), and excitation sculpting placed just prior to acquisition in homonuclear (\HH{}) modules.
+The refocusing element used in the latter is a combination of a shaped and hard \ang{180} pulse.
+Both presaturation and excitation sculpting can be independently turned on or off using acquisition flags in TopSpin.
+}
+
+\todo{\textbf{Figure?}}
+
+\SI{30}{\milli\molar} glutathione in 10\% \ch{H2O}/\ch{D2O}
+
 \subsection{splitx\_au processing}
 \label{subsec:splitx_au}
 
@@ -479,7 +507,7 @@ J.R.J.Y.\ thanks the Clarendon Fund (University of Oxford) and the EPSRC Centre 
 \label{sec:combinations}
 
 In this section we count the total number of ``viable'' NOAH combinations, available from the non-developer mode version of the GENESIS website, using the inclusion--exclusion principle.
-As of version \todo{2.0.14} of the website, there are five categories of modules:
+As of version 2.1.0 of the website, there are five categories of modules:
 \begin{itemize}
     \item HMBC (\the\nmoda{} choices, including ``none'')
     \item \NH{} (\the\nmodb{} choices, including ``none'')
@@ -521,7 +549,7 @@ This yields a total number of
     = \textbf{\ee{(\nmoda*\nmodb*\nmodc*\nmodd*\nmode)-1-(\nmoda+\nmodb+\nmodc+\nmodd+\nmode-5)-((\nmoda-1)*(\nmodb-1)*(\nmodc-1)*(\nmodd-1)*\nmoddoublehom)-(\nmode-1)-(\nmoda*\nmodb*\nmoddup*\nmode)+(\nmoddup)}} %
 \)
 possible NOAH supersequences.
-Note that, unlike the original paper\autocite{Kupce2017ACIE}, this does not take into account options that are set using acquisition flags, such as multiplicity editing in HSQC-type experiments and inversion of ``indirect'' responses in HSQC-COSY and HSQC-TOCSY spectra.
+Note that, unlike the original paper\autocite{Kupce2017ACIE}, this does not take into account options that are set using acquisition flags, such as multiplicity editing in HSQC-type experiments or solvent suppression.
 This also does not include modules that are only available via the ``developer mode'' interface.
 
 \section{More HMBC artefact comparisons}
