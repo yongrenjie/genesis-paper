@@ -6,19 +6,26 @@ from pathlib import Path
 
 plt.style.use(Path(__file__).parent / 'fira.mplstyle')
 
-path = nmrd() / "201101-7g-noah-psyche"
+path = nmrd() / "211123-7c-psyche-sapphire"
 fig = pg.figure(figsize=(7, 5.5), constrained_layout=True)
 gs = fig.add_gridspec(2, 2, height_ratios=[1, 0.6])
 axn = fig.add_subplot(gs[0,0])
 axc = fig.add_subplot(gs[0,1])
 axh = fig.add_subplot(gs[1,:])
 
-dss = [pg.read(path, expno) for expno in [3001, 3002, 3004]]
+dss = [pg.read(path, expno) for expno in [24001, 24002, 24004]]
 titles = [r"$^{15}$N seHSQC", r"$^{13}$C seHSQC",
           "TSE-PSYCHE"]
-dss[0].stage(ax=axn, levels=8e3, f1_bounds="111..130", f2_bounds="7..9.3")
-dss[1].stage(ax=axc, levels=2e4, f1_bounds="14..65", f2_bounds="0.5..5.1")
-dss[2].stage(ax=axh, bounds="1..5", color='#333333')
+dss[0].stage(ax=axn, levels=8e3, f1_bounds="115..129", f2_bounds="7.0..8.7")
+dss[1].stage(ax=axc, levels=2e4, f1_bounds="6..78", f2_bounds="0.5..6")
+dss[2].stage(ax=axh, bounds="0.5..8.4", color='#333333')
+
+inset = False
+if inset:
+    axh_inset = pg.mkinset(ax=axh, pos=(0.08, 0.55), size=(0.4, 0.4), show_zoom=False)
+    dss[2].stage(ax=axh_inset, bounds="4.7..5.8", color='#333333')
+    pg.mkplot(axh_inset, xlabel="", tight_layout=False)
+    axh_inset.tick_params(axis='x', labelsize=10)
 
 pg.mkplots([axn, axc, axh], titles=titles, tight_layout=False)
 pg.ymove(axn, tight_layout=False)

@@ -11,7 +11,7 @@ path = nmrd() / '200926-7z-n15-sehsqc-full'
 bad = pg.read(path, 101001)
 good = pg.read(path, 12001)
 dss = [bad, good]
-labels = ['4 × 1 ms HMQC gradients', '2 × 2.5 ms HMQC gradients']
+labels = ['4 × 1 ms HMQC PFGs', '2 × 2.5 ms HMQC PFGs']
 
 fig, axs = pg.subplots2d(2, 2, height_ratios=[1, 0.4],
                          constrained_layout=True)

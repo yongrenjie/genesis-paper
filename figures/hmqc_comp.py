@@ -11,7 +11,7 @@ path = nmrd() / '200926-7z-n15-sehsqc-full'
 bad = pg.read(path, 101003)
 good = pg.read(path, 12003)
 dss = [bad, good]
-labels = ['4 × 1 ms HMQC gradients', '2 × 2.5 ms HMQC gradients']
+labels = ['4 × 1 ms HMQC PFGs', '2 × 2.5 ms HMQC PFGs']
 
 fig = plt.figure(figsize=(7, 5.5), constrained_layout=True)
 gs = fig.add_gridspec(2, 2, height_ratios=[0.85, 1], hspace=0.2)

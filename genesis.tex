@@ -1,21 +1,26 @@
-%! TEX program = xelatex
 \documentclass[a4paper,11pt]{article}
 
 % Fonts {{{1
 \usepackage{fontspec,amsmath,unicode-math}
 \setmainfont[
   Path={/Users/yongrenjie/Library/Fonts/},
-  Extension=.ttf,
+  Extension=.otf,
   UprightFont={*-Regular},
-  BoldFont={*-SemiBold},
-  ItalicFont={*-Italic},
-  BoldItalicFont={*-SemiBoldItalic},
-]{SourceSerifPro}
+  BoldFont={*-Semibold},
+  ItalicFont={*-It},
+  BoldItalicFont={*-SemiboldIt},
+]{SourceSerif4}
 \setmonofont[
   Path={/Users/yongrenjie/Library/Fonts/},
+  Extension=.otf,
+  UprightFont={*-Regular},
+  BoldFont={*-Bold},
   Scale=MatchLowercase
-]{FiraMono-Regular.ttf}
-\setmathfont[Scale=1.06]{LibertinusMath-Regular.otf}
+]{FiraMono}
+\setmathfont[
+  Path={/Users/yongrenjie/Library/Fonts/},
+  Scale=1.06
+]{LibertinusMath-Regular.otf}
 \usepackage[final]{microtype}
 % }}}1
 % Packages and settings {{{1
@@ -24,7 +29,7 @@
 \usepackage[svgnames]{xcolor}
 \usepackage{chemformula}
 \setchemformula{math-scripts=true}
-\usepackage[style=chem-angew,subentry,pageranges=false]{biblatex}
+\usepackage[style=chem-acs,subentry,articletitle,doi]{biblatex}
 \addbibresource{genesis.bib}
 \graphicspath{{./figures/}}
 \usepackage{xurl}   % must be after biblatex
@@ -38,8 +43,10 @@
   text-series-to-math=true
 ]{siunitx}
 \usepackage[symbol]{footmisc}
+\usepackage{titletoc}
 \usepackage{hyperref}
 \hypersetup{
+    naturalnames,
     colorlinks,
     linkcolor={red!50!black},
     citecolor={blue!60!black},
@@ -59,9 +66,9 @@
 \DeclareSIUnit{\ppm}{ppm}
 % }}}1
 % Newcommands {{{1 
-\newcommand{\genesistitle}{Automated pulse programme generation for NOAH supersequences}
-\newcommand{\crl}{Chemistry Research Laboratory, Department of Chemistry, University of Oxford, Mansfield Road, Oxford, OX1 3TA, U.K.}
-\newcommand{\brukeruk}{Bruker UK Ltd., Banner Lane, Coventry, CV4 9GH, U.K.}
+\newcommand{\genesistitle}{Modular Pulse Program Generation for NMR Supersequences}
+\newcommand{\crl}{Chemistry Research Laboratory, Department of Chemistry, University of Oxford, Mansfield Road, Oxford, OX1 3TA, United Kingdom}
+\newcommand{\brukeruk}{Bruker UK Ltd, R\&D, Coventry CV4 9GH, United Kingdom}
 \newcommand{\proton}{\ch{^{1}H}}
 \newcommand{\carbonbulk}{\ch{^{12}C}}
 \newcommand{\carbon}{\ch{^{13}C}}
@@ -81,6 +88,7 @@
 \newcommand{\theurl}{\url{https://nmr-genesis.co.uk}}
 \newcommand*{\andro}{Spectra were obtained on a \SI{700}{\MHz} Bruker AV III equipped with a TCI H/C/N cryoprobe; the sample used was \SI{40}{\milli\molar} andrographolide in DMSO-\(d_6\).}
 \newcommand*{\grami}{Spectra were obtained on a \SI{700}{\MHz} Bruker AV III equipped with a TCI H/C/N cryoprobe; the sample used was \SI{40}{\milli\molar} gramicidin in DMSO-\(d_6\).}
+\newcommand*{\cyclo}{Spectra were obtained on a \SI{700}{\MHz} Bruker AV III equipped with a TCI H/C/N cryoprobe; the sample used was \SI{50}{\milli\molar} cyclosporin A in \ch{C6D6}.}
 \newcommand*{\zolmi}{Spectra were obtained on a \SI{700}{\MHz} Bruker AV III equipped with a TCI H/C/N cryoprobe; the sample used was \SI{50}{\milli\molar} zolmitriptan in DMSO-\(d_6\).}
 % }}}1
 % Counters for the combinatorics {{{1
@@ -120,23 +128,28 @@
     \textsuperscript{*} \texttt{tim.claridge@chem.ox.ac.uk}
 
     \vspace{0.5cm} \hrule
-\end{center}
 
-\vspace{0.5cm} \textbf{Keywords: } NMR, \proton{}, \carbon{}, \nitrogen{}, NOAH, supersequence, GENESIS, pulse programme, software
+    \vspace{0.5cm} \textbf{Keywords: } NMR, \proton{}, \carbon{}, \nitrogen{}, NOAH, supersequence, GENESIS, pulse program, software
+
+    \vspace{0.5cm} \includegraphics[width=0.7\textwidth]{toc_600_rgb16.png}
+\end{center}
 
 \section*{Abstract}
 
-NOAH (NMR by Ordered Acquisition using \proton{}-detection) supersequences allow multiple 2D NMR datasets to be acquired in greatly reduced experiment durations through the elision of recovery delays.
-In NOAH experiments, up to five ``modules'' can be combined (or more when parallel modules are employed), which means that there is a very large number of plausible supersequences (over 4000).
-This renders the traditional method of pulse programme construction by hand wholly inadequate.
-We introduce here an online tool named GENESIS (GENEration of Supersequences In Silico), available via \theurl{}, which systematically generates arbitrary NOAH supersequences compatible with Bruker spectrometers.
-This not only allows users to obtain customised supersequences for specific applications, but also enables us to rapidly and effortlessly disseminate new NOAH modules (e.g.\ PSYCHE, 2D J) as well as improvements to existing modules (e.g.\ \CH{} HMBC, \NH{} HMQC).
-
+NMR supersequences allow multiple 2D NMR datasets to be acquired in greatly reduced experiment durations through tailored detection of NMR responses within concatenated modules.
+In NOAH (NMR by Ordered Acquisition using \proton{} detection) experiments, up to five modules can be combined (or even more when parallel modules are employed), which in theory leads to thousands of plausible supersequences.
+However, constructing a pulse program for a supersequence is highly time-consuming, requires specialized knowledge, and is error-prone due to their complexity; this has prevented the true potential of the NOAH concept from being fully realized.
+We introduce here an online tool named GENESIS (GENEration of Supersequences In Silico), available via \theurl{}, which systematically generates pulse programs for arbitrary NOAH supersequences compatible with Bruker spectrometers.
+The GENESIS website provides a unified ``one-stop'' interface where users may obtain customized supersequences for specific applications, together with all associated acquisition and processing scripts, as well as detailed instructions for running NOAH experiments.
+Furthermore, it enables the rapid dissemination of new developments in NOAH sequences, such as new modules or improvements to existing modules.
+Here we present several such enhancements, including options for solvent suppression, new modules based on pure shift NMR, and improved artifact reduction in HMBC and HMQC modules.
 \section{Introduction}
 
-The acceleration of NMR data acquisition has in recent years proven a fruitful area for NMR pulse sequence and method development, particularly for \(n\)-dimensional (\(n\)D) NMR where raw data are acquired as a series of time increments.
-Developments in this area include (but are not limited to) ultrafast NMR\autociteset{ultrafast}, non-uniform sampling (NUS)\autociteset{nus}, multiple-FID experiments\autociteset{multifid}, and the shortening or elision of recovery delays\autociteset{reducedd1}.
-NOAH (NMR by Ordered Acquisition using \proton{}-detection) experiments\autociteset{noah}, which fall under the last two categories, consist of a series of multiple 2D experiments (``modules''), combined into one single ``supersequence'' which uses only one recovery delay for all modules.
+NMR spectroscopy is one of the most important analytical techniques for the characterization of molecular structures.
+In particular, \textit{n}‐dimensional (\textit{n}D) NMR experiments (\(n \geq 2\)) provide extensive information about through-bond and through-space connectivity.
+However, such experiments require the incrementation of one or more indirect-dimension evolution periods, leading to long experiment times.
+The acceleration of \textit{n}D NMR has therefore emerged as a highly popular area of research: developments in this area include (but are not limited to) ultrafast NMR\autociteset{ultrafast}, non-uniform sampling (NUS)\autociteset{nus}, multiple-FID experiments\autociteset{multifid}, and the shortening or elision of recovery delays\autociteset{reducedd1}.
+NOAH (NMR by Ordered Acquisition using \proton{} detection) experiments\autociteset{noah}, which fall under the last two categories, consist of a series of multiple 2D experiments (``modules''), combined into one single ``supersequence'' which uses only one recovery delay for all modules.
 This provides substantial (up to \(4\times\)) time savings compared to conventional acquisition, in which one recovery delay is used for each module (\cref{fig:noah_diagram}).
 
 \begin{figure}
@@ -145,43 +158,46 @@ This provides substantial (up to \(4\times\)) time savings compared to conventio
     {\phantomsubcaption\label{fig:noah_diagram_noah}}
     {\phantomsubcaption\label{fig:noah_diagram_conventional}}
     \caption{
-        \textbf{(\subref{fig:noah_diagram_noah})} Diagrammatic representation of a NOAH supersequence, where only one recovery delay (\(d_1\)) is used for the entire experiment.
-        \textbf{(\subref{fig:noah_diagram_conventional})} Conventional 2D NMR data acquisition, where one recovery delay is used per dataset.
+        \textbf{(\subref{fig:noah_diagram_noah})} Diagrammatic representation of a NOAH supersequence, which consists of up to five modules but uses only one recovery delay (\(d_1\)).
+        \textbf{(\subref{fig:noah_diagram_conventional})} Conventional 2D NMR data acquisition, where one recovery delay is used per module.
     }
     \label{fig:noah_diagram}
 \end{figure}
 
-Virtually all common 2D experiments employed for small molecule characterisation have been implemented in NOAH supersequences to date, including HMBC, HSQC, HSQC-TOCSY, HMQC, COSY, TOCSY, NOESY, and ROESY.
-Each module is given a unique abbreviation, usually one letter long (e.g.\ `B' for HMBC, `S' for HSQC, `M' for HMQC, `C' for COSY) and occasionally sub/superscripted (e.g.\ `S\textsuperscript{T}' for HSQC-TOCSY or `S\textsuperscript{+}' for sensitivity-enhanced HSQC).
-The combinatorial nature of NOAH experiments means that there are a very large number of conceivable supersequences ranging from NOAH-2 to NOAH-5 (where the suffix indicates the number of modules); the use of parallel supersequences\autocite{Kupce2021JACSA} extends this maximum number even further.
+Virtually all common 2D experiments employed for small molecule characterization have been implemented in NOAH supersequences to date, including HMBC, HSQC, HSQC-TOCSY, HMQC, COSY, TOCSY, NOESY, and ROESY.
+Each module is given a unique abbreviation, usually one letter long (e.g., `B' for HMBC, `S' for HSQC, `M' for HMQC, `C' for COSY) and occasionally sub/superscripted (e.g., `S\textsuperscript{T}' for HSQC-TOCSY).
+The combinatorial nature of NOAH experiments means that there are a very large number of conceivable supersequences ranging from NOAH-2 to NOAH-5 (where the suffix indicates the number of modules); the use of parallel ``\textit{p}-NOAH'' supersequences\autocite{Kupce2021JACSA} extends this maximum number even further.
 
-For optimal data quality in terms of both sensitivity and artefact minimisation, there are certain conditions on NOAH supersequences.
-Specifically, NOAH modules placed earlier in a supersequence should ideally only excite the magnetisation it needs, leaving all other magnetisation sources untouched.
-As an example, in the NOAH-2 SC supersequence (HSQC and COSY), the \HC{} HSQC module is designed to excite only the \proton{} nuclei directly attached to the 1.1\%-natural abundance \carbon{}, and leave all other proton magnetisation (the ``bulk magnetisation'') in the equilibrium state (i.e.\ along the \(+z\)-axis).\autocite{SchulzeSunninghausen2014JACS}
-A \HH{} COSY module (or TOCSY, or NOESY, etc.) can then draw on this bulk magnetisation, with almost no loss in sensitivity and without having to wait for the \carbonbulk{}-bound protons to relax.
-Conversely, if the COSY module were placed first, the \carbon{}-bound proton magnetisation would not survive for use in the HSQC: thus, the HSQC module in a NOAH-2 CS would display severe sensitivity losses, as compared to in a NOAH-2 SC.
-More subtle factors also abound, such as in the SBC sequence\autocite{Kupce2017ACIE}, where COSY intensities are modulated by \(T_2\) relaxation and \(J_{\ch{HH}}\) evolution.
-The alternative BSC arrangement\autocite{Kupce2018CC}, especially with isotropic ``ASAP'' mixing applied before the COSY, circumvents this issue and has become the preferred implementation for HMBC/HSQC combinations\autocite{Claridge2019MRC}.
+For optimal data quality in terms of both sensitivity and artifact minimization, there are certain restrictions on NOAH supersequences.
+Specifically, NOAH modules placed earlier in a supersequence should ideally only excite the magnetization they need, leaving all other magnetization sources untouched; as long as this is obeyed, the resulting NOAH spectra effectively have the same sensitivity as conventional experiments.
+As an example, in the NOAH-2 SC supersequence (comprising HSQC and COSY modules), the \HC{} HSQC module is designed to excite only the \proton{} nuclei directly attached to the 1.1\%-natural abundance \carbon{}, and leave all other proton magnetization (the ``bulk magnetization'') in the equilibrium state (i.e., along the \(+z\)-axis).\autocite{SchulzeSunninghausen2014JACS}
+A \HH{} COSY module (or TOCSY, or NOESY, etc.) can then draw on this bulk magnetization, with almost no loss in sensitivity and without having to wait for the \carbonbulk{}-bound protons to relax.
+Conversely, if the COSY module were placed first, the \carbon{}-bound proton magnetization would not survive for use in the HSQC: thus, the HSQC module in a NOAH-2 CS would display severe sensitivity losses compared to a NOAH-2 SC.
+More subtle factors also apply, such as in the SBC sequence\autocite{Kupce2017ACIE}, where COSY intensities are modulated by \(T_2\) relaxation and \(J_{\ch{HH}}\) evolution.
+The alternative BSC arrangement\autocite{Kupce2018CC}, especially with isotropic ``ASAP'' mixing applied before the COSY module, circumvents this issue and has become the preferred implementation for HMBC/HSQC combinations\autocite{Claridge2019MRC}.
+Although the HMBC and COSY modules in this supersequence excite the same magnetization pool, the resulting sensitivity losses in the COSY spectrum are readily tolerated as it has a far greater intrinsic sensitivity compared to the HMBC spectrum.
 
-Considerations such as these restrict the set of ``viable'' NOAH supersequences.
+Considerations such as these restrict the number of ``viable'' NOAH supersequences, in which the time savings are not undermined by detrimental sensitivity losses.
 Even so, the original NOAH paper alone suggests a figure of 285\autocite{Kupce2017ACIE}, and the number of available modules has only grown since then.
 By our calculations, as of the time of writing, there are
 \(\text{\ee{(\nmoda*\nmodb*\nmodc*\nmodd*\nmode)-1-(\nmoda+\nmodb+\nmodc+\nmodd+\nmode-5)-((\nmoda-1)*(\nmodb-1)*(\nmodc-1)*(\nmodd-1)*\nmoddoublehom)-(\nmode-1)-(\nmoda*\nmodb*\nmoddup*\nmode)+(\nmoddup)}}\)
 viable NOAH supersequences (\cref{sec:combinations}).
-Constructing every one of these supersequences ``by hand'' is clearly unreasonable.
-Consequently, it has not been possible to produce an exhaustive series of pulse programmes: we have so far had to limit ourselves to a handful of ``typical'' supersequences, which may or may not be applicable to all users' needs.
+Although there is a clear blueprint for how to construct such supersequences, it is evidently impractical to do all of these ``by hand''.
+Each combination requires its own pulse program, which is typically many hundreds of lines long; this complexity makes pulse program construction highly time-intensive, and makes the chances of errors (such as inconsistent parameter definitions) substantially higher
+Consequently, of the thousands of combinations available, only a few dozen ``typical'' supersequences have been released, representing only a fraction of the possibilities which the NOAH technique offers; these alone are unlikely to adequately meet the varied requirements of users.
 
-To solve this problem, we sought to \textit{programmatically} generate NOAH pulse programmes, an approach which we term GENESIS (GENEration of Supersequences In Silico).
-The implementation of this is a single web page (\cref{fig:screenshot}), accessible via \theurl{}, which can construct virtually any supersequence one might want and output a Bruker pulse programme ready for download and execution.
-Apart from allowing users to download customised supersequences, this allows us to easily and rapidly disseminate new NOAH developments to users, independently of Bruker's own release cycle and without needing a separate publication for each.
-Such developments may include either new modules or updates to existing modules, as detailed later in this article.
-Adopting a programmatic approach also ensures that the output is predictable and can be reasoned about; this eliminates many possibilities of user error during pulse programme construction, a particularly acute problem for NOAH sequences which tend to have considerable length.
+To solve this problem, we sought to \textit{programmatically} generate NOAH pulse programs, an approach which we term GENESIS (GENEration of Supersequences In Silico).
+A programmatic approach not only provides virtually instantaneous results, but also ensures that the output is predictable and can be reasoned about, which eliminates many possibilities for user error during pulse program construction.
+The modular nature of NOAH supersequences (i.e., having multiple almost-independent components which are pieced together to form a greater entity) lends itself well to this, as each component only needs to be defined once in order to be usable in all combinations.
+GENESIS is implemented in the form of a single web page (\cref{fig:screenshot}), accessible via \theurl{}, which can construct virtually any supersequence one might want and output a Bruker pulse program ready for download and execution.
+Apart from allowing users to download customized supersequences, this allows new NOAH developments to be easily and rapidly disseminated to users, independently of Bruker's own release cycle and without requiring a separate publication for each.
+Some such enhancements (namely solvent suppression options, new pure shift-based modules, improved versions of HMBC and HMQC modules which minimize spectral artifacts, and various streamlined aspects of acquisition and processing) are detailed later in this article; we anticipate that future feature requests from the NMR community will be similarly implemented.
 
-The regular GENESIS user interface is designed to only produce viable supersequences: thus, for example, it is not possible to create the CS or SBC supersequences discussed earlier.
+The regular GENESIS user interface is designed to produce only viable supersequences: thus, for example, it is not possible to create the CS or SBC supersequences discussed earlier.
 This is most useful for users who wish to follow established best practices.
 For more advanced usage, enabling ``developer mode'' will remove these limitations, allowing any arbitrary combination of modules to be created.
 The website further contains an extensive library of frequently asked questions about the implementation and practical details of NOAH experiments.
-It also offers download links for the AU scripts used for processing, as well as the new Python script used for toggling non-uniform sampling on/off (\texttt{noah\_nus2.py}, discussed in \cref{subsec:nus}).
+It also offers download links for the AU scripts used for processing, as well as a new Python script used for toggling non-uniform sampling on/off (\cref{subsec:nus}).
 
 
 \begin{figure}
@@ -189,7 +205,7 @@ It also offers download links for the AU scripts used for processing, as well as
     \includegraphics[width=0.8\textwidth]{screenshot.png}
     \caption{
         A screenshot of the GENESIS web interface.
-        Visible here are the module choices, the ``developer mode'' toggle, and buttons for downloading the pulse programme.
+        Visible here are the module choices, the ``developer mode'' toggle, and button for downloading the pulse program.
     }
     \label{fig:screenshot}
 \end{figure}
@@ -197,53 +213,48 @@ It also offers download links for the AU scripts used for processing, as well as
 \section{Implementation details}
 
 We begin with a brief discussion of how the GENESIS approach works.
-The pulse programme generation code itself is written in TypeScript (version 4.2.3, Microsoft), which is compiled to JavaScript (formally ECMAScript 2015, or ``ES6'') and then executed directly in a client's browser; there is no server-side code.
+The pulse program generation code itself is written in TypeScript (version 4.2.3, Microsoft), which is compiled to JavaScript (formally ECMAScript 2015, or ``ES6'') and then executed directly in a client's browser; there is no server-side code.
 The web browser shows a list of modules for users to choose from, using accessible and familiar names such as HMBC, HSQC, and so on (\cref{fig:screenshot}).
-Internally, these are mapped to a series of \texttt{NOAHModule} objects, each of which contain module-specific information, such as its abbreviation, the requisite parameter definitions, the pulse programme for the module itself, and the appropriate AU programme to be used for processing. 
+Internally, these are mapped to a series of \texttt{NOAHModule} objects, each of which contain module-specific information, such as its abbreviation, the requisite parameter definitions, the pulse program for the module itself, and the appropriate AU program to be used for processing. 
 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{pulprog_code.png}
     \caption{
-        Abridged pulse programme for a NOAH-2 \(\mathrm{S^+C^c}\) supersequence (\carbon{} seHSQC + CLIP-COSY).
+        Abridged pulse program for a NOAH-2 \(\mathrm{S^+C^c}\) supersequence (\carbon{} seHSQC + CLIP-COSY).
         Specific sections of interest are numbered on the left.
         \textbf{(1)} Module-specific delays are given unique identifiers to prevent clashes and to improve readability.
-        \textbf{(2)} TopSpin parameters (delays such as \texttt{d4}) are standardised between modules.
-        \textbf{(3)} The pulse programme instructions themselves begin here.
-        \textbf{(4)} \(t_1\) incrementation and echo--antiecho gradient inversion is carried out as necessary.
-        \textbf{(5)} Pulse and receiver phase cycles are standardised between modules.
-        \textbf{(6)} Comments for gradient pulses are compatible with the TopSpin \texttt{gppp} script.
+        \textbf{(2)} TopSpin parameters (delays such as \texttt{d4}) are standardized between modules.
+        \textbf{(3)} The pulse program instructions themselves begin here.
+        \textbf{(4)} Commands for \(t_1\) incrementation and echo--antiecho selection are inserted here.
+        \textbf{(5)} Pulse and receiver phase cycles are standardized between modules.
+        \textbf{(6)} Comments for PFGs are compatible with the TopSpin \texttt{gppp} script.
         \textbf{(7)} Instructions for generating shaped pulses using TopSpin's WaveMaker software.
         \textbf{(8)} Comments describing each parameter appear in the parameter setup screen.
-        \textbf{(9)} Instructions for processing AU programmes (\cref{subsec:splitx_au}) are encoded here, along with information about the specific modules used and a timestamp which ensures reproducibility.
+        \textbf{(9)} Instructions for processing AU programs (\cref{subsec:splitx_au}) are encoded here, along with information about the specific modules used and a timestamp which ensures reproducibility.
     }
     \label{fig:pulprog_code}
 \end{figure}
 
-Using this information, GENESIS then constructs the pulse programme in several steps (\cref{fig:pulprog_code}):
-
-\begin{itemize}
-    \item Header comments including information about the pulse programme and constituent modules;
-    \item Parameter definitions from each module are then collated, taking particular care to avoid duplicate definitions for parameters used in multiple modules;
-    \item The main section, which contains the actual instructions for the pulse sequence, is then put together.
-        This is done mostly by concatenating individual modules together, although there are also context-sensitive blocks placed \textit{between} modules such as purge pulses, gradients, or ASAP mixing\autocite{Claridge2019MRC} in BSX-type supersequences (X being any homonuclear module);
-    \item Appropriate looping and incrementation of parameters such as phase cycles, \(t_1\) delays, and gradient amplitudes for echo--antiecho selection is added at the end of the main section;
-    \item Additional comments containing descriptive text for parameters (displayed in TopSpin's \texttt{ased} parameter setup screen), as well as gradient and shaped pulse information (which allow direct setup using the \texttt{gppp} and \texttt{wvm} commands), are added at this stage.
-        These are collated by scanning the main section for TopSpin parameters (e.g.\ delays, pulses, gradients) and obtaining their descriptions from a lookup table;
-    \item Finally, we also specify the exact modules used in the pulse programme, the GENESIS version number, and a timestamp. This is important for reproducibility purposes (\cref{subsec:repro}).
-\end{itemize}
+Using this information, GENESIS then constructs the pulse program in several steps (\cref{fig:pulprog_code}).
+The pulse program begins with header comments including information about the pulse program and constituent modules.
+Parameter definitions for each module are then collated, taking particular care to avoid duplicate definitions for parameters used in multiple modules.
+The main section, which contains the actual instructions for the pulse sequence, is then put together.
+This is done mostly by concatenating individual modules together, although there are also context-sensitive blocks placed \textit{between} modules such as purge pulses, pulsed field gradients (PFGs), or ASAP mixing\autocite{Claridge2019MRC} in BSX-type supersequences (X being any homonuclear module).
+Appropriate looping and incrementation of parameters such as phase cycles, \(t_1\) delays, and PFG amplitudes for echo--antiecho selection is added at the end of the main section.
+Additional comments containing descriptive text for parameters (displayed in TopSpin's \texttt{ased} parameter setup screen), as well as PFG and shaped pulse information (which allow direct setup using the \texttt{gppp} and \texttt{wvm} commands), are added at this stage.
+Finally, we also specify the exact modules used in the pulse program, the GENESIS version number, and a timestamp: this is important for reproducibility purposes (\cref{subsec:repro}).
 
 
-\subsection{Standardisation of parameter meanings}
+\subsection{Standardization of parameter meanings}
 
-An immediate problem of directly concatenating pulse programme texts from different modules is that a given parameter in one module may take on a different meaning in another module.
-As a necessary step to prevent such clashes, we have fully standardised all parameters used in the GENESIS pulse programmes.
-These include pulse widths (\texttt{p\#}), delays (\texttt{d\#}), constants (\texttt{cnst\#}), \(z\)-gradient amplitudes (\texttt{gpz\#}), and phase cycles (\texttt{ph\#}), where \texttt{\#} represents a non-negative integer.
-Where possible, we have chosen meanings that are similar to those in the standard library of Bruker pulse programmes, only deviating in order to avoid otherwise inevitable clashes between different modules.
-Furthermore, in place of module-specific delays which are often called \texttt{DELTA\#} in standard library sequences, we have chosen to define new identifiers with more human-readable names inside the pulse programme itself.
-Thus, the delays in a HSQC sequence might be called \texttt{DC\_HSQC\#}, where the first \texttt{C} indicates the indirect-dimension nucleus (\carbon{}).
-
-While this standardisation was primarily implemented in order to facilitate pulse programme construction, this also makes it far easier for users to set up NOAH experiments.
+An immediate problem of directly concatenating pulse program texts from different modules is that a given parameter in one module may take on a different meaning in another module.
+To avoid such clashes, we have fully standardized all parameters used in the GENESIS pulse programs.
+These include pulse widths (\texttt{p\#}), delays (\texttt{d\#}), constants (\texttt{cnst\#}), \(z\)-gradient pulse amplitudes (\texttt{gpz\#}), and phase cycles (\texttt{ph\#}), where \texttt{\#} represents a non-negative integer.
+Where possible, we have chosen meanings that are similar to those in the standard library of Bruker pulse programs, only deviating in order to avoid otherwise inevitable clashes between different modules.
+Furthermore, in place of module-specific delays which are often called \texttt{DELTA\#} in standard library sequences, we have chosen to define new identifiers with more human-readable names inside the pulse program itself.
+Thus, the delays in an HSQC sequence might be called \texttt{DC\_HSQC\#}, where the first \texttt{C} indicates the indirect-dimension nucleus (\carbon{}).
+While this standardization was primarily implemented in order to facilitate pulse program construction, this also makes it far easier for users to set up NOAH experiments.
 Since the majority of these parameters are consistent with the standard Bruker library, many of them may be directly read in from the \textit{prosol} relation tables and/or existing parameter sets in TopSpin.
 Furthermore, since every parameter has the same meaning in every NOAH supersequence, it also makes setting up multiple supersequences an almost trivial task: generally only the parameters \texttt{NBL}, \texttt{PULPROG}, and \texttt{TD1} need be changed.
 
@@ -255,58 +266,57 @@ Furthermore, since every parameter has the same meaning in every NOAH superseque
     \includegraphics[width=0.85\textwidth]{flowchart.pdf}
     \caption{
         Flowchart illustrating how GENESIS decides the form of the \(zz\)-filter to be used in a \HC{} HMBC module.
-        Dotted lines represent the branch where developer mode is enabled, i.e.\ the user has full control over which form is used: these are labelled by alphabetical codes starting with \texttt{C\_HMBC} (the website contains a full description of these codes).
-        Solid lines represent the standard user mode, i.e.\ developer mode disabled: in this case, GENESIS automatically chooses the appropriate module based on what other modules are present in the supersequence.
+        Dotted lines represent the branch where developer mode is enabled, i.e., the user has full control over which form is used: these are labelled by alphabetical codes starting with \texttt{C\_HMBC} (the website contains a full description of these codes).
+        Solid lines represent the standard user mode, i.e., developer mode disabled: in this case, GENESIS automatically chooses the appropriate module based on what other modules are present in the supersequence.
     }
     \label{fig:flowchart}
 \end{figure}
 
 Another potential issue is that different versions of a pulse sequence often exist.
-An example is the \(zz\)-HMBC, where the \(zz\)-filter element is used to retain \carbon{}-bound and/or \nitrogen{}-bound \proton{} magnetisation.\autocite{Kupce2018CC,Kupce2019JMR}
-Since the user only specifies that they want a HMBC module and not the exact details of the \(zz\)-filter, the GENESIS code must in effect make this choice for the user behind the scenes, in an adaptive fashion which changes depending on what other modules the user selects (\cref{fig:flowchart}).
-Advanced users may, however, circumvent this and make their own choice by entering ``developer mode'': each module version is assigned a different label \texttt{C\_HMBC\_...} (the labels are enumerated in more detail on the website).
-The sensitivity-enhanced HSQC (seHSQC, abbreviated `\(\mathrm{S^+}\)'/\texttt{Sp}) presents a similar case.
-If the seHSQC module is followed by one or more homonuclear modules such as a COSY or NOESY, then the ZIP-seHSQC\autocite{Hansen2021AC,Yong2021JMR} is automatically chosen, as this preserves the requisite magnetisation for the later modules.
-However, if the seHSQC module is used last in the sequence, then the original Cavanagh--Rance--Kay seHSQC\autociteset{sehsqc} is chosen in order to maximise sensitivity.
+An example is the \(zz\)-HMBC module, where the implementation of the \(zz\)-filter element depends on whether \carbon{}-bound and/or \nitrogen{}-bound \proton{} magnetization needs to be retained for later modules.\autocite{Kupce2018CC,Kupce2019JMR}
+Since the user only specifies that they want an HMBC module and not the exact details of the \(zz\)-filter, the GENESIS code must in effect make this choice for the user behind the scenes, in an adaptive fashion which changes depending on what other modules the user selects (\cref{fig:flowchart}).
+Advanced users may, however, circumvent this and make their own choice by entering ``developer mode'', where each HMBC version is assigned a different label \texttt{C\_HMBC\_...} (the labels are explained in more detail on the website).
+The sensitivity-enhanced HSQC\autociteset{sehsqc} (seHSQC, abbreviated `\(\mathrm{S^+}\)'/\texttt{Sp}) module presents a similar case.
+If the seHSQC module is followed by one or more homonuclear modules such as a COSY or NOESY, then the ZIP element\autocite{Hansen2021AC,Yong2021JMR} is inserted at the beginning of the seHSQC module, in order to preserve the bulk magnetization required by the later modules.
+However, if the seHSQC module is used last in the sequence, then the ZIP element is omitted to maximize sensitivity.
 
 
 \subsection{Acquisition flags}
 \label{subsec:zgoptns}
 
-\changed{
-The GENESIS pulse programmes make substantial use of acquisition flags, a feature within TopSpin which allows for conditional compilation of pulse programme segments.
-By defining one or more ``symbols'' inside the \texttt{zgoptns} TopSpin parameter, users may choose whether to include additional features in the pulse programme, such as multiplicity editing in HSQC sequences, zero-quantum suppression\autocite{Thrippleton2003ACIE}, and solvent suppression (\cref{subsec:solvsupp}).
-The benefit of this is that there is no need for users to store multiple different pulse sequences which only differ in isolated sections.
-}
+To maximize flexibility within a sequence, the GENESIS pulse programs make substantial use of acquisition flags, a feature within TopSpin which allows for conditional compilation of pulse program segments.
+By defining one or more ``symbols'' inside the \texttt{zgoptns} TopSpin parameter, users may choose whether to include additional features in the pulse program, such as multiplicity editing in HSQC sequences, zero-quantum suppression\autocite{Thrippleton2003ACIE}, and solvent suppression (\cref{subsec:solvsupp}).
+The benefit of this is that there is no need for users to store multiple different pulse sequences which differ only in small, isolated segments.
 
 \subsection{Reproducibility}
 \label{subsec:repro}
 
-Reproducibility is a key consideration for scientific code, including GENESIS.\autocite{Perkel2020N}
-The primary aim of GENESIS is to release updates to NOAH supersequences in a timely fashion.
-However, it is also important that old releases of pulse sequences remain available so that scientific results using these pulse sequences may be reproduced. 
+As a final point for this section, we touch on the issue of reproducibility, which is a key consideration for scientific code such as GENESIS.\autocite{Perkel2020N}
+Although one of the primary aims of GENESIS is to release updates to NOAH supersequences in a timely fashion, it is also important that old releases of pulse sequences remain available, so that scientific results using these pulse sequences may be reproduced. 
 Furthermore, each release is accompanied by a suite of processing scripts; these may also be modified over time, and to ensure compatibility with the pulse sequences, old versions of the scripts must also be kept available.
 
-To ensure that NMR experiments run with GENESIS pulse programmes and scripts are always reproducible, each pulse programme and script is marked with a version number (labelled \textbf{(9)} in \cref{fig:pulprog_code}).
+To ensure that NMR experiments run with GENESIS pulse programs and scripts are always reproducible, each pulse program and script is marked with a version number (labelled \textbf{(9)} in \cref{fig:pulprog_code}).
 Old versions of GENESIS may be obtained using the following formula: to access version \texttt{vX.Y.Z} (where \texttt{X}, \texttt{Y}, \texttt{Z} are integers), navigate to the URL \url{https://nmr-genesis.co.uk/X/Y/Z}.
 For example, the release version that accompanies this paper is labelled \texttt{v2.1.0}; this can be accessed at \url{https://nmr-genesis.co.uk/2/1/0}.
 While earlier versions are also available and functional, these should be treated as ``pre-release'' versions, to be used at the reader's own risk.
-As an alternative, the GENESIS code can be obtained from GitHub at \url{https://github.com/yongrenjie/genesis}. Instructions on how to use this are provided in the repository description.
+As an alternative, the GENESIS code can be obtained from GitHub at \url{https://github.com/yongrenjie/genesis} and run entirely offline, allowing users to rewind to any desired version.
+Instructions on how to use this are provided in the repository description.
 
 \subsection{Outlook}
 \label{subsec:outlook}
 
 In its current form, GENESIS is not capable of creating arbitrary pulse sequences; its scope is limited to NOAH supersequences.
-However, this remains a viable target for the future: instead of combining NOAH modules to form a supersequence, one may instead consider combining pulse sequence elements (e.g.\ spin echoes, INEPT, zero-quantum suppression, decoupling, or solvent suppression schemes) to form a pulse sequence.
-At an even more granular level, individual building blocks (e.g.\ pulses, delays, gradients) could be strung together to construct a pulse sequence in an interactive fashion.
+However, this remains a viable target for the future: instead of combining NOAH modules to form a supersequence, one may instead consider combining pulse sequence elements (e.g., spin echoes, INEPT, zero-quantum suppression, decoupling, or solvent suppression schemes) to form a pulse sequence.
+At an even more granular level, individual building blocks (e.g., pulses, delays, PFGs) could be strung together to construct a pulse sequence in an interactive fashion.
 
 
-\section{Other NOAH improvements within GENESIS}
+\section{New NOAH improvements in GENESIS}
 
-We now detail a few recent improvements to NOAH supersequences, which are already implemented in the live GENESIS webpage.
-It is worth noting that because of the modular nature of pulse programme construction, changing the underlying code for a single NOAH module is sufficient to propagate changes to all supersequences containing that module.
+We now detail a few recent improvements to NOAH supersequences, all of which are already implemented in the live GENESIS webpage.
+It is worth emphasizing that the modular nature of GENESIS means that the addition of a new module enables the creation of all possible supersequences containing that module (of which there may be hundreds); traditionally, only around five of these might have been included with a publication.
+Likewise, simply changing the underlying code for any existing NOAH module is sufficient to immediately propagate changes to every relevant supersequence.
 
-\subsection{Suppression of one-bond artefacts in HMBC}
+\subsection{Suppression of one-bond artifacts in HMBC}
 
 \begin{figure}[ht]
     \centering
@@ -316,29 +326,29 @@ It is worth noting that because of the modular nature of pulse programme constru
     {\phantomsubcaption\label{fig:hmbc_comp_after}}
     \caption{
         \textbf{(\subref{fig:hmbc_comp_pulprog})} The NOAH \(zz\)-HMBC pulse sequence, with the newly added \carbon{} \ang{90} pulse highlighted in red.
-        The delays are \(\Delta = 1/(4 \cdot \onejch)\) and \(\Delta_{\text{LR}} = 1/(2 \cdot \njch)\); \(\varepsilon\) is the minimum time required for a gradient plus the subsequent recovery delay.
+        The delays are \(\Delta = 1/(4 \cdot \onejch)\) and \(\Delta_{\text{LR}} = 1/(2 \cdot \njch)\); \(\varepsilon\) is the minimum time required for a PFG the subsequent recovery delay.
         Phase cycling is performed as follows: \(\phi_1 = x, -x\); \(\phi_2 = x, x, -x, -x\); \(\phi_{\text{rec}} = x, -x, -x, x\).
-        All gradients have duration \SI{1}{ms}; amplitudes as a fraction of the maximum gradient strength (\SI{55.7}{G\per\cm}) are as follows: \(g_1 = -15\%\); \(g_2 = 10\%\); \(g_3 = 5\%\); \(g_4 = 80\%\); \(g_5 = \pm 40.2\%\).
-        \textbf{(\subref{fig:hmbc_comp_before})} HMBC spectrum obtained using the original \(zz\)-HMBC module, i.e.\ without the added \ang{90} pulse.
-        \(\onejch{}\) artefacts are highlighted in red boxes.
+        All PFGs have duration \SI{1}{ms}; amplitudes as a fraction of the maximum \(z\)-gradient pulse strength (\SI{55.7}{G\per\cm}) are as follows: \(g_1 = -15\%\); \(g_2 = 10\%\); \(g_3 = 5\%\); \(g_4 = 80\%\); \(g_5 = \pm 40.2\%\).
+        \textbf{(\subref{fig:hmbc_comp_before})} HMBC spectrum obtained using the original \(zz\)-HMBC module, i.e., without the added \ang{90} pulse.
+        \(\onejch{}\) artifacts are highlighted in red boxes.
         \textbf{(\subref{fig:hmbc_comp_after})} HMBC spectrum obtained with the added \ang{90} pulse.
         \andro{}
     }
     \label{fig:hmbc_comp}
 \end{figure}
 
-The \(zz\)-HMBC module is ordinarily placed first in a supersequence, where the \(zz\)-filter element serves to preserve magnetisation of protons directly coupled to \carbon{} and/or \nitrogen{}.\autocite{Kupce2018CC,Kupce2019JMR}
+The \(zz\)-HMBC module is ordinarily placed first in a supersequence, where the \(zz\)-filter element serves to preserve magnetization of protons directly coupled to \carbon{} and/or \nitrogen{}.\autocite{Kupce2018CC,Kupce2019JMR}
 Specifically, the \(zz\)-filter acts as a \ang{90} excitation pulse on \carbonbulk{}-bound protons, while leaving \carbon{}-bound protons along \(+z\).
 This is largely accomplished in practice, as evidenced by the fact that the intensities in subsequent HSQC-type modules are barely perturbed.
-However, due to instrumental imperfections and/or J-coupling mismatch, not all of the \carbon{}--\proton{} magnetisation is perfectly retained: in particular, the \(zz\)-filter also generates a degree of \textit{antiphase} \(\onejch{}\) magnetisation of the form \(2\mathrm{H}_x\mathrm{C}_z\).
-This antiphase magnetisation is later refocused during the low-pass J-filter (LPJF) to give in-phase magnetisation, eventually ending up as one-bond correlation artefacts in the HMBC spectrum (\cref{fig:hmbc_comp_before}).
+However, due to instrumental imperfections and/or J-coupling mismatch, not all of the \carbon{}--\proton{} magnetization is perfectly retained: in particular, the \(zz\)-filter also generates a degree of \textit{antiphase} magnetization of the form \(\mathrm{H}_x\mathrm{C}_z\).
+This antiphase magnetization is later refocused during the low-pass J-filter (LPJF) to give in-phase magnetization, eventually ending up as one-bond correlation artifacts in the HMBC spectrum (\cref{fig:hmbc_comp_before}).
 
-A simple solution to this is to add a \carbon{} \ang{90} pulse at the end of the \(zz\)-filter (\cref{fig:hmbc_comp_pulprog}): this converts any antiphase magnetisation to double- or zero-quantum magnetisation, which is subsequently dephased by the LPJF.
+A simple solution to this is to add a \carbon{} \ang{90} pulse at the end of the \(zz\)-filter (\cref{fig:hmbc_comp_pulprog}): this converts any antiphase magnetization to double- or zero-quantum magnetization, which is subsequently dephased by the LPJF.
 This idea has previously been used by Luy and coworkers in CLIP-HSQC experiments to remove antiphase contributions prior to FID detection.\autocite{Enthart2008JMR}
-In the event, this small modification proved to have a large impact, almost completely suppressing the \(\onejch\) artefacts (\cref{fig:hmbc_comp_after}).
-Further comparisons of artefact intensity are provided in \cref{sec:si_hmbc}.
+In the event, this small modification proved to have a large impact, almost completely suppressing the \(\onejch\) artifacts (\cref{fig:hmbc_comp_after}).
+Further comparisons of artifact intensity are provided in \cref{sec:si_hmbc}.
 
-\subsection{\texorpdfstring{\nitrogen{}}{15N} HMQC gradient scheme}
+\subsection{\texorpdfstring{\nitrogen{}}{15N} HMQC module}
 
 \begin{figure}[ht]
     \centering
@@ -350,28 +360,28 @@ Further comparisons of artefact intensity are provided in \cref{sec:si_hmbc}.
     {\phantomsubcaption\label{fig:hmqc_comp_spec_after}}
     \caption{
         \textbf{(\subref{fig:hmqc_comp_pulprog})} A general outline of the NOAH \nitrogen{} HMQC module.
-        \(g_2\) has a duration which matches that of \(g_1\) (explained below), and an amplitude of \(\pm n \cdot 8.1\%\), where \(n\) is the number of CTP gradients bracketing the \(t_1\) period.
+        \(g_2\) has a duration which matches that of \(g_1\) (explained below), and an amplitude of \(\pm n \cdot 8.1\%\), where \(n\) is the number of PFGs bracketing the \(t_1\) period.
         \(g_1\) has an amplitude of \(80\%\) in all cases.
         All other symbols have the same meaning as in \cref{fig:hmbc_comp}.
-        \textbf{(\subref{fig:hmqc_comp_pulprog_before})} The previously published coherence selection scheme for the HMQC module, with four gradients each of duration \SI{1}{ms}.
-        \textbf{(\subref{fig:hmqc_comp_pulprog_after})} The new coherence selection scheme for the HMQC module, with two gradients each of duration \SI{2.5}{ms}.
-        \textbf{(\subref{fig:hmqc_comp_spec_before})--(\subref{fig:hmqc_comp_spec_after})} CLIP-COSY spectra obtained from a NOAH-3 \(\mathrm{MS^+C^c}\) supersequence (\nitrogen{} HMQC + \carbon{} seHSQC + CLIP-COSY), acquired with the gradient schemes shown in (\subref{fig:hmqc_comp_pulprog_before}) and (\subref{fig:hmqc_comp_pulprog_after}) respectively.
-        The wing artefacts in the former spectrum are highlighted in red boxes.
+        \textbf{(\subref{fig:hmqc_comp_pulprog_before})} The previously published CTP selection scheme for the HMQC module, with four PFGs each of duration \SI{1}{ms}.
+        \textbf{(\subref{fig:hmqc_comp_pulprog_after})} The new CTP selection scheme for the HMQC module, with two PFGs each of duration \SI{2.5}{ms}.
+        \textbf{(\subref{fig:hmqc_comp_spec_before})--(\subref{fig:hmqc_comp_spec_after})} CLIP-COSY spectra obtained from a NOAH-3 \(\mathrm{MS^+C^c}\) supersequence (\nitrogen{} HMQC + \carbon{} seHSQC + CLIP-COSY), acquired with the CTP selection schemes shown in (\subref{fig:hmqc_comp_pulprog_before}) and (\subref{fig:hmqc_comp_pulprog_after}) respectively.
+        The wing artifacts in the former spectrum are highlighted in red boxes.
         \zolmi{}
     }
     \label{fig:hmqc_comp}
 \end{figure}
 
-We have recently described the occurrence of ``wing artefacts'' in homonuclear modules, which arise from bulk magnetisation which evolves during either half of \(t_1\) in a preceding heteronuclear module.\autocite{Yong2021JMR}
-These artefacts can be removed in an elegant manner by ensuring that each half of \(t_1\) in a HMQC/HSQC/seHSQC module contains coherence transfer pathway (CTP) gradients of equal sign and magnitude, which makes sure that any bulk magnetisation undergoing net evolution during \(t_1\) is dephased.
+We have recently described the occurrence of ``wing artifacts'' in homonuclear modules, which arise from bulk magnetization which evolves in one of the two halves of \(t_1\) in a preceding heteronuclear module, such as an HMQC (\cref{fig:hmqc_comp_pulprog}).\autocite{Yong2021JMR}
+These artifacts can be removed in an elegant manner by ensuring that each half of \(t_1\) in the heteronuclear module contains coherence transfer pathway (CTP) PFGs of equal sign and magnitude, which makes sure that any bulk magnetization undergoing net evolution during \(t_1\) is dephased.
 
-At the same time, it is also important that the final gradient in the heteronuclear module have as large an amplitude as possible, since this gradient is responsible for dephasing bulk magnetisation that is not returned to \(+z\) just prior to the detection period.
-In order to accomplish this, the previous \nitrogen{} HMQC module used bipolar opposing gradients in either half of \(t_1\), a scheme which allows the final refocusing CTP gradient \(g_2\) to have an amplitude of \(4g_1\gamma_{\ch{N}}/\gamma_{\ch{H}}\) (\cref{fig:hmqc_comp_pulprog_before}).
-Although this leads to excellent artefact suppression in the \nitrogen{} HMQC itself, wing artefacts are apparent in downstream modules (\cref{fig:hmqc_comp_spec_before}), because the opposing gradients cancel each other out and do not enforce any CTP selection on the bulk magnetisation.
+At the same time, it is also important that the final refocusing PFG in the heteronuclear module (\(g_2\)) has as large an amplitude as possible, since it is responsible for dephasing bulk magnetization that is not returned to \(+z\) just prior to the detection period.
+In order to accomplish this, the previous \nitrogen{} HMQC module placed pairs of bipolar PFGs (\(g_1\)) in both halves of \(t_1\), a scheme which allows \(g_2\) to have an amplitude of \(4g_1\gamma_{\ch{N}}/\gamma_{\ch{H}}\) (\cref{fig:hmqc_comp_pulprog_before}).
+Although this leads to excellent artifact suppression in the \nitrogen{} HMQC itself, wing artifacts are apparent in downstream modules (\cref{fig:hmqc_comp_spec_before}), because the opposing PFGs cancel each other out and do not enforce any CTP selection on the bulk magnetization.
 
-In order to suppress these ``wing artefacts'' in later modules, it proves better to only use two gradients during \(t_1\) (one in either half), and to \textit{lengthen} their duration such that the final gradient \(g_2\) provides sufficient coherence selection in the HMQC itself (\cref{fig:hmqc_comp_pulprog_after}).
-This strategy was previously described for the \nitrogen{} seHSQC;\autocite{Yong2021JMR} here we have also applied it to the HMQC with success (\cref{fig:hmqc_comp_spec_after}).
-This change causes no significant difference in the sensitivity of the HMQC module itself (\cref{fig:hmqc_comp_snr}).
+In order to suppress these ``wing artifacts'' in later modules, it proves better to only use two PFGs during \(t_1\) (one in either half), and to \textit{lengthen} their duration such that the final PFG \(g_2\) provides sufficient CTP selection in the HMQC module itself (\cref{fig:hmqc_comp_pulprog_after}).
+This strategy was previously described for the \nitrogen{} seHSQC module;\autocite{Yong2021JMR} here we have also applied it to the HMQC module with success (\cref{fig:hmqc_comp_spec_after}).
+This change causes no significant difference in the sensitivity of the resulting spectra (\cref{fig:hmqc_comp_snr}).
 
 \subsection{PSYCHE and 2DJ modules}
 
@@ -389,8 +399,8 @@ Particularly for the HMQC experiment, this allowed modest gains in sensitivity a
         Spectra obtained from a NOAH-3 \(\mathrm{S^{+}_{N}S^{+}P^T}\) supersequence.
         \textbf{(\subref{fig:psyche_n15_sehsqc})} \nitrogen{} sensitivity-enhanced HSQC\autocite{Yong2021JMR} (256 \(t_1\) increments, 2 scans per increment).
         \textbf{(\subref{fig:psyche_c13_sehsqc})} \carbon{} sensitivity-enhanced HSQC\autocite{Hansen2021AC,Yong2021JMR} (256 \(t_1\) increments, 2 scans per increment).
-        \textbf{(\subref{fig:psyche_psyche})} 1D TSE-PSYCHE pure shift spectrum\autocite{Foroozandeh2015CC} (saltire flip angle of \ang{10}, 32 chunks, 16 scans per chunk).
-        \grami{}
+        \textbf{(\subref{fig:psyche_psyche})} 1D TSE-PSYCHE pure shift spectrum\autocite{Foroozandeh2015CC} (saltire flip angle of \ang{15}, 32 chunks, 16 scans per chunk, 8-step SAPPHIRE averaging).
+        \cyclo{}
     }
     \label{fig:psyche}
 \end{figure}
@@ -400,60 +410,57 @@ In both cases, the number of \(t_1\) increments needed (16--32) is far smaller t
 In particular, at present, we have implemented a family of PSYCHE experiments, namely: the original pseudo-2D PSYCHE (abbreviated ``P''); the triple spin echo (TSE)-PSYCHE experiment (``P\textsuperscript{T}''), which provides improved robustness towards strong coupling; and the PSYCHE 2DJ experiment (``J'') which yields pure absorption-mode lineshapes.\autociteset{psyche}
 On top of this, there is also a magnitude-mode 2D J module available (``J\textsuperscript{qf}'').
 
-In PSYCHE spectra, the flip angle of the chirp or saltire pulses used in the J-refocusing element provides the experimentalist with a choice: a larger flip angle provides greater sensitivity, but at the cost of increased artefacts.\autocite{Foroozandeh2018CEJ}
+In PSYCHE spectra, the flip angle of the chirp or saltire pulses used in the J-refocusing element provides the experimentalist with a choice: a larger flip angle provides greater sensitivity, but at the cost of increased artifacts.\autocite{Foroozandeh2018CEJ}
 One advantage of acquiring PSYCHE spectra in NOAH-type supersequences is that the increased number of transients compensates for the sensitivity losses inherent to PSYCHE and other pure shift techniques.
-Thus, the user can choose a smaller flip angle (ca.\ \ang{10}) in order to maximise spectral purity instead, without losing any actual spectrometer time.
+Thus, the user can choose a smaller flip angle (ca.\ \ang{10}) in order to maximize spectral purity instead, without losing any actual spectrometer time.
+On top of that, the extra transients may additionally be used to carry out SAPPHIRE averaging\autocite{Moutzouri2017CC} to suppress artefacts arising from J-modulation; this feature is enabled by default in GENESIS.
 An example of a NOAH-3 supersequence with the TSE-PSYCHE module is shown in \cref{fig:psyche}.
 
 \subsection{Solvent suppression}
 \label{subsec:solvsupp}
 
-\changed{
-The addition of solvent suppression to NOAH supersequences is more involved than for a typical NMR experiment, because the water signal must be adequately suppressed in all modules, ideally without affecting any other magnetisation components.
-The HMQC- and HSQC-type NOAH modules in fact provide good intrinsic solvent suppression, because the magnetisation of all \proton{} spins not coupled to heteronuclei---including that of water---are returned to $+z$ at the end of the sequence.
+The addition of solvent suppression to NOAH supersequences is more involved than for a typical NMR experiment, because the water signal must be adequately suppressed in all modules, ideally without affecting any other magnetization components.
+HMQC- and HSQC-type NOAH modules in fact provide good intrinsic solvent suppression, because the magnetization of all \proton{} spins not coupled to heteronuclei---including that of water---are returned to $+z$ at the end of the sequence.
 However, other modules require the addition of specific solvent suppression techniques.
-}
 
-\changed{
-Two options are currently available, namely presaturation (during the recovery delay $d_1$, as well as the mixing time in NOESY modules), and excitation sculpting placed just prior to acquisition in homonuclear (\HH{}) modules.
+Two options are currently available, namely presaturation (during the recovery delay $d_1$ and the mixing time in NOESY modules), and excitation sculpting placed just prior to acquisition in homonuclear (\HH{}) modules\autocite{Hwang1995JMR}.
 The refocusing element used in the latter is a combination of a shaped and hard \ang{180} pulse.
-Both presaturation and excitation sculpting can be independently turned on or off using acquisition flags in TopSpin.
-}
-
-\todo{\textbf{Figure?}}
-
-\SI{30}{\milli\molar} glutathione in 10\% \ch{H2O}/\ch{D2O}
+Both presaturation and excitation sculpting can be independently turned on or off using the \texttt{-DPRESAT} and \texttt{-DES} acquisition flags in TopSpin respectively.
 
 \subsection{splitx\_au processing}
 \label{subsec:splitx_au}
 
-NOAH data processing is done using the \texttt{splitx\_au} AU programme; this is responsible for creating separate datasets containing the data for each module, defining any required processing parameters, and processing each dataset using module-specific AU programmes (e.g.\ \texttt{noah\_hsqc} for \carbon{} HSQC data).
-Previously, the names of the module-specific AU programmes had to be specified as the \texttt{USERP\#} series of processing parameters.
-In contrast, with GENESIS pulse programmes, this information is directly embedded within the pulse programme itself; consequently, with a small modification to the \texttt{splitx\_au} AU programme, we can parse the pulse programme to obtain the requisite list of AU programmes.
-The user therefore does not have to specify it explicitly, which makes setting up multiple different supersequences a much smoother process.
-If necessary, it is possible to override these ``default'' AU programmes by explicitly specifying the \texttt{USERP\#} parameters, allowing for customised processing.
+NOAH data processing is done using the \texttt{splitx\_au} AU program; this is responsible for creating separate datasets containing the data for each module, defining any required processing parameters, and processing each dataset using module-specific AU programs (e.g., \texttt{noah\_hsqc} for \carbon{} HSQC data).
+Previously, the names of the module-specific AU programs had to manually be specified as the \texttt{USERP\#} series of processing parameters.
+In contrast, with GENESIS pulse programs, this information is directly embedded within the pulse program itself; furthermore, we have modified the \texttt{splitx\_au} AU program to obtain the requisite list of AU programs by parsing the pulse program text.
+Users therefore no longer need to provide the \texttt{USERP\#} parameters, which makes setting up multiple different supersequences a much smoother process.
+If necessary, it is possible to override these preselected AU programs by explicitly specifying the \texttt{USERP\#} parameters, allowing for customized processing.
 
 \subsection{Non-uniform sampling implementation}
 \label{subsec:nus}
 
-With the GENESIS pulse programmes we also introduce a new and more user-friendly implementation of non-uniform sampling (NUS).
-NOAH experiments do not work ``out of the box'' with TopSpin's conventional NUS setup routine: some special adjustments have to be made by manually generating the list of increments to be sampled and adjusting the \(t_1\) delays accordingly within the pulse sequence looping.
-Previously, this was accomplished using a Python script which created a new pulse programme for each supersequence, e.g.\ \texttt{noah3\_BSC.nus}.\autocite{Claridge2019MRC}
-We have modified this approach such that the \textit{same} pulse programme can be used for both uniform and non-uniform sampling, where NUS is controlled by an acquisition flag \texttt{-DNUS}.
-Although a (different) Python script is still required for initialisation, this means that it is no longer necessary to keep two separate instances of the same pulse sequence in TopSpin, and simplifies turning NUS on and off.
+With the GENESIS pulse programs we also introduce a new and more user-friendly implementation of non-uniform sampling (NUS).
+NOAH experiments do not work ``out of the box'' with TopSpin's conventional NUS setup routine: some special adjustments must be made by manually generating the list of increments to be sampled and adjusting the \(t_1\) delays accordingly within the pulse sequence looping.
+Previously, this was accomplished using a Python script which created a new pulse program for each supersequence, e.g., \texttt{noah3\_BSC.nus}.\autocite{Claridge2019MRC}
+We have modified this approach such that the \textit{same} pulse program can be used for both uniform and non-uniform sampling, where NUS is controlled by an acquisition flag \texttt{-DNUS}.
+Although a (different) Python script is still required for initialization, this means that it is no longer necessary to keep two separate instances of the same pulse sequence in TopSpin, and simplifies turning NUS on and off.
 
 
 \section{Conclusion}
 
-Here, we have demonstrated how the systematic generation of NOAH pulse programmes can be used to create any supersequence that users are interested in (of which there are potentially thousands).
-This provides ready access to a far greater range of supersequences tailored to users' needs, reduces the likelihood of coding errors in new sequences, and allows newly implemented or improved modules to be easily disseminated to users.
-Several of these improvements to NOAH modules, along with the associated processing routines, have been described; these are already available via the GENESIS website (\theurl{}).
+In this article, we have demonstrated how the modular nature of NOAH supersequences can be exploited in the systematic generation of pulse programs containing any arbitrary set of constituent modules.
+This provides a real, practical way to obtain a myriad of possible supersequences which have been hitherto inaccessible.
+Users can create customized sequences which are tailored to their needs, and also access newly implemented or improved modules immediately upon release.
+Here, we have described several such enhancements, including built-in solvent suppression flags, new pure shift and 2D J modules, the reduction of artifacts in HMBC and HMQC modules, and improved processing routines.
+All of these, as well as any future updates, are and will be available via the GENESIS website (\theurl{}).
 
 \section*{Acknowledgements}
 
+We thank Dr Mohammadali Foroozandeh (University of Oxford) for helpful discussions.
 J.R.J.Y.\ thanks the Clarendon Fund (University of Oxford) and the EPSRC Centre for Doctoral Training in Synthesis for Biology and Medicine (EP/L015838/1) for a studentship, generously supported by AstraZeneca, Diamond Light Source, Defence Science and Technology Laboratory, Evotec, GlaxoSmithKline, Janssen, Novartis, Pfizer, Syngenta, Takeda, UCB, and Vertex.
 
 % Fakesection Bibliography
+\AtNextBibliography{\small}
 \printbibliography{}
 \end{refsection}
 
@@ -488,7 +495,7 @@ J.R.J.Y.\ thanks the Clarendon Fund (University of Oxford) and the EPSRC Centre 
 
     \vspace{0.6cm}
 
-    \Large Jonathan R.\ J.\ Yong,\textsuperscript{1} {\=E}riks Kup{\v{c}}e,\textsuperscript{2} Tim D.\ W.\ Claridge\textsuperscript{1,}*
+    \Large Jonathan R.\ J.\ Yong,\textsuperscript{1} {\=E}riks Kup{\v{c}}e,\textsuperscript{2} Tim D.\ W.\ Claridge\textsuperscript{1,*}
 
     \vspace{0.6cm}
 
@@ -497,8 +504,14 @@ J.R.J.Y.\ thanks the Clarendon Fund (University of Oxford) and the EPSRC Centre 
     \textsuperscript{2} \textit{\brukeruk{}}
 
     * \texttt{tim.claridge@chem.ox.ac.uk}
+
 \end{center}
-\thispagestyle{empty}
+
+\vspace{2cm}
+\section*{Contents}
+
+\startcontents[si]
+\printcontents[si]{ }{1}{}
 \vfill
 \hspace{0pt}
 \newpage
@@ -524,16 +537,16 @@ However, this does contain some invalid combinations, namely:
 \begin{enumerate}
     \item All five ``none'' modules selected (\(\symbf{1}\)).
     \item ``NOAH-1'' combinations with only one module: \(\ee{\nmoda-1} + \ee{\nmodb-1} + \ee{\nmodc-1} + \ee{\nmodd-1} + \ee{\nmode-1} = \symbf{\ee{\nmoda+\nmodb+\nmodc+\nmodd+\nmode-5}}\).
-        These are technically valid experiments (and the pulse programmes generated by the website \textit{will} function correctly), but they are no different from standard 2D experiments so the NOAH description does not truly apply to these.
-    \item ``NOAH-6'' combinations where there is one experiment in each of the first four categories, and a ``double'' experiment (e.g.\ COSY + NOESY) in the last category.
+        These are technically valid experiments (and the pulse programs generated by the website \textit{will} in fact function correctly), but they are no different from standard 2D experiments so the NOAH description does not truly apply to these.
+    \item ``NOAH-6'' combinations where there is one experiment in each of the first four categories, and a ``double'' experiment (e.g., COSY + NOESY) in the last category.
         There are \(\ee{\nmoddoublehom}\) such modules, for a total of \(\ee{\nmoda-1} \cdot \ee{\nmodb-1} \cdot \ee{\nmodc-1} \cdot \ee{\nmodd-1} \cdot \ee{\nmoddoublehom} = \symbf{\ee{(\nmoda-1)*(\nmodb-1)*(\nmodc-1)*(\nmodd-1)*\nmoddoublehom}}\) combinations.
         These are perfectly sound from a scientific perspective, but cannot be executed in current versions of TopSpin as the parameter \texttt{NBL} (number of modules) has a maximum value of 5.
     \item NOAH-2 or NOAH-3 combinations consisting of the HMBC module directly followed by a \HH{} homonuclear module: \(\symbf{\ee{\nmode-1}}\).
-        These can be run, but are likely to produce lower-quality homonuclear spectra as the HMBC module dephases bulk magnetisation.
-    \item Duplicate, identical combinations where the same \CH{} module (e.g.\ HSQC) was selected either from the third or the fourth column.
+        These can be run, but are likely to produce lower-quality homonuclear spectra as the HMBC module dephases bulk magnetization.
+    \item Duplicate, identical combinations where the same \CH{} module (e.g., HSQC) was selected either from the third or the fourth column.
         There are \(\ee{\nmoddup}\) such modules, so we must subtract \(\ee{\nmoda} \cdot \ee{\nmodb} \cdot \ee{\nmoddup} \cdot \ee{\nmode} = \symbf{\ee{\nmoda*\nmodb*\nmoddup*\nmode}}\) combinations.
         \begin{itemize}
-            \item Note, however, that some of these duplicate combinations were \textit{already} rejected in step (2) above. Thus, we need to add back \(\symbf{\ee{\nmoddup}}\) ``NOAH-1'' combinations that we double-counted.
+            \item Note, however, that some of these duplicate combinations were \textit{already} rejected in step (2) above. Thus, we need to add back \(\symbf{\ee{\nmoddup}}\) ``NOAH-1'' combinations.
         \end{itemize}
 \end{enumerate}
 
@@ -549,10 +562,10 @@ This yields a total number of
     = \textbf{\ee{(\nmoda*\nmodb*\nmodc*\nmodd*\nmode)-1-(\nmoda+\nmodb+\nmodc+\nmodd+\nmode-5)-((\nmoda-1)*(\nmodb-1)*(\nmodc-1)*(\nmodd-1)*\nmoddoublehom)-(\nmode-1)-(\nmoda*\nmodb*\nmoddup*\nmode)+(\nmoddup)}} %
 \)
 possible NOAH supersequences.
-Note that, unlike the original paper\autocite{Kupce2017ACIE}, this does not take into account options that are set using acquisition flags, such as multiplicity editing in HSQC-type experiments or solvent suppression.
+Note that, unlike the original paper\autocite{Kupce2017ACIE}, this does not take into account options that are set using acquisition flags, such as multiplicity editing or solvent suppression.
 This also does not include modules that are only available via the ``developer mode'' interface.
 
-\section{More HMBC artefact comparisons}
+\section{More HMBC artifact comparisons}
 \label{sec:si_hmbc}
 
 \begin{figure}[H]
@@ -568,9 +581,9 @@ This also does not include modules that are only available via the ``developer m
         Comparisons of HMBC spectra obtained using the Bruker standard library sequences\autocite{Cicero2001JMR} \texttt{hmbcetgpl3nd} (with a third-order LPJF, first column) and \texttt{hmbcetgpl2nd} (with a second-order LPJF, second column); and the NOAH \(zz\)-HMBC module (pulse sequence in \cref{fig:hmbc_comp_pulprog}), before and after the added \carbon{} \ang{90} pulse (third and fourth columns respectively).
         It should be noted that the NOAH \(zz\)-HMBC module features a second-order LPJF as well.
         \textbf{(\subref{fig:hmbc_si_andro_overall})} The full 2D spectra, plotted with the same contour levels.
-        \textbf{(\subref{fig:hmbc_si_andro_trace1})--(\subref{fig:hmbc_si_andro_trace5})} Multiple \(f_1\) traces through the 2D spectra showing the \(\onejch{}\) artefacts.
+        \textbf{(\subref{fig:hmbc_si_andro_trace1})--(\subref{fig:hmbc_si_andro_trace5})} Multiple \(f_1\) traces through the 2D spectra showing the \(\onejch{}\) artifacts.
         The spectra within each row are plotted with the same \(y\)-axis range.
-        In all cases except (\subref{fig:hmbc_si_andro_trace5}), the addition of the \ang{90} pulse leads to far better artefact suppression; in many cases, its performance is comparable to the standard library third-order LPJF.
+        In all cases except (\subref{fig:hmbc_si_andro_trace5}), the addition of the \ang{90} pulse leads to far better artifact suppression; in many cases, its performance is comparable to the standard library third-order LPJF.
         \andro{}
     }
     \label{fig:hmbc_si_andro}
@@ -588,7 +601,7 @@ This also does not include modules that are only available via the ``developer m
     \caption{
         The same as in \cref{fig:hmbc_si_andro}, but instead acquired with a sample of \SI{50}{\milli\molar} zolmitriptan in DMSO-\(d_6\).
         Note that the peak labelled with an asterisk in (\subref{fig:hmbc_si_zolmi_trace1}) is a genuine correlation.
-        It is, however, flanked by a pair of \(\onejch{}\) artefacts (most visible in the third column, i.e.\ NOAH \(zz\)-HMBC without added \ang{90} pulse).
+        It is, however, flanked by a pair of \(\onejch{}\) artifacts (most visible in the third column, i.e., NOAH \(zz\)-HMBC without added \ang{90} pulse).
     }
     \label{fig:hmbc_si_zolmi}
 \end{figure}
@@ -604,14 +617,14 @@ This also does not include modules that are only available via the ``developer m
     {\phantomsubcaption\label{fig:hmqc_comp_snr_bad1d}}
     {\phantomsubcaption\label{fig:hmqc_comp_snr_good1d}}
     \caption{
-        Comparisons of \HN{} HMQC spectra obtained using the two gradient schemes shown in \cref{fig:hmqc_comp}.
+        Comparisons of \HN{} HMQC spectra obtained using the two CTP selection schemes shown in \cref{fig:hmqc_comp} of the main text.
         \textbf{(\subref{fig:hmqc_comp_snr_bad2d})--(\subref{fig:hmqc_comp_snr_good2d})} Full 2D spectra.
         The two desired signals are boxed.
-        Note the artefacts at \(f_2 = \SI{2.2}{\ppm}\); these arise from bulk magnetisation that is not fully dephased by the gradients in the HMQC module.\autocite{Yong2021JMR}
-        These artefacts are also present in the standard Bruker HMQC / seHSQC sequences, and have comparable intensity to the unmodified NOAH spectrum in (\textbf{\subref{fig:hmqc_comp_snr_bad2d}}).
+        Note the artifacts at \(f_2 = \SI{2.2}{\ppm}\); these arise from bulk magnetization that is not fully dephased by the PFGs in the HMQC module.\autocite{Yong2021JMR}
+        These artifacts are also present in the standard Bruker HMQC / seHSQC sequences, and have comparable intensity to the unmodified NOAH spectrum in (\subref{fig:hmqc_comp_snr_bad2d}).
         \textbf{(\subref{fig:hmqc_comp_snr_bad1d})--(\subref{fig:hmqc_comp_snr_good1d})} Positive projections of the spectra onto the \(f_2\) axis.
-        The relative intensities of the peaks and artefacts are shown in (\subref{fig:hmqc_comp_snr_good1d}).
-        Switching to the improved gradient scheme leads to no significant change in the intensity of the desired peaks (\(\geq 95\%\)), and halves the artefact intensity.
+        The relative intensities of the peaks and artifacts are shown in (\subref{fig:hmqc_comp_snr_good1d}).
+        Switching to the improved CTP selection scheme leads to no significant change in the intensity of the desired peaks (\(\geq 95\%\)), and halves the artifact intensity.
         We previously reported similar results with the \HN{} seHSQC module.\autocite{Yong2021JMR}
         \zolmi{}
     }
@@ -619,6 +632,7 @@ This also does not include modules that are only available via the ``developer m
 \end{figure}
 
 % Fakesection SI bibliography
+\AtNextBibliography{\small}
 \printbibliography{}
 \clearpage    % For some reason this is needed to make the last page number 'S5', not '5'
 
