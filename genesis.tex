@@ -35,6 +35,8 @@
 \usepackage{xurl}   % must be after biblatex
 \usepackage[
   mode=match,
+  range-phrase={--},
+  range-units=single,
   propagate-math-font=true,
   reset-math-version=false,
   reset-text-family=false,
@@ -148,7 +150,7 @@ Here we present several such enhancements, including options for solvent suppres
 NMR spectroscopy is one of the most important analytical techniques for the characterization of molecular structures.
 In particular, \textit{n}‐dimensional (\textit{n}D) NMR experiments (\(n \geq 2\)) provide extensive information about through-bond and through-space connectivity.
 However, such experiments require the incrementation of one or more indirect-dimension evolution periods, leading to long experiment times.
-The acceleration of \textit{n}D NMR has therefore emerged as a highly popular area of research: developments in this area include (but are not limited to) ultrafast NMR\autociteset{ultrafast}, non-uniform sampling (NUS)\autociteset{nus}, multiple-FID experiments\autociteset{multifid}, and the shortening or elision of recovery delays\autociteset{reducedd1}.
+The acceleration of \textit{n}D NMR has therefore emerged as a highly popular area of research: developments in this area include (but are not limited to) ultrafast NMR\autociteset{ultrafast}, nonuniform sampling (NUS)\autociteset{nus}, multiple-FID experiments\autociteset{multifid}, and the shortening or elision of recovery delays\autociteset{reducedd1}.
 NOAH (NMR by Ordered Acquisition using \proton{} detection) experiments\autociteset{noah}, which fall under the last two categories, consist of a series of multiple 2D experiments (``modules''), combined into one single ``supersequence'' which uses only one recovery delay for all modules.
 This provides substantial (up to \(4\times\)) time savings compared to conventional acquisition, in which one recovery delay is used for each module (\cref{fig:noah_diagram}).
 
@@ -197,7 +199,7 @@ The regular GENESIS user interface is designed to produce only viable superseque
 This is most useful for users who wish to follow established best practices.
 For more advanced usage, enabling ``developer mode'' will remove these limitations, allowing any arbitrary combination of modules to be created.
 The website further contains an extensive library of frequently asked questions about the implementation and practical details of NOAH experiments.
-It also offers download links for the AU scripts used for processing, as well as a new Python script used for toggling non-uniform sampling on/off (\cref{subsec:nus}).
+It also offers download links for the AU scripts used for processing, as well as a new Python script used for toggling nonuniform sampling on/off (\cref{subsec:nus}).
 
 
 \begin{figure}
@@ -250,8 +252,8 @@ Finally, we also specify the exact modules used in the pulse program, the GENESI
 
 An immediate problem of directly concatenating pulse program texts from different modules is that a given parameter in one module may take on a different meaning in another module.
 To avoid such clashes, we have fully standardized all parameters used in the GENESIS pulse programs.
-These include pulse widths (\texttt{p\#}), delays (\texttt{d\#}), constants (\texttt{cnst\#}), \(z\)-gradient pulse amplitudes (\texttt{gpz\#}), and phase cycles (\texttt{ph\#}), where \texttt{\#} represents a non-negative integer.
-Where possible, we have chosen meanings that are similar to those in the standard library of Bruker pulse programs, only deviating in order to avoid otherwise inevitable clashes between different modules.
+These include pulse widths (\texttt{p\#}), delays (\texttt{d\#}), constants (\texttt{cnst\#}), \(z\)-gradient pulse amplitudes (\texttt{gpz\#}), and phase cycles (\texttt{ph\#}), where \texttt{\#} represents a nonnegative integer.
+Where possible, we have chosen meanings which match those in the standard library of Bruker pulse programs, only deviating in order to avoid otherwise inevitable clashes between different modules.
 Furthermore, in place of module-specific delays which are often called \texttt{DELTA\#} in standard library sequences, we have chosen to define new identifiers with more human-readable names inside the pulse program itself.
 Thus, the delays in an HSQC sequence might be called \texttt{DC\_HSQC\#}, where the first \texttt{C} indicates the indirect-dimension nucleus (\carbon{}).
 While this standardization was primarily implemented in order to facilitate pulse program construction, this also makes it far easier for users to set up NOAH experiments.
@@ -298,7 +300,7 @@ Furthermore, each release is accompanied by a suite of processing scripts; these
 To ensure that NMR experiments run with GENESIS pulse programs and scripts are always reproducible, each pulse program and script is marked with a version number (labelled \textbf{(9)} in \cref{fig:pulprog_code}).
 Old versions of GENESIS may be obtained using the following formula: to access version \texttt{vX.Y.Z} (where \texttt{X}, \texttt{Y}, \texttt{Z} are integers), navigate to the URL \url{https://nmr-genesis.co.uk/X/Y/Z}.
 For example, the release version that accompanies this paper is labelled \texttt{v2.1.0}; this can be accessed at \url{https://nmr-genesis.co.uk/2/1/0}.
-While earlier versions are also available and functional, these should be treated as ``pre-release'' versions, to be used at the reader's own risk.
+While earlier versions are also available and functional, these should be treated as ``prerelease'' versions, to be used at the reader's own risk.
 As an alternative, the GENESIS code can be obtained from GitHub at \url{https://github.com/yongrenjie/genesis} and run entirely offline, allowing users to rewind to any desired version.
 Instructions on how to use this are provided in the repository description.
 
@@ -340,7 +342,7 @@ Likewise, simply changing the underlying code for any existing NOAH module is su
 The \(zz\)-HMBC module is ordinarily placed first in a supersequence, where the \(zz\)-filter element serves to preserve magnetization of protons directly coupled to \carbon{} and/or \nitrogen{}.\autocite{Kupce2018CC,Kupce2019JMR}
 Specifically, the \(zz\)-filter acts as a \ang{90} excitation pulse on \carbonbulk{}-bound protons, while leaving \carbon{}-bound protons along \(+z\).
 This is largely accomplished in practice, as evidenced by the fact that the intensities in subsequent HSQC-type modules are barely perturbed.
-However, due to instrumental imperfections and/or J-coupling mismatch, not all of the \carbon{}--\proton{} magnetization is perfectly retained: in particular, the \(zz\)-filter also generates a degree of \textit{antiphase} magnetization of the form \(\mathrm{H}_x\mathrm{C}_z\).
+However, due to instrumental imperfections and/or J-coupling mismatch, not all of the \CH{} magnetization is perfectly retained: in particular, the \(zz\)-filter also generates a degree of \textit{antiphase} magnetization of the form \(\mathrm{H}_x\mathrm{C}_z\).
 This antiphase magnetization is later refocused during the low-pass J-filter (LPJF) to give in-phase magnetization, eventually ending up as one-bond correlation artifacts in the HMBC spectrum (\cref{fig:hmbc_comp_before}).
 
 A simple solution to this is to add a \carbon{} \ang{90} pulse at the end of the \(zz\)-filter (\cref{fig:hmbc_comp_pulprog}): this converts any antiphase magnetization to double- or zero-quantum magnetization, which is subsequently dephased by the LPJF.
@@ -405,14 +407,14 @@ Particularly for the HMQC experiment, this allowed modest gains in sensitivity a
     \label{fig:psyche}
 \end{figure}
 
-A simple extension of this protocol to \textit{homonuclear} \proton{}--\proton{} modules enables experiments such as 2D J-resolved or pseudo-2D pure shift spectroscopy to be incorporated into NOAH supersequences.
-In both cases, the number of \(t_1\) increments needed (16--32) is far smaller than the typical number required for a 2D experiment (128--256).
+A simple extension of this protocol to \textit{homonuclear} \HH{} modules enables experiments such as 2D J-resolved or pseudo-2D pure shift spectroscopy to be incorporated into NOAH supersequences.
+In both cases, the number of \(t_1\) increments needed (\numrange{16}{32}) is far smaller than the typical number required for a 2D experiment (\numrange{128}{256}).
 In particular, at present, we have implemented a family of PSYCHE experiments, namely: the original pseudo-2D PSYCHE (abbreviated ``P''); the triple spin echo (TSE)-PSYCHE experiment (``P\textsuperscript{T}''), which provides improved robustness towards strong coupling; and the PSYCHE 2DJ experiment (``J'') which yields pure absorption-mode lineshapes.\autociteset{psyche}
 On top of this, there is also a magnitude-mode 2D J module available (``J\textsuperscript{qf}'').
 
 In PSYCHE spectra, the flip angle of the chirp or saltire pulses used in the J-refocusing element provides the experimentalist with a choice: a larger flip angle provides greater sensitivity, but at the cost of increased artifacts.\autocite{Foroozandeh2018CEJ}
 One advantage of acquiring PSYCHE spectra in NOAH-type supersequences is that the increased number of transients compensates for the sensitivity losses inherent to PSYCHE and other pure shift techniques.
-Thus, the user can choose a smaller flip angle (ca.\ \ang{10}) in order to maximize spectral purity instead, without losing any actual spectrometer time.
+Thus, the user can choose a smaller flip angle (\qtyrange{10}{15}{\degree}) to maximize spectral purity instead, without incurring the usual drawback of increased experiment time.
 On top of that, the extra transients may additionally be used to carry out SAPPHIRE averaging\autocite{Moutzouri2017CC} to suppress artefacts arising from J-modulation; this feature is enabled by default in GENESIS.
 An example of a NOAH-3 supersequence with the TSE-PSYCHE module is shown in \cref{fig:psyche}.
 
@@ -436,13 +438,13 @@ In contrast, with GENESIS pulse programs, this information is directly embedded 
 Users therefore no longer need to provide the \texttt{USERP\#} parameters, which makes setting up multiple different supersequences a much smoother process.
 If necessary, it is possible to override these preselected AU programs by explicitly specifying the \texttt{USERP\#} parameters, allowing for customized processing.
 
-\subsection{Non-uniform sampling implementation}
+\subsection{Nonuniform sampling implementation}
 \label{subsec:nus}
 
-With the GENESIS pulse programs we also introduce a new and more user-friendly implementation of non-uniform sampling (NUS).
+With the GENESIS pulse programs we also introduce a new and more user-friendly implementation of nonuniform sampling (NUS).
 NOAH experiments do not work ``out of the box'' with TopSpin's conventional NUS setup routine: some special adjustments must be made by manually generating the list of increments to be sampled and adjusting the \(t_1\) delays accordingly within the pulse sequence looping.
 Previously, this was accomplished using a Python script which created a new pulse program for each supersequence, e.g., \texttt{noah3\_BSC.nus}.\autocite{Claridge2019MRC}
-We have modified this approach such that the \textit{same} pulse program can be used for both uniform and non-uniform sampling, where NUS is controlled by an acquisition flag \texttt{-DNUS}.
+We have modified this approach such that the \textit{same} pulse program can be used for both uniform and nonuniform sampling, where NUS is controlled by an acquisition flag \texttt{-DNUS}.
 Although a (different) Python script is still required for initialization, this means that it is no longer necessary to keep two separate instances of the same pulse sequence in TopSpin, and simplifies turning NUS on and off.
 
 
@@ -519,7 +521,7 @@ J.R.J.Y.\ thanks the Clarendon Fund (University of Oxford) and the EPSRC Centre 
 \section{Number of NOAH combinations}
 \label{sec:combinations}
 
-In this section we count the total number of ``viable'' NOAH combinations, available from the non-developer mode version of the GENESIS website, using the inclusion--exclusion principle.
+In this section we count the total number of ``viable'' NOAH combinations, available from the normal user mode of the GENESIS website, using the inclusion--exclusion principle.
 As of version 2.1.0 of the website, there are five categories of modules:
 \begin{itemize}
     \item HMBC (\the\nmoda{} choices, including ``none'')
