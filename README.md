@@ -1,7 +1,7 @@
 # genesis-paper
 
 Source code for the publication accompanying the GENESIS website.
-You can find the paper itself at LINK, or if you don't have access to that, the `genesis.pdf` file in this repository (LINK) has essentially identical content.
+You can find the paper itself at LINK, or if you don't have access to that, the [`genesis.pdf` file in this repository](https://github.com/yongrenjie/genesis-paper/blob/master/genesis.pdf) has essentially identical content.
 This repository also hosts the necessary code for generating all the figures, which in requires all the raw data.
 
 ## Raw data
