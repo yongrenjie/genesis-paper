@@ -23,7 +23,9 @@ To recreate the figures, follow these steps:
 
         python -m pip install penguins==0.5.0
 
- 4. Run any of the Python scripts in the `figures` directory to generate the appropriate figure. You have to figure out which script corresponds to which figure (or look at the LaTeX sources to be sure), but it honestly shouldn't be too difficult. If a figure in the paper doesn't have a corresponding Python script, that means it was drawn in Inkscape by hand. The original SVG files can be found in the same directory. (The ToC graphic was done in Blender by hand. The Blender file is also available there.)
+ 4. Run any of the Python scripts in the `figures` directory to generate the appropriate figure. You have to figure out which script corresponds to which figure (or look at the LaTeX sources to be sure), but it honestly shouldn't be too difficult.
+
+    If a figure in the paper doesn't have a corresponding Python script, that means it was drawn in Inkscape by hand. The original SVG files can be found in the same directory. (The ToC graphic was done in Blender by hand. The Blender file is also available there.)
 
 ## Problems? Questions?
 
