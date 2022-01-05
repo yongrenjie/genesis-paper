@@ -1,9 +1,10 @@
-import penguins as pg
-from aptenodytes import nmrd, enzip
-import matplotlib.pyplot as plt
 from pathlib import Path
 
-path = nmrd() / '210923-7z-hmbc-morescans'
+import penguins as pg
+import matplotlib.pyplot as plt
+
+
+path = Path(__file__).parents[1] / 'data' / '210923-7z-hmbc-morescans'
 plt.style.use(Path(__file__).parent / 'fira.mplstyle')
 
 expnos = [8, 7, 4001, 3001]
@@ -22,7 +23,7 @@ npeaks = len(f1s)
 fig, axs = pg.subplots2d(npeaks+1, nexpts, sharey='row', figsize=(12, 10),
                          height_ratios=([1.9]+[1.0]*npeaks),
                          constrained_layout=True)
-for j, ax, label, ds in enzip(axs[0], labels, dss):
+for j, (ax, label, ds) in enumerate(zip(axs[0], labels, dss)):
     ds.stage(ax, f1_bounds="19..163", f2_bounds="1.8..10.95", levels=1e4)
     pg.mkplot(ax, title=label)
     ax.yaxis.set_tick_params(labelright=True)
@@ -41,8 +42,8 @@ for char, f1 in zip("bcdefghijk", f1s):   # only uses as many chars as needed
             "connectionstyle": "arc,angleA=0,angleB=180,armA=110,armB=80,rad=0"
         },
     )
-for i, ax_row, f1, f2b in enzip(axs[1:], f1s, f2bs):
-    for j, ax, ds in enzip(ax_row, dss):
+for i, (ax_row, f1, f2b) in enumerate(zip(axs[1:], f1s, f2bs)):
+    for j, (ax, ds) in enumerate(zip(ax_row, dss)):
         proj = ds.f2projp(bounds=(f1 - 0.6, f1 + 0.6))
         proj.stage(ax, bounds=f2b)
         pg.mkplot(ax, xlabel=(None if i == npeaks - 1 else ""))
@@ -58,6 +59,12 @@ for i, ax_row, f1, f2b in enzip(axs[1:], f1s, f2bs):
 
 pg.label_axes([ax_row[0] for ax_row in axs], fstr="({})",
               fontweight="semibold", fontsize=14)
+
+# Note that with show(), for some reason, the arrows at the top-left corner are
+# messed up. However, savefig() with 600 dpi (this is set in fira.mplstyle)
+# works just fine. I'm guessing it's probably something to do with the output /
+# canvas size, although I don't really know.
+
 # pg.show()
 for filetype in [".png", ".svg"]:
     pg.savefig(str(Path(__file__)).replace(".py", filetype))

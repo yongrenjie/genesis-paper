@@ -1,1 +1,1 @@
-$pdf_mode = 5;
+$pdf_mode = 4;

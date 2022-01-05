@@ -1,12 +1,12 @@
-import penguins as pg
-from aptenodytes import nmrd
 from pathlib import Path
+
+import penguins as pg
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 
 plt.style.use(Path(__file__).parent / 'fira.mplstyle')
 
-path = nmrd() / '200926-7z-n15-sehsqc-full'
+path = Path(__file__).parents[1] / 'data' / '200926-7z-n15-sehsqc-full'
 
 bad = pg.read(path, 101003)
 good = pg.read(path, 12003)

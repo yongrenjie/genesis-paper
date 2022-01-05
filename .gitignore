@@ -8,6 +8,7 @@
 *.fdb_latexmk
 *.log
 *.out
+*.ptc
 *.toc
 *.swp
 *.synctex.gz
@@ -15,3 +16,4 @@
 *.xdv
 *.xml
 refs/**/*.pdf
+data

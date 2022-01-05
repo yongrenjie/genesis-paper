@@ -1,12 +1,13 @@
-import penguins as pg
-from aptenodytes import nmrd
-import matplotlib.pyplot as plt
 from pathlib import Path
+
+import penguins as pg
+import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
+
 
 plt.style.use(Path(__file__).parent / 'fira.mplstyle')
 
-path = nmrd() / '210909-7a-hmbc'
+path = Path(__file__).parents[1] / 'data' / '210909-7a-hmbc'
 expnos = [4001, 3001]
 dss = [pg.read(path, expno) for expno in expnos]
 labels = ['without $^{13}$C 90°', 'with $^{13}$C 90°']
