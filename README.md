@@ -7,7 +7,7 @@ This repository also hosts the necessary code for generating all the figures, wh
 ## Raw data
 
 Since the raw data is quite large (875 MB before compression), it's not in the repository itself.
-You can download a compressed version either from [this GitHub release](https://github.com/yongrenjie/genesis-paper/releases/tag/final-revision), or Zenodo if you prefer that (LINK).
+You can download a compressed version either from [this GitHub release](https://github.com/yongrenjie/genesis-paper/releases/tag/final-revision), or [Zenodo](10.5281/zenodo.5822959) if you prefer that.
 
 ## Figures
 
